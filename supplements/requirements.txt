@@ -1,0 +1,8 @@
+nbformat    # Notebook format
+ipykernel   # Notebook runtime
+pandas
+matplotlib  # Graphs for Pandas
+geopandas
+mapclassify # Principled strategies for choropleth colors
+kaleido     # Statically saved plots for Plotly
+plotly

@@ -1,0 +1,246 @@
+country,iso3,reports
+Afghanistan,AFG,"283,116"
+Aland Islands,ALA,21
+Albania,ALB,"15,985"
+Algeria,DZA,"1,171,653"
+American Samoa,ASM,114
+Andorra,AND,104
+Angola,AGO,"13,346"
+Anguilla,AIA,70
+Antarctica,ATA,4
+Antigua and Barbuda,ATG,149
+Argentina,ARG,"91,957"
+Armenia,ARM,"3,486"
+Aruba,ABW,527
+Australia,AUS,"65,535"
+Austria,AUT,"7,580"
+Azerbaijan,AZE,"42,763"
+Bahamas,BHS,858
+Bahrain/Bahrein,BHR,"32,346"
+Bangladesh,BGD,"1,743,240"
+Barbados,BRB,597
+Belarus,BLR,"5,636"
+Belgium,BEL,"15,762"
+Belize,BLZ,"8,297"
+Benin,BEN,"3,683"
+Bermuda,BMU,91
+Bhutan,BTN,"14,518"
+Bolivia,BOL,"36,551"
+Bosnia and Herzegovina,BIH,"10,930"
+Botswana,BWA,"1,998"
+Bouvet Island,BVT,1
+Brazil,BRA,"437,091"
+British Indian Ocean Territory,IOT,45
+British Virgin Islands,VGB,79
+Brunei,BRN,"3,214"
+Bulgaria,BGR,"13,584"
+Burkina Faso,BFA,"2,528"
+Burma/Myanmar,MMR,"540,301"
+Burundi,BDI,"1,486"
+Cambodia,KHM,"395,793"
+Cameroon,CMR,"8,325"
+Canada,CAN,"62,084"
+Cape Verde Islands,CPV,"3,855"
+"Bonaire, Sint Eustatius and Saba",BES,74
+Cayman Islands,CYM,175
+Central African Republic,CAF,241
+Chad,TCD,713
+Chile,CHL,"45,087"
+Christmas Island,CXR,1
+Cocos (Keeling) Islands,CCK,168
+Colombia,COL,"440,203"
+Comoros,COM,"3,963"
+Congo,COG,"1,151"
+"Congo, The Democratic Republic of the",COD,"5,368"
+Cook Islands,COK,61
+Costa Rica,CRI,"16,623"
+Cote d'Ivoire (Ivory Coast),CIV,"17,676"
+Croatia,HRV,"4,744"
+Cuba,CUB,"13,779"
+Curacao,CUW,366
+Cyprus,CYP,"2,657"
+Czech Republic,CZE,"15,004"
+Denmark,DNK,"5,891"
+Djibouti,DJI,"1,281"
+Dominica,DMA,128
+Dominican Republic,DOM,"144,150"
+Ecuador,ECU,"118,322"
+Egypt,EGY,"622,633"
+El Salvador,SLV,"35,868"
+Equatorial Guinea,GNQ,157
+Eretria,ERI,"1,199"
+Estonia,EST,"2,729"
+Ethiopia,ETH,"6,851"
+Falkland Islands,FLK,15
+Faroe Islands,FRO,76
+Federated States of Micronesia,FSM,200
+Fiji,FJI,"8,175"
+Finland,FIN,"6,079"
+France,FRA,"98,233"
+French Guiana,GUF,313
+French Polynesia,PYF,477
+Gabon,GAB,"1,873"
+"Gambia, The",GMB,298
+Georgia,GEO,"7,168"
+Germany,DEU,"79,701"
+Ghana,GHA,"19,733"
+Gibraltar,GIB,123
+Greece,GRC,"14,616"
+Greenland,GRL,289
+Grenada,GRD,438
+Guadeloupe,GLP,314
+Guam,GUM,695
+Guatemala,GTM,"65,076"
+Guernsey,GGY,69
+"Guiana, French",GUF,2
+Guinea,GIN,"3,808"
+Guinea-Bissau,GNB,168
+Guyana,GUY,"3,254"
+Haiti,HTI,"4,314"
+Honduras,HND,"44,142"
+Hong Kong,HKG,"20,722"
+Hungary,HUN,"31,710"
+Iceland,ISL,567
+India,IND,"4,699,515"
+Indonesia,IDN,"1,861,135"
+Iran,IRN,"223,144"
+Iraq,IRQ,"1,220,470"
+Ireland,IRL,"7,327"
+Isle of Man,IMN,100
+Israel,ISR,"23,411"
+Italy,ITA,"37,480"
+Jamaica,JAM,"3,743"
+Japan,JPN,"49,487"
+Jersey,JEY,194
+Jordan,JOR,"113,846"
+Kazakhstan,KAZ,"16,752"
+Kenya,KEN,"17,983"
+Kiribati,KIR,179
+Kosovo,KOS,"3,361"
+Kuwait,KWT,"78,803"
+Kyrgyzstan,KGZ,"3,822"
+Lao People's Democratic Republic,LAO,"43,809"
+Latvia,LVA,"1,537"
+Lebanon,LBN,"46,528"
+Lesotho,LSO,850
+Liberia,LBR,"1,770"
+Libya,LBY,"270,811"
+Liechtenstein,LIE,17
+Lithuania,LTU,"3,509"
+Luxembourg,LUX,"2,005"
+Macao,MAC,"1,005"
+Macedonia,MKD,"6,045"
+Madagascar,MDG,"79,174"
+Malawi,MWI,969
+Malaysia,MYS,"269,671"
+Maldives,MDV,"9,638"
+Mali,MLI,"2,637"
+Malta,MLT,750
+Marshall Islands,MHL,105
+Martinique,MTQ,317
+Mauritania,MRT,"5,943"
+Mauritius,MUS,"7,430"
+Mayotte,MYT,966
+Mexico,MEX,"786,215"
+Moldova,MDA,"9,547"
+Monaco,MCO,494
+Mongolia,MNG,"21,656"
+Montenegro,MNE,"2,517"
+Montserrat,MSR,2
+Morocco,MAR,"347,443"
+Mozambique,MOZ,"6,691"
+Namibia,NAM,906
+Nauru,NRU,49
+Nepal,NPL,"263,130"
+Netherlands,NLD,"36,790"
+Netherlands Antilles,ANT,2
+New Caledonia,NCL,"2,375"
+New Zealand,NZL,"9,971"
+Nicaragua,NIC,"37,012"
+Niger,NER,828
+Nigeria,NGA,"57,654"
+Niue,NIU,1
+North Korea,PRK,2
+Northern Mariana Islands,MNP,317
+Norway,NOR,"7,807"
+Oman,OMN,"64,156"
+Pakistan,PAK,"2,030,801"
+Palau,PLW,157
+Palestinian Territory,PSE,"39,095"
+Panama,PAN,"10,613"
+Papua New Guinea,PNG,"7,076"
+Paraguay,PRY,"13,309"
+People's Republic of China,CHN,"7,644"
+Peru,PER,"192,943"
+Philippines,PHL,"3,188,793"
+Poland,POL,"37,758"
+Portugal,PRT,"34,415"
+Puerto Rico,PRI,"6,703"
+Qatar,QAT,"73,536"
+Reunion,REU,"3,198"
+Romania/Rumania,ROU,"32,765"
+Russian Federation,RUS,"81,897"
+Rwanda,RWA,"1,248"
+Saint Bartelemey,BLM,9
+Saint Kitts and Nevis,KNA,80
+Saint Lucia,LCA,446
+Saint Martin,MAF,20
+Saint Pierre and Miquelon,SPM,62
+Saint Vincent and the Grenadines,VCT,407
+Samoa,WSM,463
+San Marino,SMR,5
+Sao Tome and Principe,STP,412
+Saudi Arabia,SAU,"708,980"
+Senegal,SEN,"3,752"
+Serbia,SRB,"22,695"
+Seychelles,SYC,812
+Sierre Leone,SLE,"1,185"
+Singapore,SGP,"53,603"
+Sint Maarten,SXM,88
+Slovakia,SVK,"7,275"
+Slovenia,SVN,"3,162"
+Solomon Islands,SLB,"1,466"
+Somalia,SOM,"29,636"
+South Africa,ZAF,"50,875"
+South Korea,KOR,"53,329"
+South Sudan,SSD,"1,840"
+Spain,ESP,"33,136"
+Sri Lanka,LKA,"152,811"
+Sudan,SDN,"31,198"
+Surinam,SUR,"2,062"
+Swaziland,SWZ,384
+Sweden,SWE,"19,635"
+Switzerland,CHE,"7,180"
+Syria,SYR,"77,152"
+Taiwan,TWN,"38,316"
+Tajikistan,TJK,"4,036"
+Tanzania,TZA,"7,068"
+Thailand,THA,"589,515"
+Timor-Leste,TLS,"3,783"
+Togo,TGO,"1,391"
+Tokelau,TKL,4
+Tonga,TON,188
+Trinidad and Tobago,TTO,"4,552"
+Tunisia,TUN,"164,562"
+Turkey,TUR,"289,046"
+Turkmenistan,TKM,161
+Turks and Calcos Islands,TCA,151
+Tuvalu,TUV,25
+Uganda,UGA,"4,538"
+Ukraine,UKR,"67,852"
+United Arab Emirates,ARE,"327,820"
+United Kingdom,GBR,"97,727"
+United States,USA,"716,474"
+Uruguay,URY,"6,320"
+US Virgin Islands,VIR,200
+Uzbekistan,UZB,"7,168"
+Vanuatu,VUT,"1,414"
+Vatican City,VAT,1
+Venezuela,VEN,"150,778"
+Vietnam,VNM,"716,065"
+Wallis and Futuna,WLF,24
+Western Sahara,ESH,77
+Yemen Arab Republic,YEM,"243,340"
+Zambia,ZMB,"3,881"
+Zimbabwe,ZWE,810
+No Country Listed,,"1,193,266"
