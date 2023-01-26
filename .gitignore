@@ -302,3 +302,6 @@ TSWLatexianTemp*
 
 # Python virtual environment
 .venv
+
+# The generated document
+source/main.pdf
