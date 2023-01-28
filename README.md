@@ -12,11 +12,14 @@ Colony 🏝” by Robert Grimm.
   * To work with the ACM's new (but arguably not improved) publishing flow, the
     paper uses only approved LaTeX packages and compiles with `pdflatex`.
   * Unfortunately, that leaves only one subpar option for color emoji, namely
-    simulate them by including graphics files. In practice, my `\emoji{name}`
+    simulating them by including graphics files. In practice, my `\emoji{name}`
     macro takes care of everything.
-  * Transparency data and Jupyter notebooks with my analysis of the data are
-    inside the [supplements](supplements) directory. When given the `venv`
-    argument, the build script creates a Python virtual environment if necessary
+  * Transparency data and Jupyter notebooks with the code for analyzing the data
+    are inside the [supplements](supplements) directory.
+  * The build script assumes that the virtual environment with Python packages
+    necessary for running the notebooks is contained in the `.venv` directory.
+    When invoked with the `venv` argument, it checks whether that directory
+    exists, creating the virtual environment and installing packages otherwise,
     and then activates the virtual environment.
 
 
@@ -45,6 +48,9 @@ pointing towards harm reduction as a strategy for, possibly maybe, making life
 in the penal colony at least somewhat bearable — because, I fear, we are stuck
 in just that penal colony.
 
----
 
-(C) 2023 by Robert Grimm.
+## (C) Copyright 2023 by Robert Grimm
+
+The shell script and Jupyter notebooks included in this repository are open
+source under the Apache 2.0 license. I have not yet settled on a license for the
+paper itself. For now, all rights are reserved.
