@@ -1,0 +1,113 @@
+%\documentclass[manuscript,screen,review,anonymous]{acmart}
+\documentclass[authorversion,nonacm,screen]{acmart}
+
+\usepackage{bm}               % Bold symbols in math mode
+\usepackage{dirtytalk}        % \say
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{
+    {./emoji/}
+    {./images/}
+}
+\usepackage{pifont}
+\usepackage{wrapfig}          % Text wrapping around figure
+\setlength{\intextsep}{0pt}
+
+% Better tables
+\usepackage{colortbl}
+\usepackage{multirow}
+\newcolumntype{C}{>{\columncolor[gray]{.91}}c}
+\newcolumntype{L}{>{\columncolor[gray]{.91}}l}
+\newcolumntype{R}{>{\columncolor[gray]{.91}}r}
+
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+
+\begin{document}
+
+\newcommand\emoji[1]{\raisebox{-0.2ex}{\includegraphics[height=1em]{{#1}}}}
+\newcommand\dalle{\textsc{DALL·E}}
+\newcommand\EU{\includegraphics[height=0.7em]{eu}}
+\newcommand\MK{\emoji{checkmark}}
+
+\newcommand\sectionbreak{\begin{center}\ding{166}\end{center}}
+\newcommand\openfatdquo{\ding{125}}
+\newcommand\closefatdquo{\ding{126}}
+
+\title{Letters from the Stochastic Penal Colony \emoji{desertisland}}
+\subtitle{When Algorithms Discipline and Punish}
+
+\author{Robert Grimm}
+\orcid{0000-0002-8300-2153}
+\affiliation{
+    \institution{Independent Researcher}
+    \city{Brooklyn}
+    \state{New York}
+    \country{United States}
+}
+\email{rgrimm@alum.mit.edu}
+
+\keywords{algorithmic snake oil, child sexual abuse material, content
+    moderation, harm reduction, punitive algorithms, text-to-image tools,
+    transparency reporting}
+\begin{CCSXML}
+    <ccs2012>
+       <concept>
+           <concept_id>10010147.10010178</concept_id>
+           <concept_desc>Computing methodologies~Artificial intelligence</concept_desc>
+           <concept_significance>500</concept_significance>
+           </concept>
+       <concept>
+           <concept_id>10003456.10003462</concept_id>
+           <concept_desc>Social and professional topics~Computing / technology policy</concept_desc>
+           <concept_significance>500</concept_significance>
+           </concept>
+     </ccs2012>
+\end{CCSXML}
+\ccsdesc[500]{Computing methodologies~Artificial intelligence}
+\ccsdesc[500]{Social and professional topics~Computing / technology policy}
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\maketitle
+
+\dalle{} \textsc{DALL·E} {\sc DALL·E} DALL·E
+
+
+\input{sections/introduction}
+\input{sections/dalle2-supermax}
+\input{sections/tweet-da-fe}
+\input{sections/social-media-census}
+\input{sections/october-2020-bar-exam}
+\input{sections/escape-from-dalle2}
+\input{sections/conclusion}
+
+\begin{acks}
+A.\ D.\ Vocatus provided helpful background and color about the State Bar of
+California and its licensing exam. An employee of the National Center for
+Missing and Exploited Children helped complicate my thinking about CSAM (while
+also avoiding to answer my questions). Akiko-Aboagye and Cordula Hahn served as
+sounding boards for scoping the research and its presentation. Cordula and Karin
+Wolman also helped with the occasional phrasing. Thank you!
+
+I worked at Meta n\'ee Facebook as a software engineer from mid 2018 to mid
+2019. I also served as paid consultant to litigation against Meta in 2022.
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bibliography}
+
+\newpage
+\appendix
+
+\input{appendices/dalle2-policies}
+\input{appendices/twitter-policies}
+\input{appendices/bar-exam-public-record}
+\input{appendices/from-kafka-with-love}
+\input{appendices/lets-chat}
+\input{appendices/research-ethics}
+
+\end{document}
