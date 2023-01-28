@@ -1,6 +1,7 @@
 nbformat    # Notebook format
 ipykernel   # Notebook runtime
 pandas
+jinja2      # Formatting for Pandas
 matplotlib  # Graphs for Pandas
 geopandas
 mapclassify # Principled strategies for choropleth colors
