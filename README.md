@@ -3,7 +3,7 @@
 Source code and supplements for the paper “Letters from the Stochastic Penal
 Colony 🏝” by Robert Grimm.
 
-  * A custom [build](build.sh) script in the repository root takes care of
+  * A [__custom build script__](build.sh) in the repository root takes care of
     repetitive tasks. The one optional argument is the name of the task to
     execute.
   * By default, i.e., when invoked without argument, the build script runs
@@ -13,7 +13,8 @@ Colony 🏝” by Robert Grimm.
     paper uses only approved LaTeX packages and compiles with `pdflatex`.
   * Unfortunately, that leaves only one subpar option for color emoji, namely
     simulating them by including graphics files. In practice, my `\emoji{name}`
-    macro takes care of everything.
+    macro takes care of everything. I even documented my [workflow and
+    macro](supplements/emoji.md).
   * Transparency data and Jupyter notebooks with the code for analyzing the data
     are inside the [supplements](supplements) directory.
   * The build script assumes that the virtual environment with Python packages
