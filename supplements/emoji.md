@@ -1,9 +1,9 @@
 ## Color Emoji and pdflatex
 
-Getting color emoji to work with ancient `pdflatex` took some effort. This
-document summarizes the steps involved. In particular, I start by summarizing my
-workflow for creating the necessary graphics files and then show the LaTeX macro
-for using them.
+Getting color emoji to work with the ancient `pdflatex` tool took some effort.
+This document summarizes the steps involved. In particular, I start by
+summarizing my workflow for creating the necessary graphics files and then show
+the LaTeX macro for using them.
 
  1. __Acquire Emoji Graphics__: My preferred because least bad source for color
     emoji is [Google's Noto emoji
