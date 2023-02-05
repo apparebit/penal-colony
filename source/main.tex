@@ -1,5 +1,5 @@
-%\documentclass[manuscript,screen,review,anonymous]{acmart}
-\documentclass[authorversion,nonacm,screen]{acmart}
+\documentclass[manuscript,screen,review,anonymous]{acmart}
+%\documentclass[authorversion,nonacm,screen]{acmart}
 
 \usepackage{amsmath}
 \usepackage{bm}               % Bold symbols in math mode
@@ -28,11 +28,19 @@
 \begin{document}
 
 \newcommand\emoji[1]{\raisebox{-0.2ex}{\includegraphics[height=1em]{{#1}}}}
-\newcommand\dalle{\textsc{DALL·E}}
-\newcommand\EU{\includegraphics[height=0.7em]{eu}}
+\newcommand\euflag{\includegraphics[height=0.7em]{eu}}
 \newcommand\MK{\emoji{checkmark}}
 
-\newcommand\sectionbreak{\begin{center}\ding{166}\end{center}}
+\newcommand\AI{\textsc{ai}}
+\newcommand\ChatGPT{Chat\textsc{gpt}}
+\newcommand\CSAM{\textsc{csam}}
+\newcommand\DALLE{\textsc{dall•e}}
+\newcommand\EU{\textsc{eu}}
+\newcommand\GPT{\textsc{gpt-3}}
+\newcommand\NCMEC{\textsc{ncmec}}
+
+%\newcommand\sectionbreak{\begin{center}\ding{166}\end{center}}
+\newcommand\sectionbreak{\begin{center}\tiny$\bullet$ $\bullet$ $\bullet$\end{center}}
 \newcommand\openfatdquo{\ding{125}}
 \newcommand\closefatdquo{\ding{126}}
 
@@ -82,9 +90,9 @@
 \maketitle
 
 \input{sections/introduction}
-\input{sections/dalle2-supermax}
-\input{sections/tweet-da-fe}
-\input{sections/social-media-census}
+\input{sections/dalle2}
+\input{sections/twitter}
+\input{sections/census}
 \input{sections/bar-exam}
 \input{sections/escape-from-dalle2}
 \input{sections/conclusion}
@@ -92,10 +100,10 @@
 \begin{acks}
 A.\ D.\ Vocatus provided helpful background and color about the State Bar of
 California and its licensing exam. An employee of the National Center for
-Missing and Exploited Children helped complicate my thinking about CSAM (while
-also avoiding to answer any of my questions). Akiko-Aboagye and Cordula Hahn
-served as sounding boards for scoping the research and its presentation. Cordula
-and Karin Wolman also helped with the occasional phrasing. Thank you!
+Missing and Exploited Children helped complicate my thinking about \CSAM{}
+(while also avoiding to answer any of my questions). Akiko-Aboagye and Cordula
+Hahn served as sounding boards for scoping the research and its presentation.
+Cordula and Karin Wolman also helped with the occasional phrasing. Thank you!
 \end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
