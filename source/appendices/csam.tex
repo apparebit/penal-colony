@@ -1,0 +1,187 @@
+% !TEX root = ../main.tex
+
+\newpage
+\section{Homo Infanti Lupus}
+\label{adx:csam}
+
+Since transparency disclosures, by definition, are based on platform-internal
+data, the public must trust that platforms correctly collect and report the
+data. At least for the \EU, that will change as the \DSA's yearly audit
+requirement takes effect in February 2024. Still, I was curious if there were
+other opportunities for independently validating such disclosures.
+
+As it turns out, there is: In the United States, child sexual abuse material
+(\CSAM) must be reported to a clearinghouse, the National Center for Missing and
+Exploited Children (\NCMEC). \NCMEC{} makes its own, yearly transparency
+disclosures. They include a breakdown of internet platforms' report counts.
+Hence, it should be possible to cross-check \NCMEC's data with that released by
+social media in their own transparency disclosures.
+
+For practical reasons, I limited the comparison of \CSAM\ disclosures to Meta
+and Google. I include Meta because, at over 90\% of all reports made to \NCMEC,
+it appears to be a ``hotbed of \CSAM''~\cite{Hitt2021} (and not Pornhub, as
+falsely asserted~\cite{Brown2020,Grant2020} with devastating
+consequences~\cite{Celarier2021,Dickson2020,Harris2021,Stoya2021,TheIndependent2021b}
+by a certain New York Times columnist, who made common cause with anti-porn
+crusaders~\cite{Hitt2020a} associated with a white supremacist
+church~\cite{Halley2021,ProducerX2020} after pulling a similar stunt
+before~\cite{Bass2014,Brown2019,Dickson2014,HuffPost2012,Martin2012,Masnick2017,Talusan2017}).
+While Google is a distant second, I originally included the firm because it uses
+the same two \CSAM\ detection systems as Meta~\cite{Allen2011,Davis2018}:
+Microsoft's PhotoDNA for detecting previously known instances of \CSAM\ based on
+perceptual hashing and Google's own Content Safety \API{} for detecting
+previously unknown instances of \CSAM\ based on a machine learning model.
+
+Table~\ref{table:csam} summarizes \emph{all} \CSAM\ disclosures by the three
+entities~\cite{NcmecByPlatform2019,NcmecByPlatform2020,NcmecByPlatform2021}. In
+the language of \NCMEC, which I adapt for the rest of this section, a
+\emph{report} includes one or more \emph{pieces} of \CSAM, i.e., photos or
+videos. \NCMEC\ makes yearly disclosures of report counts, Google makes
+semiannual disclosures of both report and piece counts, and Meta makes quarterly
+disclosures of only piece counts. That already implies that only \NCMEC's and
+Google's data are comparable. As the table shows, they are reasonably close,
+with a maximum yearly difference of -0.6\% between \NCMEC's report count for
+Google and Google's own report count.
+
+\begin{table}
+\caption{\CSAM{} disclosures by \NCMEC, Google, and Meta from 2018 to 2022.}
+\label{table:csam}
+\begin{tabular}{cRrrRRrRrRr}
+
+& \multicolumn{5}{>{\columncolor[gray]{.91}}c}{\textbf{NCMEC}\T}
+&
+& \multicolumn{3}{>{\columncolor[gray]{.91}}c}{\textbf{Google}}
+& \multicolumn{1}{c}{\textbf{Meta}} \\
+
+\multirow{-2}{*}{\textbf{Year}}
+& \multicolumn{1}{>{\columncolor[gray]{.91}}c}{\textbf{Reports}}
+& \multicolumn{2}{c}{\textbf{From Meta}}
+& \multicolumn{2}{>{\columncolor[gray]{.91}}c}{\textbf{From Google}\B}
+& \multicolumn{1}{c}{\multirow{-2}{*}{$\bm{\Delta}$}}
+& \multicolumn{1}{>{\columncolor[gray]{.91}}c}{\textbf{Reports}}
+& \multicolumn{1}{c}{$\bm{\Pi$}}
+& \multicolumn{1}{>{\columncolor[gray]{.91}}c}{\textbf{Pieces}}
+& \multicolumn{1}{c}{\textbf{Pieces}} \\
+\hline
+& & & & & & & & & & \T\\
+& & & & & & & & & & \\
+& & & & & & & & & & 9,000,000 \\
+\multirow{-4}{*}{2018} & & & & & & & & & & \B 7,200,000 \\
+\hline
+& & & & & & & & & & \T 5,800,000 \\ \cline{11-11}
+& & & & & & & & & & 7,426,200 \\
+& & & & & & & & & & 12,155,800 \\
+\multirow{-4}{*}{2019}
+& \multirow{-4}{*}{16,836,694}
+& \multirow{-4}{*}{94.3\%} & \multirow{-4}{*}{15,884,511}
+& \multirow{-4}{*}{2.7\%}  & \multirow{-4}{*}{449,283}
+& & & & & \B 13,986,400 \\
+\hline
+& & & & & & & & & & \T 9,500,000 \\
+& & & & & &
+& \multirow{-2}{*}{182,556} & \multirow{-2}{*}{8.4×} & \multirow{-2}{*}{1,533,536}
+& 2,958,200 \\
+& & & & & & & & & & 10,770,600 \\
+\multirow{-4}{*}{2020}
+& \multirow{-4}{*}{21,447,786}
+& \multirow{-4}{*}{94.7\%} & \multirow{-4}{*}{20,307,216}
+& \multirow{-4}{*}{2.5\%}  & \multirow{-4}{*}{546,704}
+& \multirow{-4}{*}{+0.2\%}
+& \multirow{-2}{*}{365,319} & \multirow{-2}{*}{8.0×} & \multirow{-2}{*}{2,904,317}
+& \B 4,958,900 \\
+\hline
+& & & & & & & & & & \T 5,812,400 \\ \cline{11-11}
+& & & & & &
+& \multirow{-2}{*}{412,141} & \multirow{-2}{*}{8.3×} & \multirow{-2}{*}{3,413,673}
+& 27,000,000 \\
+& & & & & & & & & & 22,800,000 \\
+\multirow{-4}{*}{2021}
+& \multirow{-4}{*}{29,157,083}
+& \multirow{-4}{*}{92.2\%} & \multirow{-4}{*}{26,885,302}
+& \multirow{-4}{*}{3.0\%}  & \multirow{-4}{*}{875,783}
+& \multirow{-4}{*}{-0.6\%}
+& \multirow{-2}{*}{458,178} & \multirow{-2}{*}{7.2×} & \multirow{-2}{*}{3,282,824}
+& \B 22,400,000 \\
+\hline
+& & & & & & & & & & \T 18,000,000 \\
+& & & & & &
+& \multirow{-2}{*}{1,044,277} & \multirow{-2}{*}{6.4×} & \multirow{-2}{*}{6,698,201}
+& 21,600,000 \\
+& & & & & & & & & & 31,400,000 \\
+\multirow{-4}{*}{2022}
+& & & & & & & & & & \\
+\end{tabular}
+\end{table}
+
+Unfortunately, Meta's statistics aren't just incomparable to \NCMEC's. They also
+suffer from several other short-comings. Meta has disclosed but not explained
+most of them. I discovered a major data quality issue surepitiously after
+re-implementing my original spreadsheet-based analysis with Pandas in Python and
+while comparing results:
+
+\begin{enumerate}
+\item As indicated by the horizontal lines between Q1/Q2 2019 and Q1/Q2 2021,
+    Meta changed metrics twice. At first, the firm disclosed ``Child Nudity \&
+    Sexual Exploitation,'' which covers child nudity, child physical abuse, and
+    child sexual abuse, for Facebook only. In Q2 2019, it started reporting the
+    same metric for Instagram, too. In Q2 2021, it switched to reporting \CSAM{}
+    by itself, though the 4.6$\times$ increase despite the new metric covering
+    less pieces is surprising.
+\item No other social media platform is rounding transparency numbers, yet Meta
+    is obviously doing so. Worse, it does so with different precision for
+    Facebook and Instagram.
+\item For 2019 and 2020, \NCMEC{} disclosed a single report count for Meta. For
+    2021, it disclosed separate counts for Facebook, Instagram, and WhatsApp.
+    \emph{WhatsApp}? Meta has yet to make a transparency disclosure for
+    WhatsApp.
+\item I prepared a first version of the above table based on Meta's Q2 2022
+    disclosure in the late summer of 2022. During the following winter, I
+    replaced the original spreadsheet with Python code that used Meta's Q3 2022
+    disclosure. When I compared results, the numbers for Q4 2020 differed. After
+    checking my work and finding no issues, I compared the data in Meta's CSV
+    files and discovered that 113 data points across several categories
+    including \CSAM{} had changed, 77 for Q4 2020, 3 for Q1 2021, 4 for Q2 2021,
+    and the rest for Q2 2022. Furthermore, out of the 77 updated metrics for Q4
+    2020, the 58 updated absolute counts changed substantially, from -50.0\% to
+    -0.1\%. Yet neither the transparency report nor the blog post announcing the
+    report's release mention these changes. That seems sloppy at the very best.
+\item In February 2021, Antigone Davis, Meta's Global Head of Safety, reported
+    in a blog post~\cite{Davis2021} that, when they performed an in-depth
+    analysis of \CSAM reported to \NCMEC\ during the fall of 2020, 90\% of the
+    content were the same or visually similar as previously reported content.
+    Further analysis of 150 accounts reported to \NCMEC\ during the summer of
+    2020 and in January 2021 showed that 75\% of the people didn't exhibit
+    malicious intent. Instead they shared \CSAM\ because of outrage, poor humor
+    (``i.e., a child's genitals being bitten by an animal''), or sexting
+    teenagers. These statistics suggest that at least Meta's piece counts are
+    vastly exaggerating the problem and that additional, regular disclosures
+    characterizing uniqueness and motivation are necessary.
+\end{enumerate}
+
+\NCMEC\ also releases report counts broken down by country. Since the largest
+non-Chinese social media, with exception of Telegram, are all based in the
+United States, that breakdown should be fairly representative of \CSAM\ sharing
+patterns across the world.
+
+Hence, to complete this investigation into the quality of transparency
+disclosures, I decided to analyze \NCMEC's dataset for
+2021~\cite{NcmecByCountry2021}. I did find several minor data quality issues.
+Notably, the data included two different entries for French Guiana. Furthermore,
+it included entries for (1) the Netherlands Antilles, (2) Bonaire, Sint
+Eustatius, and Saba (3) Curaçao, as well as (4) Sint Maarten, even though the
+former was split into the latter three in 2010. Finally, it included an entry
+for Bouvet Island, which seems unlikely since the island, located in the South
+Atlantic close to Antarctica, is an uninhabited nature preserve with no man-made
+structures beyond a weather station.
+
+To characterize geographic distribution, I determine regional totals as well as
+per-capita rates per country. Taken together South and South East Asia are
+responsible for 58.1\% of all reports, i.e., a clear majority. However, when
+considering per-capita rates, the countries with the highest number of reports
+per capita are concentrated on the Arab peninsula and in North Africa, abutting
+the Mediterranean. The exception are the Cocos or Keeling Islands; at 168
+reports per 596 capita, its rate is seven times higher than that of the second
+ranked country, Libya. It likely also is a fluke thanks to the tiny population.
+These results are consistent with those reported by a team from Google, \NCMEC,
+and Thorn in 2019~\cite{BurszteinBrightea2019}. The supplemental materials for
+this paper include both data and notebooks.
