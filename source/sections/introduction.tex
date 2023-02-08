@@ -7,8 +7,8 @@ My first interaction with \DALLE~2, OpenAI's headline-making text-to-image
 system, in late July 2022 didn't quite go as expected. I had signed up with
 OpenAI several months before but had been granted access only earlier that day.
 So I was eager to try out the system and started with a prompt that had yielded
-compelling results with another text-to-image system. But instead of producing
-four images, \DALLE~2 responded with a stern warning:
+good results with another text-to-image system. But instead of producing four
+images, \DALLE~2 responded with a stern warning:
 
 \begin{quote}
 \openfatdquo{}It looks like this request may not follow our content policy.
@@ -19,12 +19,9 @@ account.\closefatdquo{}
 \noindent Whoa! I enter an entirely reasonable prompt and OpenAI immediately
 threatens me with account suspension? Without even telling me what I did wrong?
 That's just ridiculous. And frustrating. Consulting the content policy didn't
-help much either. At least at first. The policy seemed broad, also vague. I
-eventually did narrow down the violation to two out of the eleven categories for
-prohibited content. But which of the two? I couldn't tell. It all seemed rather
-Kafkaesque!
-
-\begin{center}$\bm\therefore$\end{center}
+help much either. The policy seemed broad, also vague. I eventually did narrow
+down the violation to two out of the eleven content prohibitions. But which of
+the two? I couldn't tell. It all seemed rather Kafkaesque!
 
 It also was familiar. In October 2021, Twitter's \AI{} took offense to an
 admittedly caustic tweet I had just posted and locked down my account. A first
@@ -36,12 +33,10 @@ enough of single tweet limbo and did submit to Twitter's penance rites: I
 withdrew my appeal, acknowledged that I ``violated the Twitter Rules,'' and
 deleted the offending tweet --- all with one click on the red ``Delete'' button.
 
-\begin{center}$\therefore$\end{center}
-
 While the two interventions were substantially different, I experienced the
 respective enforcement processes as similarly punitive, with little
 consideration given to my voice, agency, and dignity. Moreover, my prompt to
-\DALLE\ was intercepted before generating images; generated images, in turn, are
+\DALLE{} was intercepted before generating images; generated images, in turn, are
 not publicly visible. Similarly, my tweet was taken down within a couple of
 seconds after posting at most. Given the limited reach of my Twitter account,
 which had barely 140 followers at the time, and the early hour, just before
@@ -50,24 +45,17 @@ besides me. In short, thanks to algorithmic content moderation no-one could have
 been harmed by prompt or tweet. But that also renders any justification for
 meting out punishment null and void.
 
-When OpenAI threatened me with account suspension, I immediately recognized the
-punitive thrust shared with Twitter's content moderation and started wondering
-about the extent of punitive algorithmic interventions. This paper is a first
-attempt to map just that. In doing so, I focus on content moderation, which
-arguably is \emph{the} business value proposition of social
+When \DALLE{} threatened me with account suspension, I immediately recognized
+the punitive thrust shared with Twitter's content moderation and became curious
+about the extent of such punitive algorithmic interventions. This paper is a
+first attempt to map just that extent. In doing so, I focus on content
+moderation, which arguably is \emph{the} business value proposition of social
 media~\cite{Masnick2022a,Patel2022a} and lately of considerable public interest.
-I also discuss the California Bar's reliance on exam proctoring
-software~\cite{FrancisWard2021b} because apparently not even massive failure ---
-a false positive rate 80$\mspace{1mu}\times$ the true positive rate or \emph{a
-third of all exam takers} --- can dislodge use of that \AI{} snake oil.
 
-At the same time, the California Bar is not the only institution subjugating
-exam takers to this type of software. Many universities seem all too eager to
-validate Michel Foucault's contention that educational institutions, like jails,
-are primarily disciplinary institutions~\cite{Foucault1979}. Other examples
-include credit scoring~\cite{Anonymous2018}, debt
-assessment~\cite{Yampolskiy2015}, fraud prevention~\cite{Kugel2022},
-grading~\cite{Lam2020}, job and school
+At the same time, there is no shortage of effectively punitive algorithmic
+interventions. Examples include credit scoring~\cite{Anonymous2018}, debt
+assessment~\cite{Yampolskiy2015}, exam proctoring~\cite{FrancisWard2021b}, fraud
+prevention~\cite{Kugel2022}, grading~\cite{Lam2020}, job and school
 applications~\cite{Anonymous2016,Hall2012,Hall2020a,Stockton2020}, personal
 vendettas~\cite{Casovan2022}, productivity
 monitoring~\cite{Covert2022,KantorSundaramea2022,Rosenblat2018}, and screening
@@ -80,219 +68,72 @@ few years~\cite{Sainato2022}.
 
 To map the \emph{stochastic penal colony}~\emoji{desertisland}, i.e., the
 conceptual space of punitive algorithms, this paper first explores OpenAI's
-enforcement process in Sec.\ \ref{sec:dalle:supermax} and then Twitter's in
-Sec.\ \ref{sec:tweet:da:fe}. For each firm, it leverages a close textual reading
+enforcement process in Sec.~\ref{sec:dalle:supermax} and then Twitter's in
+Sec.~\ref{sec:tweet:da:fe}. For each firm, it leverages a close textual reading
 of firm policies and other communications to enumerate the many ways its
 enforcement process deprives targeted users of voice, agency, and dignity. It
 also contrasts these \emph{Kafkaesque co-factors} with major failures of neutral
 and trustworthy content moderation.
 
-Sec.\ \ref{sec:census} shifts from auto-ethnographic case studies based on
+Sec.~\ref{sec:census} shifts from auto-ethnographic case studies based on
 procedural justice~\cite{Tyler2003,Tyler2006,Tyler2007} to a cumulative
 perspective, performing a comprehensive comparison of popular non-Chinese social
-media and their governance based on their transparency reports. I distilled the
-comparison criteria from previous
-studies~\cite{BradfordGriselea2019,CrockerGebhartea2019}, best practices
-recommendations~\cite{TheSantaClaraPrinciples2021}, and the \EU's new legal
-requirements~\cite{EuropeanParliamentAndCouncil2022}. Results suggest that
-content moderation outcomes are excessively punitive across all social media
-platforms. Telegram is the only exception, but only because it doesn't perform
-meaningful content moderation. Results also point to significant short-comings
-in all platforms' transparency reporting. They urgently need to shape up, since
-the Digital Services Act's transparency and audit requirements become effective
-for the largest platforms some time this year and the rest February 2024.
+media and their governance based on their transparency reports. Results suggest
+that content moderation outcomes are excessively punitive across all social
+media platforms. Telegram is the only exception, but only because it doesn't
+perform meaningful content moderation. Results also point to significant
+short-comings in all platforms' transparency reporting. They urgently need to
+shape up, since the \EU's Digital Services Act's transparency and audit
+requirements become effective within the year.
 
-Sec.\ \ref{sec:csam} tests the limits of transparency reporting by trying to
-correlate data on child sexual abuse material (\CSAM) reported by Meta and
-Google with equivalent data reported by the National Center for Missing and
-Exploited Children (\NCMEC). The latter serves as lawful clearinghouse for these
-materials. I included Meta in the comparison because it is responsible for more
-than 90\% of all \CSAM{} reports every year, whereas Google is a distant second.
-The comparison shows that Google's and \NCMEC's statistics are closely matched,
-but Meta's and \NCMEC's are incomparable. Worse, Meta's own public statements
-already suggest that their numbers are inflated. My own analysis only adds to
-the concerns about data quality.
+To contextualize this social media census, Sec.\ \ref{sec:census:validation}
+explores the validity of transparency disclosures by comparing data released by
+Google, Meta, and the National Center for Missing and Exploited Children.
+Sec.~\ref{sec:census:limits} explores what transparency disclosures don't even
+capture on the example of industry-leading Meta.
 
-Sec.\ \ref{sec:bar:exam} preempts calls for reform by demonstrating the
-entrenchment of punitive algorithms on the example of the October 2020 bar exam
-in California. Despite already punitive rules for in-person exams, outright
-abusive rules for remote exams, proctoring software that is unreliable,
-ineffective, and insecure, a history of technical failures, direct appeals by
-experts in technology and legal education, the Bar failing at even the most
-basic transparency about its handling of exam rule violations, and the Bar
-otherwise policing mostly Black solo-practitioners, no substantial change has
-been forthcoming besides a return to in-person exams. I hence conclude this
-section by speculating about the abolishment of the California Bar. While that
-may sound outlandish at first, there is in fact solid precedent.
+Whereas Sec.~\ref{sec:census}'s census goes broad, Sec.~\ref{sec:escape} goes
+deep again by experimentally exploring the reason for my first prompt's
+rejection as well as my successful strategy for circumventing \DALLE's content
+moderation. Since I did seek to create violative content related to the topics
+of this paper but have little tolerance for realistic gore, I restricted myself
+to images that would be suitable as editorial content for a magazine version of
+this paper. Thanks to that restriction, images are not substantially more
+disturbing than a Francis Bacon painting and I included highlights in
+Appendix~\ref{adx:dalle:fromkafkawithlove} on
+page~\pageref{adx:dalle:fromkafkawithlove}.
 
-Sec.\ \ref{sec:escape} provides a counterpoint by exploring my successful
-strategy for circumventing \DALLE's content moderation. Since I wanted to create
-violative content related to the topics of this paper but have little tolerance
-for the realistic depiction of gore, I placed an important restriction on my
-experiments: The goal was to create content that isn't just violent and/or
-disturbing but also visually compelling. In particular, images should be
-suitable as editorial content for a magazine version of this paper. Thanks to
-that restriction, images are not substantially more disturbing than a Francis
-Bacon painting and I am comfortable including highlights with this paper. See
-Appendix~\ref{adx:dalle:fromkafkawithlove} starting on
-page~\pageref{adx:dalle:fromkafkawithlove}. Finally, Sec.\ \ref{sec:conclusion}
-concludes this paper.
+The hands-on investigation of \DALLE\ surepitiously surfaced two additional
+limitations of OpenAI's content policy and automated enforcement. First, \DALLE\
+effectively discriminated against Christian religious beliefs, simultaneously
+censoring too little and too much, with the latter including the crucifixion.
+Between me running these experiments in August through October 2022 mostly and
+completing this paper in February 2023, OpenAI has updated its censor and now
+accepts the crucifixion and hence is not as discriminatory anymore. Second,
+OpenAI's post-processing of prompts to diversify gender and race representation
+is outright dangerous~\cite{OpenAI2022e,Sparkes2022}. For some prompts, doing so
+results in grotesquely racist imagery. Worse, once I knew what to look for, I
+recognized similar, though more subtle effects in earlier generations. These
+images are \emph{not} reproduced in this paper or its appendices; though they
+are included with the supplemental materials.
 
-My investigations of \DALLE\ surepitiously surfaced two additional shortcomings
-of OpenAI's content policy and automated enforcement. First, as discussed in
-Sec.\ \ref{sec:dalle:supermax}, \DALLE\ effectively discriminates against
-Christian religious beliefs, simultaneously censoring too little, letting
-through images that are in poor taste at best, and also censoring too much,
-suppressing images with the crucifixion of Christ. Second, as discussed in Sec.\
-\ref{sec:escape}, OpenAI's post-processing of prompts to diversify gender and
-race representation is dangerous~\cite{OpenAI2022e,Sparkes2022}. For some
-prompts, doing so results in grotesquely racist imagery. Worse, once I knew what
-to look for, I recognized similar, though more subtle effects in earlier
-generations. These images are \emph{not} reproduced in this paper or its
-appendices.
+Finally, Sec.\ \ref{sec:conclusion} concludes this paper.
+Appendix~\ref{adx:research-ethics} discusses research ethics for project and
+paper while also declaring potential conflicts of interest.
 
 Before diving into the substance of this pointed critique of algorithmic
-interventions, Sec.\ \ref{sec:penal:context} situates the stochastic penal
-colony in its conceptual, political, and historical context (). Sec.\
-\ref{sec:criteria} further clarifies methodological similarities with and
-differences to procedural justice. The latter not only prepares for the case
-studies in Sec.\ \ref{sec:dalle:supermax} and Sec.\ \ref{sec:tweet:da:fe}, but
-also leads to a more precise definition of the stochastic penal colony and its
-differences from Foucault's disciplinary institutions.
+interventions, it helps to provide the necessary conceptual context and
+methodological foundation. Sec.\ ref{sec:context} covers the conceptual,
+political, and historical context. Sec.\ ref{sec:criteria} explores
+methodological similarities to and differences from procedural justice. Along
+the way, it also provides a more precise definition of the stochastic penal
+colony.
 
 
-\subsection{The Conceptual, Political, and Historical Context}
-\label{sec:penal:context}
+\subsection{Conceptual, Political, and Historical Context}
+\label{sec:context}
 
-In \emph{Discipline and Punish}, Foucault traces the transition from punishment
-as a public and usually deadly spectacle to the modern prison and other
-disciplinary institutions~\cite{Foucault1979}. He argues that this transition
-did not happen for humanist concerns, as the result of reform efforts. Instead,
-the driving force was the destabilizing impact of public executions. By being
-rather ostentatious displays of power, they turned the criminal into sympathetic
-victim and executioner as well as sovereign into targets of popular resentment.
-By simultaneously rationalizing, tempering, and distributing the application of
-power, penal institutions avoid these downsides while also instilling individual
-discipline. Conveniently, discipline further obviates need for more direct
-application of power, resulting in a virtuous cycle that begets other
-disciplinary institutions, including schools, hospitals, and eventually
-factories. Yet that same institutionalization of discipline also puts
-constraints on the sovereign's exercise of power and leads to an attendant loss
-of centralized control. That last aspect is often lost on Foucault's readers ---
-despite the fact that his idealized disciplinary institution, the panopticon,
-simply cannot scale.
-
-Before the advent of cheap hardware sensors and powerful machine learning
-models, re-centralizing control through ubiquitous surveillance was not
-practical. While East Germany did manage just that for 40 years, its lo-tech
-approach to re-establishing centralized control was too expensive to be
-sustainable in the long run. In one district, 18\% of the population were active
-informants for the Stasi, that country's vicious state security
-service~\cite{Kellerhoff2022}. In contrast, Xina is reaping the benefits of
-readily available sensors and algorithms. By rolling out ever more intrusive yet
-centralized control, Xina is erasing the distinction between prison and
-not-prison at scale~\cite{Grauer2021,MozurXiaoea2022,SmithIV2016}. Ironically,
-some of that is driven by American innovations on predictive
-policing~\cite{PerryMcInnisea2013,SmithIV2016,Sprick2019}. But the excessive
-intrusiveness of the Han n\'ee Borg declaring ``Resistance is future. You will
-be assimilated!'' also makes Xina's \emph{surveillance state} an unsuitable
-model for algorithmic control in western democracies.
-
-The \emph{carceral state} in the United States comes closer~\cite{Simon2007}
-(with the term also originating in Foucault's writing). It has the largest
-number of prisoners in the world — as of 2022, the country accounted for 4.25\%
-of the world population~\cite{Worldometer2023} and 20\% of people in prisons or
-jails across the world~\cite{SawyerWagner2022} — and the highest incarceration
-rate in the world — at 625 per 100,000 in 2019, the US imprisoned
-6.0$\mspace{1mu}\times$ as many people as Canada, 9.4$\mspace{1mu}\times$ as
-Germany, and 17.5$\mspace{1mu}\times$ as Japan~\cite{WorldPrisonBrief2023}.
-Additionally, roughly double as many people are under the control of the
-carceral state through probation or parole and may be locked up at a moment's
-notice for largely arbitrary reasons~\cite{SawyerWagner2022}. Next, many of the
-imprisoned are not there because they have been convicted of a crime: Half of
-those imprisoned in local jails (as opposed to federal prisons) are there for
-pretrial detention~\cite{SawyerWagner2022}.
-
-Worse, mass incarceration disproportionally impacts poor and minority
-populations. Notably, Black Americans made up 12\% of the US adult population in
-2018 but also made up 33\% of all people serving sentences greater than one year
-in state or federal prison~\cite{Gramlich2020}. Incredibly, that is after a 34\%
-reduction of their incarceration rate since 2006 and comparatively smaller
-reductions for other ethnicities. They also tend to be locked up, far from home,
-in districts that are far more white than their homes, cutting them off from
-family and friends~\cite{WagnerKopf2015}.
-
-As we'll see over the next three sections, some of the more extreme and hence
-also white supremacist practices of the American carceral state have direct
-equivalents in social media content moderation. They notably include the
-(figurative) death penalty as well as three strikes rules. Vice versa, the
-carceral state is an early and aggressive adopter of algorithmic enforcement
-technologies~\cite{AngwinLarsonea2016,EPIC2020,Hao2019,ReddenODonovanDixea2020,Yampolskiy2016}.
-At the same time, algorithmic enforcement clearly isn't limited to the
-government. Corporations universities are deploying punitive interventions just
-as well outside the criminal injustice system. In doing so, they may even
-innovate on punishment. As I'll show in Sec.~\ref{sec:tweet:da:fe}, Twitter's
-enforcement process harkens back to punishment as a performance, but it does so
-while (ingeniously) avoiding the destabilizing public spectacle. In short, this
-paper is concerned with algorithmic interventions outside of the immediate
-control of the sovereign state. That also distinguishes this work from previous
-papers, which correctly point towards the punitive potential but incorrectly do
-so in the context of the surveillance and carceral
-states~\cite{DehlendorfGerety2021,McElroyWhittakerea2021}.
-
-I am proposing the \emph{penal colony} as closest historical precedent and as
-fitting model for contemporary algorithmic practices outside the criminal
-injustice system. The French version of \emph{transportation} --- the practice
-of sending prisoners to far locales --- is far more recent than we'd probably
-like to acknowledge. France began turning French Guiana into one large penal
-colony from 1852 onwards --- after the British had already begun unwinding
-theirs --- and closed the colony only in
-1953~\cite{Aldrich2010,Anderson2018,Spierenburg2009}. For the last 70 years or
-so, transportation was reserved for convicts sentenced under France's own three
-strikes laws. It also was almost always terminal: Only 2,000 out of 70,000
-prisoners returned to France during their
-lifetimes~\cite{WallechinskyWallace1978}. For that reason, prisoners referred to
-the penal colony as ``dry guillotine''~\cite{Furlong1913,ReneBelbenoit1938}. Yet
-discipline was surprisingly inconsistent, even lax, depending on location.
-
-Foucault had surprisingly little to say about the penal
-colony~\cite{Redfield2005}, even though transportation must be understood as a
-distinct intermediate stage in history. As such, it combines aspects from both
-public executions and prisons. Notably, like public executions, transportation
-usually is terminal, but unlike public executions, the penal colony is
-discretely out of sight. The penal colony also incorporates a disciplinary
-component, typically creating the infrastructure for more general colonization.
-The \emph{stochastic penal colony} preserves that distinctness and stands apart
-from both carceral and surveillance states. As already pointed out above, it
-does share characteristics with the American carceral state. It also relies on
-the same technology as Xina's surveillance state. But there is no central
-control or intent. And while its downsides, predictably, worsen along racial
-lines, it ensnares the privileged, including many white people, almost as
-easily, as I'll illustrate in Sec.~\ref{sec:bar:exam}'s case study on the bar
-exam.
-
-The remoteness of the penal colony, both literally and figuratively, also makes
-it an effective investigative device that renders contemporary practice strange
-again and hence amenable to analysis. While that renders the stochastic penal
-colony a largely ahistorical concept, its intellectual lineage does trace right
-back to the former penal colony in French Guiana: The stochastic penal colony
-obviously draws on Franz Kafka's 1919 short story \emph{In the Penal
-Colony}~\cite{Kafka1995}. Kafka, in turn, was influenced~\cite{Robertson2017} by
-Octave Mirbeau's 1899 novel \emph{The Torture Garden}~\cite{Mirbeau2008}. While
-taking place in an imaginary China, its year of publication and dedication ---
-``To Priests, Soldiers, Judges / to mean who rear, lead, or govern men / I
-dedicate these pages of murder and blood.'' --- point to the Dreyfus affair as
-primary inspiration. Alfred Dreyfus, a Jew and French military officer, had been
-falsely convicted for espionage in early 1895 and again in 1899 --- with rampant
-antisemitism leading to the systematic suppression of exculpatory evidence and
-complete disregard of the real spy's public confession in 1898. As a result, Mr
-Dreyfus spent 1895--1899 on Devil's Island off the coast of French Guiana, a
-particularly harsh colony in the network. Coincidentally, the Dreyfus affair
-also popularized the word ``intellectual,'' albeit originally as a
-pejorative~\cite{Drake2005,IntellectualsAndTheMediaInFrance2021}.
-
-Besides, the stochastic penal colony~\emoji{desertisland} provides an excellent
-home for stochastic parrots~\emoji{parrot}~\cite{BenderGebruea2021}!
+\input{sections/context}
 
 
 \subsection{Foundational Criteria}
@@ -301,8 +142,7 @@ home for stochastic parrots~\emoji{parrot}~\cite{BenderGebruea2021}!
 In the auto-ethnographic case studies in the following two sections, I focus on
 the procedural aspects of policy enforcement. In part, that reflects the fact
 that the outcomes aren't particularly interesting. I still have both accounts
-and they both still work — with one exception for Twitter, as discussed in Sec.\
-\ref{sec:tweet:da:fe}. In part, that reflects the fact that I, just like the
+and they both still work. In part, that reflects the fact that I, just like the
 people observed by Tyler and others, evaluate the justice of an intervention
 based on its process. That endorsement is in fact based on an inadvertent
 experimental outcome: I only learned of Tyler's work after having performed a
