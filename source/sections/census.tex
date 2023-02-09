@@ -1,0 +1,305 @@
+% !TEX root = ../main.tex
+
+\section{A Social Media Census}
+\label{sec:census}
+
+In her 2018 article for the Harvard Law Review~\cite{Klonick2018}, Kate Klonick
+traces the early history of content moderation at Facebook, Twitter, and
+YouTube. She also discusses their privileged position when it comes to speech,
+and proposes a new label, and also legal role, to go along with that,
+\emph{governance}. Her claims about social media's grounding in the tradition of
+free speech seem wilfully oblivious to capitalist reality, which, for example,
+grants Mr Zuckerberg over 50\% of voting shares for Meta and hence autocratic
+control~\cite{LauricellaNorton2021}. But her notion of governance is compelling.
+Alas, governance requires accountability requires transparency. This section
+tries to provide just that by comparing non-Chinese social media based on their
+content policies and transparency reports. For good measure, I am also including
+the \EU's Digital Services Act (\DSA)~\cite{EuropeanParliamentAndCouncil2022}.
+
+To determine which social media to include in the census, I started with
+Buffer's list of the 20 most popular platforms~\cite{Lua2022}. I treat Facebook
+and Instagram as one platform, since Meta sanctions users based on their posts
+to either social network. I drop the five platforms targeting China, since they
+are unlikely to adhere to Klonick's governance model. I also drop Facebook
+Messenger, Microsoft Teams, Skype, and WhatsApp, since they mostly enable
+private communication between users. While that arguably is the predominant use
+case for Telegram, too, it stickers, channels, and bots are public and require
+moderation, as even Telegram acknowledges in their \FAQ. Hence, Telegram
+remains. Finally, I add Tumblr because that social network has become a popular
+destination for users leaving Twitter as well as employees laid off by Twitter
+in the wake of Elon Musk's takeover of the firm.
+
+To determine the criteria for the census, I iterated a few times over previous
+studies~\cite{BradfordGriselea2019,CrockerGebhartea2019}, best practices
+recommendations~\cite{AccessNowACLUFoundationOfNorthernCaliforniaea2021}, and
+the \EU's \DSA. I eventually settled on the following hierarchy of five aspects
+with 1--4 actual criteria per aspect and 14 criteria total. I found that the
+arrangement makes it easier to reason about the completeness of criteria; I hope
+that holds for you, too. The emoji serve as column headers in the results table.
+
+% The \hfill below ensures that there is a linebreak after the description text
+% (\\ or \newline don't work). If the description was followed by regular text
+% and not an enumerate environment, `\hfill\\` would be required.
+% See https://tex.stackexchange.com/questions/35481/description-list-how-to-put-the-definition-on-a-new-line
+
+\begin{description}
+\item[The violative content itself]\hfill
+    \begin{enumerate}
+        \item \emoji{tabs}~Prevalence of violative content
+        \item \emoji{ruler}~Reach of violative content
+    \end{enumerate}
+\item[The entity labelling violative content as such]\hfill
+    \begin{enumerate}[resume]
+        \item \emoji{temple}~Government inquiries and removal requests
+        \item \emoji{enragedface}~Platform users
+        \item \emoji{robot}~Algorithmic enforcement
+        \item \emoji{judge}~Human moderation, including its mental health impact
+    \end{enumerate}
+\item[Sanctions on content and users]\hfill
+    \begin{enumerate}[resume]
+        \item \emoji{label}~Warning labels
+        \item \emoji{fog}~Visibility reduction and blacklists (aka shadow banning)
+        \item \emoji{wastebasket}~Content removal
+        \item \emoji{biohazard}~Sanctions on users
+    \end{enumerate}
+\item[Due process protections]\hfill
+    \begin{enumerate}[resume]
+        \item \emoji{pager}~Meaningful notification
+        \item \emoji{scales}~Appeals and reversals
+        \item \emoji{eye}~External oversight, including conflict resolution and auditing
+    \end{enumerate}
+\item[Cultural proficiency and fluency]\hfill
+    \begin{enumerate}[resume]
+        \item \emoji{globeafrica}~Different countires and cultures
+    \end{enumerate}
+\end{description}
+
+Table~\ref{table:governance} shows the results of the social media census. Eight
+platforms have published content policies and release transparency reports
+covering their content moderation. However, three platforms fall short of even
+these basic niceties of governance. Telegram has no policy and makes no
+transparency disclosures. Quora has a policy but makes no disclosures. Finally,
+Tumblr has a policy but discloses only governmental requests and intellectual
+property claims. While the platforms' prohibitions have strikingly similar
+names, prior work has demonstrated substantial differences in definitions and
+enforcement~\cite{FieslerJiangea2018,PaterKimea2016}.
+
+\begin{table}
+\caption{A survey of governance practices for social media. \emph{Account
+    Sanctions} are coded W for warning, a number for as many days of forced
+    timeout, and X for account suspension. \emoji{robot} and \emoji{judge}
+    sharing a checkmark means the transparency report does not distinguish
+    between automated and human review.}
+\label{table:governance}
+\begin{tabular}{LcCc@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\quad}cC}
+
+    & \textbf{Account} & \textbf{Latest}
+& \multicolumn{14}{c}{\textbf{Included in Transparency Report\T}} & \\
+
+\multirow{-2}{*}{\textbf{Platform}}
+& \textbf{Sanctions}
+& \textbf{Report}
+& \emoji{tabs}
+& \emoji{ruler}
+& \emoji{temple}
+& \emoji{enragedface}
+& \emoji{robot}
+& \emoji{judge}
+& \emoji{label}
+& \emoji{fog}
+& \emoji{wastebasket}
+& \emoji{biohazard}
+& \emoji{pager}
+& \emoji{scales}
+& \emoji{eye}
+& \emoji{globeafrica} \T\B
+& \multirow{-2}{*}{\emoji{floppydisk}} \\ \hline
+
+\href{https://transparency.fb.com/policies/community-standards/}{FB/IG}
+& \href{https://transparency.fb.com/enforcement/taking-action/restricting-accounts/}{W,1,3,7,30,X}
+& \href{https://transparency.fb.com/data/community-standards-enforcement/}{Q3 2022}
+& \MK & & \MK & \MK & \MMKK &
+& & \MK & & \MK & \MK & \MK & &
+\href{https://transparency.fb.com/sr/community-standards/}{CSV} \T\\
+
+\href{https://www.linkedin.com/legal/professional-community-policies}{LinkedIn}
+& & \href{https://about.linkedin.com/transparency/community-report}{H1 2022}
+& & & \MK & \MK & \MMKK
+& & & \MK & & & & & & \\
+
+\href{https://policy.pinterest.com/en/community-guidelines}{Pinterest}
+& & \href{https://policy.pinterest.com/en/transparency-report}{Q1+2 2022}
+& & \MK & \MK & \MK & \MK & \MK & &
+& \MK & \MK & & \MK & & & \\
+
+\href{https://help.quora.com/hc/en-us/articles/360000470706-Platform-Policies}{Quora}
+& & & & & & & & & & & & & & & & & \\
+
+\href{https://www.redditinc.com/policies/content-policy}{Reddit}
+& \href{https://www.redditinc.com/policies/transparency-report-2021-2/}{W,3,7,X}
+&
+\href{https://www.redditinc.com/policies/transparency-report-2021-2/}{2021}\,/\,\href{https://www.redditinc.com/policies/mid-year-transparency-report-2022}{H1
+2022}
+\hidden{\href{https://www.reddit.com/r/redditsecurity/comments/rgikn1/q3_safety_security_report/}{Q3
+2021}} & \MK & & \MK & \MK & \MK & \MK & & & \MK & \MK & \MK & \MK & & \MK & \\
+
+\href{https://values.snap.com/privacy/transparency/community-guidelines}{Snap}
+& & \href{https://values.snap.com/privacy/transparency}{H1 2022}
+& & \MK & \MK & \MK & & & &
+& \MK & \MK & & & & \MK &
+\href{https://assets.ctfassets.net/kw9k15zxztrs/4aBF69gFiv4l9x7LzAgY8X/578e44f80fc51d0ebc52e04fe3d8c857/Snap_H1_2022_TR.csv}{CSV}\\
+
+Telegram & & & & & & & & & & & & & & & & & \\
+
+\href{https://www.tiktok.com/community-guidelines}{TikTok}
+& & \href{https://www.tiktok.com/transparency/en/community-guidelines-enforcement-2022-3/}{Q3 2022}
+& \MK & \MK & \MK & \MK & \MMKK & &
+& \MK & \MK & & & & \MK &
+\href{https://sf16-va.tiktokcdn.com/obj/eden-va2/nuvlojeh7ryht/Transparency_CGE_2022Q3/English_CGE_2022Q3.xlsx}{XLS} \\
+
+\href{https://www.tumblr.com/policy/en/community}{Tumblr}
+& & \href{https://transparency.automattic.com/tumblr/}{H1 2022}
+& & & \MK & & & & & & & & & & & & \\
+
+\href{https://help.twitter.com/en/rules-and-policies/twitter-rules}{Twitter}
+& \href{https://help.twitter.com/en/rules-and-policies/enforcement-options}{W/0.5--7/X}
+& \href{https://transparency.twitter.com/en/reports/rules-enforcement.html#2021-jul-dec}{H2 2021}
+& & \MK & \MK & \MK & \MMKK &
+& & \MK & \MK & \MK & & & &
+\href{https://transparency.twitter.com/content/dam/transparency-twitter/download/rules_enforcement_test.zip}{CSV} \\
+
+\href{https://www.youtube.com/howyoutubeworks/policies/community-guidelines/}{YouTube}
+& \href{https://support.google.com/youtube/answer/2802032}{W,7,14,X}
+& \href{https://transparencyreport.google.com/youtube-policy/removals}{Q3 2022} \B
+& \MK & \MK & \MK & \MK & \MK & \MK & & & \MK & \MK & & \MK & & \MK & \\
+\hline
+
+\multicolumn{3}{L}{\textbf{Required by EU Digital Services Act\T}} & &
+& \euflag & \euflag & \euflag & & \euflag & \euflag & \euflag & \euflag &
+\euflag & \euflag & \euflag & & \euflag \\
+
+\end{tabular}
+\end{table}
+
+Still, a few prohibitions do stick out. Pinterest's ``Harassment and criticism''
+is chilling in its pathologizing overreach. Then again, Tumblr's
+``Misattribution or Non-Attribution'' is endearing --- but probably not that
+practical. Frankly, I am troubled by the many prohibitions against
+misinformation~\cite{Douek2021,Masnick2019}. While such prohibitions may seem
+like a good idea in theory, the practice of outsourced content reviewers
+deciding in 30 seconds which statements are science fact and which are science
+disinformation should disabuse anyone of the idea. In addition to content
+moderators, the very authorities deciding on what counts as disinformation are
+often slow to adjust to new information and/or have their own fact-defying
+agendas. Remember that, during the first few months of the pandemic, both WHO
+and CDC falsely claimed that facemasks were ineffective against Covid-19.
+Finally, censoring bona fide disinformation may reduce people's exposure but it
+also does nothing towards changing their minds, with the likely result that
+people start mistrusting the platform.
+
+When it comes to sanctioning accounts, \emph{all} social media (besides
+Telegram) fall in one of two groups. The first group seems to model their
+sanctions on the Queen of Hearts from \emph{Alice's Adventures in Wonderland},
+enthusiastically screaming ``Off with their heads!'' and then even figuratively
+following through~\cite{Carroll2008}. The second group manages to improve on
+that (low) standard, but only barely, by modelling their sanctions on
+California's 1994 ``three strikes'' law~\cite{Vitiello2002}. A decade later, the
+law accounted for a quarter of the state's prisoners, but did not curb
+crime~\cite{BrownJolivette2005}, increased homicides~\cite{MarvellMoody2001},
+and led to even more Black men being locked up for even
+longer~\cite{BrownJolivette2005}. Three decades after enactment, the most
+salient change is that the law accounts for a third of all the state's
+prisoners~\cite{BirdGillea2022}. In short, the uniformity and severity of these
+sanctions put all social media squarely into the stochastic penal colony.
+
+That conclusion does not change if I avoid the damning analogues and restrict
+the framing to content moderation only: When it comes to judging the severity of
+violative content (with possible exception of \CSAM\ and terrorism), Americans,
+including moderating practitioners, and international audiences alike reason
+along many fine-grained axes and thereby make subtle
+distinctions~\cite{JiangScheuermanea2021,ScheuermanJiangea2021}. International
+audiences only add more variability, depending on culture. And to all that
+subtle reasoning and weighing, social media respond with one emphatic ``Off with
+their heads!'' Yeah, that's appropriate. Furthermore, \AI{}-based enforcers
+increasingly intercept content \emph{before} it is posted. That makes it
+significantly harder to justify \emph{any} sanction. Yet platforms just ignore
+that inconvenient fact.
+
+The table also makes ample clear that all platforms need to become more
+transparent and independently audited if they want to meet the requirements of
+the \EU's Digital Services Act (\DSA). The timetable for doing so is tight. By
+mid-February of this year, all platforms must have reported user numbers to the
+\EU, so that the Commission can determine which of the \DSA's tiered
+requirements apply. Once the Commission has designated a platform as very large
+(the \DSA's upmost tier), the firm has only four months to comply with the law.
+All other platforms have until February 2024. Penalties for non-compliance can
+be steep: Each fine is capped at 6\% of global revenue for the previous year.
+
+As long as the \EU\ vigorously enforces the law, I personally see only upsides
+to the \DSA. Though, its provisions for reporting account suspensions are weaker
+than I would like, since they only cover some suspensions.
+
+
+\subsection{Validating the Transparency Data}
+\label{sec:census:validation}
+
+\input{sections/csam}
+
+
+\subsection{What the Transparency Data Doesn't Cover}
+\label{sec:census:limits}
+
+It is imperative to keep in mind that social media's governance efforts as
+reflected in their transparency reports provide a partial picture only. Case in
+point is again Meta n\'ee Facebook. Its governance processes and transparency
+efforts, which have been reviewed by a committee of independent domain
+experts~\cite{BradfordGriselea2019}, are industry-leading. Yet the firm also has
+an astoundingly deadly foreign record. By distributing and amplifying sectarian
+messaging, Meta has directly contributed to genocide not once but twice. As a
+result, 25,000 Rohingya were murdered in Myanmar from August 2017 to August 2018
+and 700,000 were driven into a refugee camp across the border in Bangladesh,
+which has become the densest settlement on
+Earth~\cite{DeGuzman2022,HumanRightsCouncil2018}. Also as a result, between
+385,000 and 800,000 Tigrayans were murdered in Ethiopia's northern-most
+province~\cite{AnnysVandenBemptea2021,ChothiaBekit2022}, 882,000 people turned
+into refugees, and 4.51 million people were internally displaced between
+November 2020 and November 2022~\cite{UNICEF2023}.
+
+In both countries, Meta put its profits well before any other considerations
+including content moderation and safety. The firm keeps entering foreign
+markets, not head but sales office first, even if user interfaces, policy
+documents, help pages, content moderation tools, and machine learning models
+have not yet been localized. In Myanmar, Facebook paid local cell phone
+providers to provide their customers with free access through the app. As a
+result, ``internet'' and ``Facebook'' are largely synonymous in Myanmar to this
+day~\cite{Strom2016}. At the same time, Facebook had no employees who speak
+Burmese in early 2017. It also ignored warnins from human rights organizations.
+Then it got stymied by the Burmese legacy encodings for text, which did make it
+much harder to process such text~\cite{LaGrowPruzan2019,Wade2022}. When the firm
+finally got its act together, it was too late: The genocide was well under
+way~\cite{McLaughlin2018,MilkoOrtutay2022,Mozur2018,Ortutay2022}.
+
+A little more than two years later, that same basic dynamic played out in
+Ethiopia~\cite{Allen2022,Gilbert2020,GlobalWitness2022,Ilori2020,Malik2022,ElliottChristopherea2021,ZelalemGuest2021,RobinsEarly2021}.
+Facebook had opened its first office in Africa, a \emph{sales} office, in
+2015~\cite{Wagner2015}. When it started pushing more aggressively into African
+countries in 2018, it insisted it had learned its lessons~\cite{Tiku2018}. Yet
+it opened its first content moderation office only in 2019~\cite{Agutu2019}. The
+firm obviously lacked an appreciation of the richness of dialects and languages
+spoken across the
+continent~\cite{FickDave2019,JacksonTownsendea2022,Madung2021}. It exploited
+local workers~\cite{AlSibai2022,Perrigo2022,Perrigo2023}. When it ignored
+warnings again, its own Oversight Board had to sound the alarm~\cite{Faife2021}.
+When the firm finally got its act together, it was too late: The genocide was
+well under way.
+
+Since Meta is publicly traded, you may wonder what shareholders think about that
+abysmal record. They aren't pleased and repeatedly tried holding the firm's
+\CEO\ and Chairman of the Board Mark Zuckerberg accountable. They held votes to
+strip him of his titles in 2018~\cite{Butler2018}, 2019~\cite{Sumagaysay2019},
+2020~\cite{McRitchie2020}, 2021~\cite{Nix2021}, and 2022~\cite{WatersAgnew2022},
+which resulted in clear majorities for doing so in 2019, 2021, and 2022. But
+thanks to some funny business with the allocation of votes per share, Mr
+Zuckerberg controls the majority of votes and keeps on voting for himself. So
+how much transparency and accountability can we realistically expect from a
+genocidal autocracy?
