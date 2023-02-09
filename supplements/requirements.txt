@@ -1,9 +1,10 @@
 nbformat    # Notebook format
 ipykernel   # Notebook runtime
 pandas
-jinja2      # Formatting for Pandas
-matplotlib  # Graphs for Pandas
+openpyxl    # Pandas: Read Excel
+jinja2      # Pandas: Format floats
+matplotlib  # Pandas: Graphs #1
 geopandas
-mapclassify # Principled strategies for choropleth colors
-kaleido     # Statically saved plots for Plotly
-plotly
+plotly      # Pandas: Graphs #2
+kaleido     # Plotly: Statically saved plots
+mapclassify # Principled classification of choropleth colors

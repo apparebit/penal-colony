@@ -20,10 +20,13 @@ here in the supplemental materials. The prompts are below and the images in the
 `racist-images` subdirectory. Please use your own best judgement in using this
 material within the confines of the copyright declaration below.
 
-I am asserting "(C) Copyright 2023 by Robert Grimm" for prompts and generations.
-I am also affirming the fair use provisions of US copyright law and grant a
-nonexclusive license to use the prompts and images in not-for-profit education
-and scholarship. All other rights remain reserved (to prevent any other use).
+I am asserting "(C) Copyright 2023 by Robert Grimm" for the prompts below and
+the images in the `racist-images` folder. Since prompts and images are part of a
+larger effort to circumvent DALL-E 2's controls, they reflect far more than a
+modicum of creativity and hence are copyrightable. At the same time, I am
+affirming the fair use provisions of US copyright law as far as not-for-profit
+education and scholarship are concerned and grant a nonexclusive license for
+those purposes only. All other rights remain reserved.
 
 
 ## The Prompts
