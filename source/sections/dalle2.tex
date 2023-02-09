@@ -3,14 +3,14 @@
 \section{\DALLE~2 Supermax}
 \label{sec:dalle:supermax}
 
-So, back to OpenAI and its warning. As stated in the first sentence --- ``It
-looks like this request may not follow our content policy.''--- the alleged
-policy violation is just that, some violation of some policy. The warning's
-complete lack of specificity directly translates into a lack of actionable
-guidance — beyond obviously not submitting the prompt again. At best, that seems
-just lazy. Like OpenAI couldn't be bothered to engineer a better warning. At
-worst, it feels condenscending: We are being treated as children --- or pets.
-That is the first Kafkaesque co-factor.
+Back to OpenAI and its warning: As stated in the first sentence --- ``It looks
+like this request may not follow our content policy.''--- the alleged policy
+violation is just that, some violation of some policy. The warning's complete
+lack of specificity directly translates into a lack of actionable guidance —
+beyond obviously not submitting the prompt again. At best, that seems just lazy.
+Like OpenAI couldn't be bothered to engineer a better warning. At worst, it
+feels condenscending: We are being treated as children --- or pets. That is the
+first Kafkaesque co-factor.
 
 The first sentence does link to OpenAI's content policy (which I reproduced in
 Appendix~\ref{adx:dalle2:contentpolicy} on
@@ -19,8 +19,8 @@ more help. We click the link and, a moment later, our eyes are immediately drawn
 to the policy's third, bold-faced sentence. It commands:
 
 \begin{quote}
-Do not attempt to create, upload, or share images that are not G-rated or that
-could cause harm.
+\openfatdquo{}Do not attempt to create, upload, or share images that are not
+G-rated or that could cause harm.\closefatdquo{}
 \end{quote}
 
 \noindent{}That command is followed by eleven bulleted and also bold-faced
@@ -121,11 +121,10 @@ be copyrightable and a prompt by itself typically won't have sufficient
 substance. That doesn't prevent OpenAI from asserting ownership. Contract law
 suffices. But the fact that images are not copyrightable by default does
 eliminate powerful instruments for limiting the spread of copyrighted content,
-notably the DMCA takedown notice and Copyright Claims
-Board~\cite{CopyrightClaimsBoard2022}. The former helps with removing
-copyrighted content hosted by American firms and the latter makes for much
-faster decisions than the courts. As added bonus, neither requires a lawyer.
-Alas, OpenAI would have to seek a court order instead.
+notably the DMCA takedown notice and Copyright Claims Board~\cite{CCB2022}. The
+former helps with removing copyrighted content hosted by American firms and the
+latter makes for much faster decisions than the courts. As added bonus, neither
+requires a lawyer. Alas, OpenAI would have to seek a court order instead.
 
 Second and more fundamentally, OpenAI needs to find out about the violative
 image and its provenance from \DALLE before it can do anything about it.
@@ -161,136 +160,57 @@ It has successfully exorcised even the last vestige of humanity from a world in
 thrall to automated processes and quantitative everything. In short, now we all
 are just Condemned, waiting for the harrow of the stochastic enforcer.
 
-\sectionbreak{}
 
-\noindent{}In practice, the firm did soften \DALLE's content policy in
-mid-September and allowed the modification of images with recognizable faces. It
-also replaced the threat of account suspension with the sad kitten and puppy
-cartoon shown in Fig.~\ref{fig:dalle2:cartoon} on page~\ref{fig:dalle2:cartoon}.
-At the beginning of November, the firm further eliminated its terms-of-use
-addendum for \DALLE\ and  declared that users would now own their generations. I
-checked with OpenAI's customer service and they confirmed that this change was
-retroactive.
+\subsection{Is OpenAI Neutral? Can We Trust OpenAI?}
 
-In emails to customers, OpenAI justified the more relaxed rules with
-``improvements in our safety system,'' using the singular system in September
-and a plurality of systems in November~\cite{OpenAI2022f,OpenAI2022g}. That may
-be partially true. But it certainly looks like OpenAI is virtue signalling as
-well. For one, improvements to their system don't justify a retroactive change
-of image ownership. Time and causality only go forward. For two, the content
-policy's provisions against \emph{all} political and health content are
-unusually broad. They also run counter the public interest in a democracy. But
-that makes the two prohibitions harmful. Since they are nonetheless part of the
-content policy, it seems that OpenAI used a very narrow definition of harm and
-was mostly protecting its reputation from controversy.
+Before \DALLE~2's beta opened up the system to users like me, it was available
+to a much smaller number of users, more like a research experiment. The system
+card~\cite{GreenProcopeea2022,ProcopeCheemaea2022} for the original release in
+April 2022 makes clear that \DALLE~2 was, in part, trained with ``publicly
+available sources''~\cite{MishkinAhmad2022}, which in all likelihood includes
+Internet-sourced data such as the LAION-400M
+dataset~\cite{SchuhmannVencuea2021}. While OpenAI has declined to elaborate on
+the exact sources for \DALLE's training data, we know that such Internet-sourced
+datasets are anything but safe~\cite{BirhanePrabhuea2021}. That makes \DALLE{}
+unsafe by design.
 
-If I were to speculate, I'd say that the far bigger reason for OpenAI making
-changes to its policies is the open source release of Stable Diffusion on August
-22, 2022. Unlike \DALLE, its source code is readily reusable and its model only
-comes with few prohibitions. However, OpenAI can only gain by emphasizing
-safety, since Stable Diffusion's radical transparency also diverts attention
-from OpenAI. I'll return to this topic at the end of the next subsection.
+\DALLE's content policy comes right out against anything ``that could cause
+harm'' (see Appendix~\ref{adx:dalle2:contentpolicy}). In their \FAQ{} entry for
+\DALLE's warnings~\cite{Natalie2022}, OpenAI claims that ``safe usage of the
+platform is our highest priority.'' Yet \DALLE's content policy disallows
+\emph{all} political and health content. Those prohibitions are not just
+unusually broad, they also run counter the public interest in a democracy.
+Furthermore, health, like politics, has become exceedingly partisan during the
+pandemic. That suggests a very specific kind of harm OpenAI seeks protection
+from --- harm to its reputation.
 
+When OpenAI gave up control over generations in early November 2022, the email
+announcement justified that change with ``improvements in our safety
+systems''~\cite{OpenAI2022g}. That may be the case for generations created after
+those improvements were made. But when I asked customer support about
+generations made before the announcement, they confirmed that the new
+terms-of-use apply retroactively. In fact, OpenAI deleted the webpage with the
+terms-of-use addendum for \DALLE. But if \DALLE's censor required improvements,
+then chances are that older images are unsafe. Otherwise, there would have been
+no need for further safety improvements. Yet OpenAI pretends it can have it both
+ways.
 
-\subsection{Can We Trust \DALLE's Enforcer?}
+What else might have put OpenAI under significant pressure to relinquish
+ownership in generations? What about Stability~AI releasing not just source code
+but also model weights for Stable Diffusion in August
+2022~\cite{StabilityAI2022}? Unlike \DALLE, that public release enables anyone
+with basic fluency in Python and access to recent graphics cards by Nvidia to
+open their own competitor to OpenAI's system, without even paying a license fee
+to Stability~AI. While that is pure speculation on my part, Microsoft's \$10
+billion investment in OpenAI in January 2023 on top of an earlier \$1 billion
+investment illustrates the stakes at play~\cite{Bass2023}.
 
-Before I answer that question with more questions, it helps to understand why my
-first prompt was rejected. The offending prompt was:
-
-\begin{quote}
-The crucified pope, painting by Francis Bacon
-\end{quote}
-
-\noindent{}That prompt may not be G-rated, as OpenAI requires, but it certainly
-should not be prohibited. Francis Bacon is one of the more famous 20$^{th}$
-century painters. The pope and the crucifixion are two out of four major themes
-according to his Wikipedia page~\cite{Wikipedia2023}. The crucifixion of Christ
-also is of critical liturgical importance to Christianity, the largest religion
-in the world, and depictions of it are ubiquitous in houses of worship and
-museums.
-
-Alas, that doesn't tell us why the prompt was rejected. After some
-consideration, I had excluded all prohibitions but those against violence, i.e.,
-the crucifixion itself, or shocking content, i.e., thusly subjugating the leader
-of a major branch of Christianity. Given the threat of account suspension,
-determining which prohibition my prompt violated would take some care. I
-correctly guessed that the occasional violation was acceptable, but that several
-violations in short succession were not. The challenge then was to spread out
-experiments over people or time or both. For my own experiments, including those
-at circumventing \DALLE's censor discussed in Sec.\ \ref{sec:escape}, I either
-stopped using \DALLE\ after a content violation for at least a day or I
-continued using it but only submitted completely innocuous prompts.
-
-Given \DALLE's popularity, I didn't have to recruit anyone to actively probe the
-system. All I needed to do was observe posts to the \DALLE\ subreddit, looking
-for those with religious and particularly Christian themes. Some prompts, such
-as ``A selfie taken by Jesus Christ at The Last Supper''~\cite{Jolleb2022} or
-``the last supper but in the future''~\cite{FlargenstowTayne2022}, fall squarely
-into the canon of Western art. Other prompts, such as ``Jesus Christ riding a
-dinosaur, creating the world, digital art''~\cite{CosasSueltas2022} and ``Jesus
-Christ wielding a Samurai sword and riding on the back of a velociraptor,
-painting''~\cite{WastedEntity2022}, playfully explore the chasm between
-religious dogma and scientific findings. ``Jesus smoking weed, riding a fantasy
-dragon, digital art''~\cite{Erubisile2022} seems to be from a related genre. At
-the same time, prompts such as ``pope swimming in a bowl of soup digital
-art''~\cite{CatsAndDogs99-2022}, ``A 1930s Italian propaganda poster showing
-Jesus Christ extremely proud and muscular''~\cite{FrontAthlete9824-2022},
-``Jesus taking a selfie while on a cross''~\cite{TheDrewDude2022}, and a few
-more~\cite{Blazedchiller272022,InvisibleDeck2022} have little redeeming value
-and might even be considered mildly offensive.
-
-The range of the above prompts strongly suggests that my prompt wasn't flagged
-for shocking content. In fact, I came to that conclusion after seeing only a
-subset of the above images. To validate that violence was in fact the reason, I
-tried ``the pope hanging from the cross,'' ``the pope hanging from cross,'' and
-``the pope on the cross.'' The first two failed and the third resulted in images
-of the pope crawling on a humongous cross, like a kid on a playground. When I
-submitted the first two prompts to OpenAI's moderation API, they were also
-flagged for violence.
-
-\sectionbreak{}
-
-\noindent{}So what to make of this? Should we lobby OpenAI for adding
-``blasphemy'' to an already expansive list of prohibitions? That probably would
-put a stop to images of Jesus taking selfies while dying on the cross and the
-pope creating a health hazard through food. In fact, if I disregard the
-religious relevance, both scenarios still strike me as rather harmful. But where
-do we draw the line? Are images of Jesus hanging out with dinosaurs or dragons
-acceptable? I'm rather fond of them and would consider their censorship a
-distinct loss. What about the crucifixion? It \emph{is} a most gruesome method
-of execution. But what about Jesus dying for our sins? By censoring images of
-that moment, OpenAI \emph{is} effectively discriminating against the largest
-religion in the world. It's disconcerting that the firm does so, even though its
-award-winning NeurIPS paper explicitly considered religion when discussing
-broader impacts~\cite{BrownMannea2020}.
-
-But it gets only worse: OpenAI's content policy explicitly prohibits images
-``that are not G-rated.'' That is, by its own admission, infantilizing and
-deprives us of agency --- and it does so even though we're already paying OpenAI
-for the privilege of using \DALLE\ in hard fiat currency. Why shouldn't we
-decide ourselves what topics we want to explore with \DALLE and which of the
-results, if any, we want to share with confidants, our social network, the
-public? What, for example, if I want to explore deep seated trauma resulting
-from sexual and/or violent abuse?
-
-In its charter~\cite{OpenAI2018}, OpenAI asserts that its goal is creating
-algorithms ``for the benefit of all'' and avoiding to ``unduly concentrate
-power.'' But by simply declaring a huge range of human emotions and activities
-off-limits, however unpleasant and unsavory they may be, OpenAI already prevents
-us from even determining what the full benefits of its text-to-image system
-might be. Yes, they also prevent some known harms, but none of us have a good
-sense of what that trade-off really entails. Furthermore, \DALLE's content
-policy was created without broad and open consultation. It was just imposed on
-users. Worse, users who violated the policy were booted off the system and
-presumably cannot use OpenAI's offerings anymore (at least, until they change
-both email and phone number). That points to an undue concentration of power
-with OpenAI. Yet OpenAI has also shown little qualms about engaging in deeply
-exploitative and dehumanizing practices~\cite{HaoHernandez2022,Perrigo2023a}.
-
-Now I cheated a little. The above quotes from OpenAI's charter refer to
-\textsc{agi}, artificial \emph{general} intelligence, and not \AI. So
-technically, OpenAI hasn't violated its charter yet. But the firm's likely
-misrepresentations about some of the reasons for its expansive policies and for
-their changes, the firm's glaring oversight when it comes to Christian imagery,
-and most importantly the firm's maximally Kafkaesque policy design and
-enforcement do not augur well for the future.
+When taken together, the above observations very much point towards OpenAI
+having access to stellar public relations and legal talent --- as well as being
+utterly hypocritical. That still seems in line with Karen Hao's portrait of the
+firm for Technology Review, which explored the tension between OpenAI's origin
+as a research lab and its current, more commercial orientation. However, reports
+about the firm's exploitative use of cheap labor in Latin America and Africa for
+labelling content~\cite{HaoHernandez2022,Perrigo2023a}, one of which was
+co-authored by Hao, cast grave doubts about the firm's ability to follow through
+on its own charter~\cite{OpenAI2018}.
