@@ -60,12 +60,14 @@ do_venv() {
     exec /bin/zsh -f -i
 }
 
+local LATEX_TOOL=pdflatex
+
 do_build() {
-    pdflatex main
+    $LATEX_TOOL main
     bibtex main
-    pdflatex main
+    $LATEX_TOOL main
     while ( grep -q '^LaTeX Warning: Label(s) may have changed' *.log ); do
-        pdflatex main
+        $LATEX_TOOL main
     done
 }
 
@@ -97,6 +99,8 @@ shift
 case $target in
     venv     )  do_venv    $@ ;;
     build    )  ( cd source && do_build $@ ) ;;
+    lua      )  LATEX_TOOL=lualatex
+                ( cd source && do_build $@ ) ;;
     clean    )  do_clean   $@ ;;
     arxiv    )  prep_arxiv $@ ;;
     acm      )  prep_acm   $@ ;;
