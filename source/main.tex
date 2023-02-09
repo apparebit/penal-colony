@@ -1,17 +1,15 @@
-\documentclass[manuscript,screen,review,anonymous]{acmart}
-%\documentclass[authorversion,nonacm,screen]{acmart}
+%\documentclass[manuscript,screen,review,anonymous]{acmart}
+\documentclass[authorversion,screen]{acmart}
 
-\usepackage{amsmath}
 \usepackage{bm}               % Bold symbols in math mode
-\usepackage{dirtytalk}        % \say
-\usepackage{enumitem}
+\usepackage{enumitem}         % \begin{enumerate}[resume]
 \usepackage{float}
 \usepackage{graphicx}
 \graphicspath{
     {./emoji/}
     {./images/}
 }
-\usepackage{pifont}
+\usepackage{pifont}           % \ding{166} as a section break
 \usepackage{wrapfig}          % Text wrapping around figure
 \setlength{\intextsep}{0pt}
 
@@ -28,19 +26,31 @@
 \begin{document}
 
 \newcommand\emoji[1]{\raisebox{-0.2ex}{\includegraphics[height=1em]{{#1}}}}
-\newcommand\euflag{\includegraphics[height=0.7em]{eu}}
+\newcommand\euflag{\includegraphics[height=0.95em]{eu}}
 \newcommand\MK{\emoji{checkmark}}
+\newcommand\MMKK{%
+    \multicolumn{2}{@{\;}l}{%
+        \raisebox{-0.2ex}{\includegraphics[width=1.5em,height=1em]{{checkmark}}}}}
 
+% Acronyms in small caps (which require lower case)
 \newcommand\AI{\textsc{ai}}
+\newcommand\API{\textsc{api}}
+\newcommand\CEO{\textsc{ceo}}
 \newcommand\ChatGPT{ChatGPT}
 \newcommand\CSAM{\textsc{csam}}
 \newcommand\DALLE{\textsc{dall•e}}
+\newcommand\DSA{\textsc{dsa}}
 \newcommand\EU{\textsc{eu}}
+\newcommand\FAQ{\textsc{faq}}
+\newcommand\GDPR{\textsc{gdpr}}
 \newcommand\GPT{\textsc{gpt-3}}
+\newcommand\HTML{\textsc{html}}
+\newcommand\MIT{\textsc{mit}}
 \newcommand\NCMEC{\textsc{ncmec}}
+\newcommand\UN{\textsc{un}}
 
-%\newcommand\sectionbreak{\begin{center}\ding{166}\end{center}}
-\newcommand\sectionbreak{\begin{center}\tiny$\bullet$ $\bullet$ $\bullet$\end{center}}
+\newcommand\sectionbreak{\begin{center}\ding{166}\end{center}}
+%\newcommand\sectionbreak{\begin{center}\tiny$\bullet$ $\bullet$ $\bullet$\end{center}}
 \newcommand\openfatdquo{\ding{125}}
 \newcommand\closefatdquo{\ding{126}}
 
@@ -93,17 +103,16 @@
 \input{sections/dalle2}
 \input{sections/twitter}
 \input{sections/census}
-\input{sections/bar-exam}
 \input{sections/escape-from-dalle2}
 \input{sections/conclusion}
 
 \begin{acks}
-A.\ D.\ Vocatus provided helpful background and color about the State Bar of
-California and its licensing exam. An employee of the National Center for
-Missing and Exploited Children helped complicate my thinking about \CSAM{}
-(while also avoiding to answer any of my questions). Akiko-Aboagye and Cordula
-Hahn served as sounding boards for scoping the research and its presentation.
-Cordula and Karin Wolman also helped with the occasional phrasing. Thank you!
+An employee of the National Center for Missing and Exploited Children helped
+complicate my thinking about child sexual abuse material (while also avoiding to
+answer my questions). Akiko Kyei-Aboagye and Cordula Hahn served as sounding
+boards for scoping the research and its presentation. Akiko and David Halperin
+provided on-point feedback on the introduction. Finally, Karin Wolman helped
+with phrasing and last minute legal questions. Thank you!
 \end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
@@ -111,12 +120,10 @@ Cordula and Karin Wolman also helped with the occasional phrasing. Thank you!
 
 % --------------------------------------------------------------------------------------
 
-\newpage
 \appendix
 
 \input{appendices/dalle2-policies}
 \input{appendices/twitter-policies}
-\input{appendices/bar-exam-public-record}
 \input{appendices/from-kafka-with-love}
 \input{appendices/lets-chat}
 \input{appendices/research-ethics}
