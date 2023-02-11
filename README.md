@@ -12,7 +12,7 @@ Colony 🏝” by Robert Grimm.
   * To work with the ACM's new (but arguably not improved) publishing flow, the
     paper uses only approved LaTeX packages and compiles with `pdflatex`.
   * Unfortunately, that leaves only one subpar option for color emoji, namely
-    simulating them by including graphics files. In practice, my `\emoji{name}`
+    simulating them by including graphics files. In practice, my `\emo{name}`
     macro takes care of everything. I even documented my [workflow and
     macro](supplements/emoji.md).
   * Transparency data and Jupyter notebooks with the code for analyzing the data
