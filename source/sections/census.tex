@@ -37,40 +37,40 @@ with 1--4 actual criteria per aspect and 14 criteria total. I found that the
 arrangement makes it easier to reason about the completeness of criteria; I hope
 that holds for you, too. The emoji serve as column headers in the results table.
 
-% The \hfill below ensures that there is a linebreak after the description text
-% (\\ or \newline don't work). If the description was followed by regular text
-% and not an enumerate environment, `\hfill\\` would be required.
-% See https://tex.stackexchange.com/questions/35481/description-list-how-to-put-the-definition-on-a-new-line
+% \hfill pushes the nested enumerations onto the next line!
 
 \begin{description}
 \item[The violative content itself]\hfill
     \begin{enumerate}
-        \item \emoji{tabs}~Prevalence of violative content
-        \item \emoji{ruler}~Reach of violative content
+        \item \emo{tabs}~Prevalence of violative content measured as fraction
+            of all content
+        \item \emo{rulertriangle}~Reach of violative content measured in time or
+            better views
     \end{enumerate}
 \item[The entity labelling violative content as such]\hfill
     \begin{enumerate}[resume]
-        \item \emoji{temple}~Government inquiries and removal requests
-        \item \emoji{enragedface}~Platform users
-        \item \emoji{robot}~Algorithmic enforcement
-        \item \emoji{judge}~Human moderation, including its mental health impact
+        \item \emo{temple}~Government inquiries and removal requests; also
+            intellectual property claims
+        \item \emo{enragedface}~Platform users
+        \item \emo{robot}~Algorithmic enforcement
+        \item \emo{judge}~Human moderation, including its mental health impact
     \end{enumerate}
 \item[Sanctions on content and users]\hfill
     \begin{enumerate}[resume]
-        \item \emoji{label}~Warning labels
-        \item \emoji{fog}~Visibility reduction and blacklists (aka shadow banning)
-        \item \emoji{wastebasket}~Content removal
-        \item \emoji{biohazard}~Sanctions on users
+        \item \emo{label}~Warning labels (increasingly used for misinformation)
+        \item \emo{fog}~Visibility reduction and blacklists (aka shadow banning)
+        \item \emo{wastebasket}~Content removal
+        \item \emo{biohazard}~Sanctions on users
     \end{enumerate}
 \item[Due process protections]\hfill
     \begin{enumerate}[resume]
-        \item \emoji{pager}~Meaningful notification
-        \item \emoji{scales}~Appeals and reversals
-        \item \emoji{eye}~External oversight, including conflict resolution and auditing
+        \item \emo{pager}~Meaningful notification
+        \item \emo{scales}~Appeals and reversals
+        \item \emo{eye}~External oversight, including conflict resolution and auditing
     \end{enumerate}
 \item[Cultural proficiency and fluency]\hfill
     \begin{enumerate}[resume]
-        \item \emoji{globeafrica}~Different countires and cultures
+        \item \emo{globeafrica}~Different countires and cultures
     \end{enumerate}
 \end{description}
 
@@ -87,35 +87,38 @@ enforcement~\cite{FieslerJiangea2018,PaterKimea2016}.
 \begin{table}
 \caption{A survey of governance practices for social media. \emph{Account
     Sanctions} are coded W for warning, a number for as many days of forced
-    timeout, and X for account suspension. \emoji{robot} and \emoji{judge}
-    sharing a checkmark means the transparency report does not distinguish
-    between automated and human review.}
+    timeout, and X for account suspension. \emo{robot} and \emo{judge} share a
+    checkmark for FB/IG, LinkedIn, TikTok, and Twitter because their
+    transparency reports do not distinguish between in-house automated and human
+    review.}
 \label{table:governance}
-\begin{tabular}{LcCc@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\quad}cC}
+\begin{tabular}{LccCc@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\quad}cC}
 
-    & \textbf{Account} & \textbf{Latest}
+    & \textbf{Account} & & \textbf{Latest}
 & \multicolumn{14}{c}{\textbf{Included in Transparency Report\T}} & \\
 
 \multirow{-2}{*}{\textbf{Platform}}
+& \textbf{Launched}
 & \textbf{Sanctions}
 & \textbf{Report}
-& \emoji{tabs}
-& \emoji{ruler}
-& \emoji{temple}
-& \emoji{enragedface}
-& \emoji{robot}
-& \emoji{judge}
-& \emoji{label}
-& \emoji{fog}
-& \emoji{wastebasket}
-& \emoji{biohazard}
-& \emoji{pager}
-& \emoji{scales}
-& \emoji{eye}
-& \emoji{globeafrica} \T\B
-& \multirow{-2}{*}{\emoji{floppydisk}} \\ \hline
+& \emo{tabs}
+& \emo{rulertriangle}
+& \emo{temple}
+& \emo{enragedface}
+& \emo{robot}
+& \emo{judge}
+& \emo{label}
+& \emo{fog}
+& \emo{wastebasket}
+& \emo{biohazard}
+& \emo{pager}
+& \emo{scales}
+& \emo{eye}
+& \emo{globeafrica} \T\B
+& \multirow{-2}{*}{\emo{floppydisk}} \\ \hline
 
 \href{https://transparency.fb.com/policies/community-standards/}{FB/IG}
+& Oct.\ 2003
 & \href{https://transparency.fb.com/enforcement/taking-action/restricting-accounts/}{W,1,3,7,30,X}
 & \href{https://transparency.fb.com/data/community-standards-enforcement/}{Q3 2022}
 & \MK & & \MK & \MK & \MMKK &
@@ -123,19 +126,23 @@ enforcement~\cite{FieslerJiangea2018,PaterKimea2016}.
 \href{https://transparency.fb.com/sr/community-standards/}{CSV} \T\\
 
 \href{https://www.linkedin.com/legal/professional-community-policies}{LinkedIn}
+& May 2003
 & & \href{https://about.linkedin.com/transparency/community-report}{H1 2022}
 & & & \MK & \MK & \MMKK
 & & & \MK & & & & & & \\
 
 \href{https://policy.pinterest.com/en/community-guidelines}{Pinterest}
+& Mar.\ 2010
 & & \href{https://policy.pinterest.com/en/transparency-report}{Q1+2 2022}
 & & \MK & \MK & \MK & \MK & \MK & &
 & \MK & \MK & & \MK & & & \\
 
 \href{https://help.quora.com/hc/en-us/articles/360000470706-Platform-Policies}{Quora}
+& June 2010
 & & & & & & & & & & & & & & & & & \\
 
 \href{https://www.redditinc.com/policies/content-policy}{Reddit}
+& June 2005
 & \href{https://www.redditinc.com/policies/transparency-report-2021-2/}{W,3,7,X}
 &
 \href{https://www.redditinc.com/policies/transparency-report-2021-2/}{2021}\,/\,\href{https://www.redditinc.com/policies/mid-year-transparency-report-2022}{H1
@@ -144,24 +151,28 @@ enforcement~\cite{FieslerJiangea2018,PaterKimea2016}.
 2021}} & \MK & & \MK & \MK & \MK & \MK & & & \MK & \MK & \MK & \MK & & \MK & \\
 
 \href{https://values.snap.com/privacy/transparency/community-guidelines}{Snap}
+& Sep.\ 2011
 & & \href{https://values.snap.com/privacy/transparency}{H1 2022}
 & & \MK & \MK & \MK & & & &
 & \MK & \MK & & & & \MK &
 \href{https://assets.ctfassets.net/kw9k15zxztrs/4aBF69gFiv4l9x7LzAgY8X/578e44f80fc51d0ebc52e04fe3d8c857/Snap_H1_2022_TR.csv}{CSV}\\
 
-Telegram & & & & & & & & & & & & & & & & & \\
+Telegram & Aug.\ 2013 & & & & & & & & & & & & & & & & & \\
 
 \href{https://www.tiktok.com/community-guidelines}{TikTok}
+& Sep.\ 2017
 & & \href{https://www.tiktok.com/transparency/en/community-guidelines-enforcement-2022-3/}{Q3 2022}
 & \MK & \MK & \MK & \MK & \MMKK & &
 & \MK & \MK & & & & \MK &
 \href{https://sf16-va.tiktokcdn.com/obj/eden-va2/nuvlojeh7ryht/Transparency_CGE_2022Q3/English_CGE_2022Q3.xlsx}{XLS} \\
 
 \href{https://www.tumblr.com/policy/en/community}{Tumblr}
+& Feb. \ 2007
 & & \href{https://transparency.automattic.com/tumblr/}{H1 2022}
 & & & \MK & & & & & & & & & & & & \\
 
 \href{https://help.twitter.com/en/rules-and-policies/twitter-rules}{Twitter}
+& July 2006
 & \href{https://help.twitter.com/en/rules-and-policies/enforcement-options}{W/0.5--7/X}
 & \href{https://transparency.twitter.com/en/reports/rules-enforcement.html#2021-jul-dec}{H2 2021}
 & & \MK & \MK & \MK & \MMKK &
@@ -169,6 +180,7 @@ Telegram & & & & & & & & & & & & & & & & & \\
 \href{https://transparency.twitter.com/content/dam/transparency-twitter/download/rules_enforcement_test.zip}{CSV} \\
 
 \href{https://www.youtube.com/howyoutubeworks/policies/community-guidelines/}{YouTube}
+& Feb.\ 2005
 & \href{https://support.google.com/youtube/answer/2802032}{W,7,14,X}
 & \href{https://transparencyreport.google.com/youtube-policy/removals}{Q3 2022} \B
 & \MK & \MK & \MK & \MK & \MK & \MK & & & \MK & \MK & & \MK & & \MK & \\
@@ -225,19 +237,48 @@ increasingly intercept content \emph{before} it is posted. That makes it
 significantly harder to justify \emph{any} sanction. Yet platforms just ignore
 that inconvenient fact.
 
-The table also makes ample clear that all platforms need to become more
-transparent and independently audited if they want to meet the requirements of
-the \EU's Digital Services Act (\DSA). The timetable for doing so is tight. By
-mid-February of this year, all platforms must have reported user numbers to the
-\EU, so that the Commission can determine which of the \DSA's tiered
-requirements apply. Once the Commission has designated a platform as very large
-(the \DSA's upmost tier), the firm has only four months to comply with the law.
-All other platforms have until February 2024. Penalties for non-compliance can
-be steep: Each fine is capped at 6\% of global revenue for the previous year.
+In addition to confirming my hypothesis about being overly punitive, the
+sparsity of checkmarks, especially when it comes to disclosing \emph{all}
+sanctions, notifying users, and due process, provides a rude counterpoint to
+Klonick's cheerful enthusiasm for their governance. Worse, as the
+\emph{Launched} column makes clear, almost all had plenty of time for making the
+necessary investments.
 
-As long as the \EU\ vigorously enforces the law, I personally see only upsides
-to the \DSA. Though, its provisions for reporting account suspensions are weaker
-than I would like, since they only cover some suspensions.
+That won't do for much longer, unless platforms are willing to forgo the \EU
+moving forward. As the bottom row illustrates, the \EU's \DSA\ has extensive
+requirements for transparency reporting --- and for yearly independent audits,
+too. The timetable for becoming compliant is tight. By now, all platforms must
+have reported their user numbers to the \EU, so that the Commission can
+determine which of the \DSA's tiered requirements apply. Once the Commission has
+designated a platform as very large (the \DSA's upmost tier), the firm has only
+four months to comply with the law. All other platforms have until February
+2024. Penalties for non-compliance can be steep: Each fine is capped at 6\% of
+global revenue for the previous year.
+
+Missing from the census table is that most social media platforms' transparency
+disclosures lack organization and get in the way of additional analysis. It's
+utterly ridiculous that five out of nine technology firms can't be bothered to
+release their data in machine-readable form. Thankfully, the \DSA\ should put an
+end to that, too. But the lack of organization makes it far too easy to get lost
+in platforms' reports. That's just why I iterated over the census criteria
+several times, updating Table~\ref{table:governance} for every iteration. In my
+mind, Pinterest's and YouTube's disclosures stand out, with YouTube's resembling
+my own. For historical reasons, sections on government requests and intellectual
+property claims still are separate, in their own reports even. That only gets in
+the way of understanding. It's time to produce one single governance report that
+pays more attention to organization as well.
+
+Finally, social media's transparency reports tell vastly different stories about
+the role of \AI. As already discussed in Section~\ref{sec:tweet:da:fe}, Twitter
+largely is in public denial about its aggressive use of algorithms. In contrast,
+Pinterest is very exacting and distinguishes between automated and hybrid
+detection. In the latter case, algorithms pick violative content too, but only
+humans get to make a decision. Meanwhile, TikTok seems to be playing catch up
+with Meta and YouTube in automating almost all content moderation. From Q3~2020
+to Q3~2021, the share of automatically removed video clips grew from 7.8\% to
+33.9\% of all removed clips. After plateauing at that level for another two
+quarters, it resumed it rapid growth and stood at 48.0\% for Q3~2022. Will they
+make it to 99\% over the next two years?
 
 
 \subsection{Validating the Transparency Data}
@@ -252,13 +293,15 @@ than I would like, since they only cover some suspensions.
 It is imperative to keep in mind that social media's governance efforts as
 reflected in their transparency reports provide a partial picture only. Case in
 point is again Meta n\'ee Facebook. Its governance processes and transparency
-efforts, which have been reviewed by a committee of independent domain
-experts~\cite{BradfordGriselea2019}, are industry-leading. Yet the firm also has
-an astoundingly deadly foreign record. By distributing and amplifying sectarian
-messaging, Meta has directly contributed to genocide not once but twice. As a
-result, 25,000 Rohingya were murdered in Myanmar from August 2017 to August 2018
-and 700,000 were driven into a refugee camp across the border in Bangladesh,
-which has become the densest settlement on
+efforts may be sloppy and suffer from data quality issues. But Meta also has
+made significant investments into its governance by, for example, having
+external experts review its transparency reports~\cite{BradfordGriselea2019} or
+endowing the external oversight board~\cite{BoteroMarinoGreeneea2020}. Yet the
+firm also has an astoundingly deadly foreign record. By distributing and
+amplifying sectarian messaging, Meta has directly contributed to genocides not
+once but twice! As a result, 25,000 Rohingya were murdered in Myanmar from
+August 2017 to August 2018 and 700,000 were driven into refugee camps across the
+border in Bangladesh, which have become the densest settlement on
 Earth~\cite{DeGuzman2022,HumanRightsCouncil2018}. Also as a result, between
 385,000 and 800,000 Tigrayans were murdered in Ethiopia's northern-most
 province~\cite{AnnysVandenBemptea2021,ChothiaBekit2022}, 882,000 people turned
@@ -270,36 +313,37 @@ including content moderation and safety. The firm keeps entering foreign
 markets, not head but sales office first, even if user interfaces, policy
 documents, help pages, content moderation tools, and machine learning models
 have not yet been localized. In Myanmar, Facebook paid local cell phone
-providers to provide their customers with free access through the app. As a
-result, ``internet'' and ``Facebook'' are largely synonymous in Myanmar to this
-day~\cite{Strom2016}. At the same time, Facebook had no employees who speak
-Burmese in early 2017. It also ignored warnins from human rights organizations.
-Then it got stymied by the Burmese legacy encodings for text, which did make it
-much harder to process such text~\cite{LaGrowPruzan2019,Wade2022}. When the firm
-finally got its act together, it was too late: The genocide was well under
-way~\cite{McLaughlin2018,MilkoOrtutay2022,Mozur2018,Ortutay2022}.
-
-A little more than two years later, that same basic dynamic played out in
-Ethiopia~\cite{Allen2022,Gilbert2020,GlobalWitness2022,Ilori2020,Malik2022,ElliottChristopherea2021,ZelalemGuest2021,RobinsEarly2021}.
-Facebook had opened its first office in Africa, a \emph{sales} office, in
-2015~\cite{Wagner2015}. When it started pushing more aggressively into African
-countries in 2018, it insisted it had learned its lessons~\cite{Tiku2018}. Yet
-it opened its first content moderation office only in 2019~\cite{Agutu2019}. The
-firm obviously lacked an appreciation of the richness of dialects and languages
-spoken across the
-continent~\cite{FickDave2019,JacksonTownsendea2022,Madung2021}. It exploited
-local workers~\cite{AlSibai2022,Perrigo2022,Perrigo2023}. When it ignored
-warnings again, its own Oversight Board had to sound the alarm~\cite{Faife2021}.
+providers to provide their customers with free access through the Facebook app.
+As a result, ``internet'' and ``Facebook'' are largely synonymous in Myanmar to
+this day~\cite{Strom2016}. At the same time, Facebook had no employees who speak
+Burmese in early 2017. It ignored warnings from human rights organizations and
+other \NGO{}s. Then it got stymied by the Burmese legacy encodings for text,
+which made processing such text much harder~\cite{LaGrowPruzan2019,Wade2022}.
 When the firm finally got its act together, it was too late: The genocide was
-well under way.
+well under way~\cite{McLaughlin2018,MilkoOrtutay2022,Mozur2018,Ortutay2022}.
 
-Since Meta is publicly traded, you may wonder what shareholders think about that
-abysmal record. They aren't pleased and repeatedly tried holding the firm's
-\CEO\ and Chairman of the Board Mark Zuckerberg accountable. They held votes to
-strip him of his titles in 2018~\cite{Butler2018}, 2019~\cite{Sumagaysay2019},
-2020~\cite{McRitchie2020}, 2021~\cite{Nix2021}, and 2022~\cite{WatersAgnew2022},
-which resulted in clear majorities for doing so in 2019, 2021, and 2022. But
-thanks to some funny business with the allocation of votes per share, Mr
-Zuckerberg controls the majority of votes and keeps on voting for himself. So
-how much transparency and accountability can we realistically expect from a
-genocidal autocracy?
+Over two years later, that same basic dynamic played out across Africa in
+general and Ethiopia specifically. Facebook had opened its first office in
+Africa, a \emph{sales} office, in 2015~\cite{Wagner2015}. When it started
+pushing more aggressively into African countries in 2018, it publicly declared
+that it had learned its lessons~\cite{Tiku2018}. Yet it opened its first content
+moderation office in (all of) Africa only in 2019~\cite{Agutu2019}. The firm
+lacked an appreciation of the richness of dialects and languages spoken across
+the continent~\cite{FickDave2019,JacksonTownsendea2022,Madung2021}. It also
+exploited local workers~\cite{AlSibai2022,Perrigo2022,Perrigo2023}. Its own
+Oversight Board sounded the alarm because the firm was ignoring the telltale
+signs~\cite{Faife2021}. When the firm finally got its act together, it was too
+late: The genocide was well under
+way~\cite{Allen2022,Gilbert2020,GlobalWitness2022,Ilori2020,Malik2022,ElliottChristopherea2021,ZelalemGuest2021,RobinsEarly2021}.
+
+Since Meta is publicly traded, we might wonder what shareholders are doing about
+this abysmal record. They don't seem to be too pleased either and tried holding
+the firm's \CEO\ and Chairman of the Board Mark Zuckerberg accountable. The
+annual meetings in 2018~\cite{Butler2018}, 2019~\cite{Sumagaysay2019},
+2020~\cite{McRitchie2020}, 2021~\cite{Nix2021}, and 2022~\cite{WatersAgnew2022}
+featured motions to strip him of either or both titles. The majority of
+shareholders approved these motions in 2019, 2021, and 2022. But thanks to some
+funny business with the allocation of votes per share, Mr Zuckerberg controls
+the absolute majority of votes. He also keeps voting for himself. So how much
+transparency and accountability can we realistically expect from a
+genocide-abetting autocracy?
