@@ -1,14 +1,12 @@
 %\documentclass[manuscript,screen,review,anonymous]{acmart}
-\documentclass[authorversion,screen]{acmart}
+\documentclass[authorversion,nonacm,screen]{acmart}
 
 \usepackage{bm}               % Bold symbols in math mode
+\usepackage{emo}              % Emoji done flexibly
 \usepackage{enumitem}         % \begin{enumerate}[resume]
 \usepackage{float}
 \usepackage{graphicx}
-\graphicspath{
-    {./emoji/}
-    {./images/}
-}
+\graphicspath{{./images/}}
 \usepackage{pifont}           % \ding{166} as a section break
 \usepackage{wrapfig}          % Text wrapping around figure
 \setlength{\intextsep}{0pt}
@@ -25,12 +23,10 @@
 
 \begin{document}
 
-\newcommand\emoji[1]{\raisebox{-0.2ex}{\includegraphics[height=1em]{{#1}}}}
-\newcommand\euflag{\includegraphics[height=0.95em]{eu}}
-\newcommand\MK{\emoji{checkmark}}
-\newcommand\MMKK{%
-    \multicolumn{2}{@{\;}l}{%
-        \raisebox{-0.2ex}{\includegraphics[width=1.5em,height=1em]{{checkmark}}}}}
+%\newcommand\euflag{\includegraphics[height=0.95em]{eu}}
+\newcommand\euflag{\emo{eu}}
+\newcommand\MK{\emo{checkmark}}
+\newcommand\MMKK{\multicolumn{2}{l}{\emo{checkmark}}}
 
 % Acronyms in small caps (which require lower case)
 \newcommand\AI{\textsc{ai}}
@@ -50,7 +46,6 @@
 \newcommand\UN{\textsc{un}}
 
 \newcommand\sectionbreak{\begin{center}\ding{166}\end{center}}
-%\newcommand\sectionbreak{\begin{center}\tiny$\bullet$ $\bullet$ $\bullet$\end{center}}
 \newcommand\openfatdquo{\ding{125}}
 \newcommand\closefatdquo{\ding{126}}
 
@@ -58,13 +53,13 @@
 
 % --------------------------------------------------------------------------------------
 
-\title{Letters from the Stochastic Penal Colony \emoji{desertisland}}
+\title{Letters from the Stochastic Penal Colony \emo{desertisland}}
 \subtitle{When Algorithms Discipline and Punish}
 
 \author{Robert Grimm}
 \orcid{0000-0002-8300-2153}
 \affiliation{%
-    \institution{Independent Researcher}
+    \institution{Independent Investigator}
     \city{Brooklyn}
     \state{New York}
     \country{United States}
