@@ -11,6 +11,7 @@ show_help() {
     printf "${BOLD}${scriptname} <target>${RESET}  # with <target> being one of:\n"
     printf "    ${BOLD}venv${RESET}       install & activate Python virtual env\n"
     printf "    ${BOLD}build${RESET}      recreate the PDF document (default)\n"
+    printf "    ${BOLD}lua${RESET}        recreate PDF document with LuaLaTeX\n"
     printf "    ${BOLD}clean${RESET}      delete auxiliary files\n"
     printf "    ${BOLD}arxiv${RESET}      prepare submission to ArXiv\n"
     printf "    ${BOLD}acm${RESET}        prepare submission to ACM\n"
@@ -73,6 +74,7 @@ do_build() {
 
 do_clean() {
     rm -f source/comment.cut
+    rm -f source/missfont.log
     for f in aux bbl blg log out pdf; do
         rm -f "source/main.$f"
     done
