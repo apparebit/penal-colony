@@ -1,5 +1,28 @@
 % !TEX root = ../main.tex
 
+\newenvironment{kafkaesque}{
+    \setlength{\parindent}{\normalparindent}
+}{}
+\renewcommand{\textflush}{kafkaesque}
+\setlength{\epigraphwidth}{0.8\textwidth}
+
+\epigraph{\noindent\openfat{}As you see, it consists of three parts. With the
+passage of time certain popular names have been developed for each of these
+parts. The one underneath is called the Bed, the upper one is called the
+Inscriber, and here in the middle, this moving part is called the Harrow.
+[\ldots]
+
+As soon as the man is strapped in securely, the Bed is set in motion. It quivers
+with tiny, very rapid oscillations from side to side and up and down
+simultaneously. [\ldots] Only with our Bed all movements are precisely
+calibrated, for they must be meticulously coordinated with the movements of the
+Harrow. But it's the Harrow which has the job of actually carrying out the
+sentence. [\ldots]
+
+The law which a condemned man has violated is inscribed on his body with the
+Harrow.\closefat}{Franz Kafka, \emph{In the Penal Colony}~\cite{Kafka1995}}
+
+
 \section{Introduction}
 \label{sec:introduction}
 
@@ -11,9 +34,9 @@ good results with another text-to-image system. But instead of producing four
 images, \DALLE~2 responded with a stern warning:
 
 \begin{quote}
-\openfatdquo{}It looks like this request may not follow our content policy.
-Further policy violations may lead to an automatic suspension of your
-account.\closefatdquo{}
+\openfat{}It looks like this request may not follow our content policy. Further
+policy violations may lead to an automatic suspension of your
+account.\closefat{}
 \end{quote}
 
 \noindent Whoa! I enter an entirely reasonable prompt and OpenAI immediately
@@ -152,7 +175,7 @@ basic procedural justice analysis.
 
 As already mentioned above, my analysis labels violations of a user's voice,
 agency, and dignity as Kafkaesque co-factors and also considers violations of
-neutrality and trust while considering additional sources. Procedural justice is
+neutrality and trust while considering additional sources. Procedural justice
 positions voice and neutrality for evaluating the process itself, while respect
 and trust are positioned for evaluating the relationships between participants.
 If we disregard my playful labelling of ``Kafkaesque co-factors'' and rename
