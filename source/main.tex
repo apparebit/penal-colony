@@ -2,6 +2,7 @@
 \documentclass[authorversion,nonacm,screen]{acmart}
 
 \usepackage{bm}               % Bold symbols in math mode
+\usepackage{epigraph}         % Setting the tone
 \usepackage{emo}              % Emoji done flexibly
 \usepackage{enumitem}         % \begin{enumerate}[resume]
 \usepackage{float}
@@ -26,7 +27,7 @@
 %\newcommand\euflag{\includegraphics[height=0.95em]{eu}}
 \newcommand\euflag{\emo{eu}}
 \newcommand\MK{\emo{checkmark}}
-\newcommand\MMKK{\multicolumn{2}{l}{\emo{checkmark}}}
+\newcommand\MKONE{\multicolumn{2}{l}{\emo{keycapone}}}
 
 % Acronyms in small caps (which require lower case)
 \newcommand\AI{\textsc{ai}}
@@ -47,8 +48,9 @@
 \newcommand\UN{\textsc{un}}
 
 \newcommand\sectionbreak{\begin{center}\ding{166}\end{center}}
-\newcommand\openfatdquo{\ding{125}}
-\newcommand\closefatdquo{\ding{126}}
+\newcommand\openfat{\makebox[0pt][r]{\ding{125}}}
+\newcommand\openfatplain{\ding{125}}
+\newcommand\closefat{\ding{126}}
 
 \newcommand\hidden[1]{}
 
