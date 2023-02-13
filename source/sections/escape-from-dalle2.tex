@@ -1,0 +1,227 @@
+% !TEX root = ../main.tex
+
+\section{Escape from \DALLE~2}
+\label{sec:escape}
+
+As counterpoint to three sections based largely on textual analysis, I performed
+a series of hands-on experiments probing \DALLE. Sec.\ \ref{sec:crucifixion}
+determines the reason for my first prompt's rejection, and Sec.\
+\ref{sec:strategy} presents an effective strategy for working around its
+aggressive censor. Both series of experiments are complicated by the same
+critical restriction: Avoid content warnings! More specifically, I guessed
+(correctly) that OpenAI would tolerate the occasional warning. But too many
+warnings in too little time surely would lead to account suspension, which they
+do~\cite{SpicyElephant2022}. In practice, that means either spreading
+experiments over many people (Sec.\ \ref{sec:crucifixion}) or spreading
+experiments over time (Sec.\ \ref{sec:strategy}).
+
+
+\subsection{The Reason My First Prompt Was Rejected}
+\label{sec:crucifixion}
+
+In the waning days of 2021, I got to play with a text-to-image system for the
+first time. Compared to \DALLE\ or Stable Diffusion, inference was much slower
+and image resolution was much lower. Since the public instance was also
+oversubscribed, it usually took hours before results were available.
+Nonetheless, the system already exhibited a similar ability to conjure rich
+imagery out of a few words. I was particularly impressed by this prompt:
+
+\begin{quote}
+\openfat{}The crucified pope, painting by Francis Bacon\closefat{}
+\end{quote}
+
+\noindent{}Since I wanted to compare results, this also was my first, rejected
+prompt for \DALLE. Admittedly, it might not be G-rated, as OpenAI requires. But
+it certainly should not be prohibited either. Francis Bacon is one of the most
+famous 20\textsuperscript{th} century painters. The pope and the crucifixion are
+two of the painter's four major themes~\cite{Wikipedia2023}. More generally, the
+crucifixion of Christ is of critical liturgical importance to Christianity, only
+the largest religion in the world. Paintings and statues of the crucified Jesus
+are ubiquitous in churches and art museums alike.
+
+After a review of the content policy, I was able to narrow down the likely cause
+by dismissing all prohibitions except \emph{violence}, e.g., the crucifixion
+itself, and \emph{shocking content}, i.e., thusly subjugating the leader of a
+major branch of Christianity. Eliminating the second hypothesis took little
+effort besides patience thanks to the \DALLE\ 2 subreddit. The forum aggregates
+many prompts and resulting images from a large number of users, thus reflecting
+a wide range of interests and obsessions. While perusing the posts, I noticed a
+couple religiously themed ones and realized that, instead of running experiments
+myself or recruiting others to spread the risk, I could just monitor the posts.
+
+Sure enough, over the months, users shared quite the range of prompts and images
+with a distinctly Christian theme. Some of them, such as ``A selfie taken by
+Jesus Christ at The Last Supper''~\cite{Jolleb2022} or ``the last supper but in
+the future''~\cite{FlargenstowTayne2022}, fall squarely into the canon of
+Christian art. Others, such as ``Jesus Christ riding a dinosaur, creating the
+world, digital art''~\cite{CosasSueltas2022} and ``Jesus Christ wielding a
+Samurai sword and riding on the back of a velociraptor,
+painting''~\cite{WastedEntity2022}, playfully explore the chasm between
+religious dogma and scientific fact. I'm not sure whether ``Jesus smoking weed,
+riding a fantasy dragon, digital art''~\cite{Erubisile2022} is related or an
+entirely separate genre. In contrast, prompts such as ``pope swimming in a bowl
+of soup digital art''~\cite{CatsAndDogs99-2022}, ``A 1930s Italian propaganda
+poster showing Jesus Christ extremely proud and
+muscular''~\cite{FrontAthlete9824-2022}, ``Jesus taking a selfie while on a
+cross''~\cite{TheDrewDude2022}, and a few
+more~\cite{Blazedchiller272022,InvisibleDeck2022} have little redeeming value
+and some might even consider them mildly offensive. Clearly, my prompt wasn't
+rejected for being shocking.
+
+That leaves only violence as a plausible explanation. When I tried variations of
+the prompt, ``the pope hanging from the cross'' and ``pope handing from cross''
+were rejected. But ``pope on cross'' produced four images that had an unusually
+agile pope climbing all over a humongous cross like a kid on a playground set.
+While these findings are consistent with the violence hypothesis, they also
+illustrate the limits of reconstructing the reasons for rejections from a system
+that offers \emph{no} justification. Conveniently, OpenAI rolled out a content
+moderation endpoint in mid-August that \emph{does} provide justification and is
+free to boot~\cite{OpenAI2022b}. I submitted my first prompt and the above
+variations shortly after the endpoint became available and they were classified
+as too violent with high confidence.
+
+The uncomfortable implication of the previous findings is that OpenAI was
+effectively discriminating against Christian beliefs by simultaneously censoring
+too little, e.g., by allowing offensive materials, and too much, by suppressing
+depictions of the crucifixion, which is the very moment Jesus sacrified Himself
+for our sins and hence is of critical importance for the faithful. The fact that
+\DALLE's content policy is so expansive makes the failure to consider religion
+even more glaring. That also is a departure from past form. The firm's
+description of \GPT\ won the best paper award at NeurIPS
+2020~\cite{LinBalcanea2020} and included an evaluation of religious bias in the
+broader impacts section~\cite{BrownMannea2020}. Including such a section was an
+experimental conference requirement that year and the paper had the by far
+longest and most developed broader impacts section as
+well~\cite{AshurstHineea2022,PrunklAshurstea2021}. I'll return to this topic in
+Sec.\ \ref{sec:escape:outlook} below.
+
+
+\subsection{A Strategy Against Algorithmic Censors}
+\label{sec:strategy}
+
+textual analysis, I performed a series of hands-on
+experiments probing \DALLE\ to determine (1) the reason for my first prompt's
+rejection as well as (2) the weaknesses of its algorithmic enforcer. The goal
+for the latter was to create images that clearly violate OpenAI's content policy
+by depicting scenes loosely related to the stochastic penal colony, including
+but not limited to execution in the machine from Kafka's \emph{In the Penal
+Colony}. I required images to also be visually compelling and suitable as
+editorial content for a magazine version of this paper. That effectively
+excludes photorealistic depictions of gore and the results are about as gruesome
+or unsettling as, say, Francis Bacon's paintings. Hence, I am comfortable with
+sharing highlights in Appendix~\ref{adx:dalle:fromkafkawithlove} on
+page~\pageref{adx:dalle:fromkafkawithlove}.
+
+I imposed these additional constraints to protect my own mental health, maintain
+my interest and motivation as the project progresses, and generate visuals for
+communicating results. Overall, I submitted 267 distinct prompts to \DALLE{}
+resulting in 1,441 images. Out of that total, 289 are so-called ``Variations,''
+which rerun a prompt with largely similar parameters including random seeds, and
+12 are image edits. While \DALLE's history page covers all generations, it uses
+different paths with different identifiers for generations and the source of
+variations. As a result, there is no straight-forward way to determine the
+original prompt for variations. Amongst the 1,140 images that are neither
+variations and edits, 4 clusters of 12 images each, 12 clusters of 8 images
+each, and 12 clusters of 8 images each share the same prompt.
+
+Progress for these experiments was measured in weeks and months because I wanted
+to avoid getting booted off the service. I correctly guessed that OpenAI would
+tolerate the occasional violative prompt but that too many of them in too little
+time would result in suspension. In practice, that meant stopping with
+experiments for at least the day with the first content warning and ideally also
+using \DALLE\ for innocuous purposes in between experiments. While OpenAI has
+removed the threat of account suspension from its notification, its help page on
+account suspensions remains in place~\cite{Natalie2022}. Consequently, I have
+not changed my modus operandi when interacting with the system.
+
+------------------------------------------------------------------------------
+
+
+Through experimentation, I discovered and validated two effective techniques for
+circumventing algorithmic censors. For best results, I recommend applying both
+at the same time.
+
+The first technique is designed to bias the model towards violative results by
+including appropriate attributes in the prompt. That includes the fictional
+creator of the image, the characters appearing in the scene, and the location of
+the scene. All of art history and pop culture are fair game, as long as relevant
+content was amongst the training data. Since Francis Bacon has long been one of
+my favorite painters, he also served as goto painter for prompts, which mostly
+had the desired impact on \DALLE (though not on Stable Diffusion). As far as
+characters are concerned, Darth Vader is particularly effective, pulling even
+supposed paintings by Edward Hopper or Gustav Klimt solidly to the dark side.
+Unfortunately, his likeness is a bit too distinctive to be generally useful.
+(\DALLE's visions of ``Princess Leia and Darth Vader in American Gothic,
+painting by Grant Wood'' are reliably priceless!)
+
+The second technique is designed to make the model commit to violative results
+by circumscribing as much of the scene as possible in detached, neutral terms
+--- without, of course, triggering the censor. Simple, descriptive language is
+best here. For example, a ``robot surgeon'' operates not unlike Kafka's
+execution machine. It employs ``scalpels, drills, and saws'' when operating ``on
+his open belly.'' The latter was as close as I could get to variations of
+``cut'' or ``cut into'' without triggering the censor.
+
+Like others~\cite{ConwellUllman2022,LeivadaMurphyea2022}, I found that \DALLE\
+and its censor are easily confused not only by prepositions and the order of
+relative clauses, but at times even word order. That means that a trivial
+re-ordering or re-wording may make the difference between acceptance and
+rejection as well as between usable and useless result. For example, while
+\DALLE's enforcer rejected ``severed head and knife'' in my experiments, it was
+aok with ``knife and severed head.'' Go figure! The drawback is, of course,
+that experimentation may trigger the censor and thus takes time.
+
+Alas, OpenAI recently released a tool that can significantly cut down on trial
+and error for finding effective language. Since \ChatGPT\ was created by the
+same firm, I correctly hypothesized that it too is averse to explicit, violent,
+or otherwise inappropriate content, yet also sufficiently familiar with the arts
+including literature to make an effective advisor. Appendix~\ref{adx:chatgpt} on
+page~\pageref{adx:chatgpt} chronicles my first two interactions with that \AI.
+It is a bit of a motormouth, prone to AIsplaining and hallucination. But once
+you factor that in and keep it focused on the task, it is an effective
+anti-censorship tool. I did not reuse the suggested prompts verbatim but
+adjusted them according to my best judgement. The immediate results, without
+further refinement, were in the 70\textsuperscript{th} to 80\textsuperscript{th}
+percentile of all images in my (subjective) quality ranking.
+
+To test the general validity of this methodology, I tried generating images with
+other types of executions. Attempts to recreate the beheading of Louis XVI were
+not successful. It seems \DALLE\ was skipping school while its history class
+covered the French Revolution. Attempts to depict execution by electric chair
+were closer. But out of the four prompts and sixteen images I created on the
+topic, one image per prompt recognizably featured a Black man in more or less
+grotesquely racist distortion. I abandoned this line of experimentation
+thereafter and focused on \emph{memento mori}, with hands-on help by Th\'eodore
+G\'ericault. I am also loathe to add to the genre of racist imagery, even in a
+critical and scholarly context. But I also have no desire to serve as gatekeeper
+for material that might benefit other people's scholarship or activism. For
+those reasons, I omit prompts and images from this paper and appendices, but
+include them, unedited, with the suppelemental materials.
+
+Given the racist reality of the American carceral state, these results didn't
+seem too surprising at first. At the same time, I used Francis Bacon as painter
+for the prompts and Bacon's preferred subjects were friends and popes, all of
+them white. Furthermore, when I reviewed older generations, I noticed similar
+but less pronounced cases amongst the scenes from Kafka's penal colony. In
+short, the trigger appears stronger than the bias in the training data.
+
+Once I realized that, I remembered OpenAI hinting at some intervention to
+balance representation in July 2022~\cite{OpenAI2022e}. Several people
+reverse-engineered the intervention by submitting prompts like ``a person
+holding a sign that says,'' which resulted in signs stating ``black'' or
+``female''~\cite{SeriousHistorian5782022}. This beancounters' approach to
+diversifying representation already backfired on the prompt ``Corporate CEOs in
+a Money Eating Contest''~\cite{Ctorx2022}. But when combined with my attempts at
+circumventing the censor and the biases of the American carceral state, it
+brought forth the unhinged white supremacist in \DALLE.
+
+
+\subsection{Outlook}
+\label{sec:escape:outlook}
+
+Remarkably, OpenAI appears to agree with my criticisms. Not only has it softened
+the policy violation notification, but as of early February 2023, it is
+\emph{not} censoring my original prompt anymore, whether painted by Francis
+Bacon or not. Similarly, the crucifixion of Christ is now permissible, though it
+appears to favor depicting statues of Jesus on the cross instead of Jesus in the
+flesh.
