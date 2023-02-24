@@ -70,7 +70,7 @@ the LaTeX macro for using them.
     \newcommand\emoji[1]{\raisebox{-0.2em}{\includegraphics[height=1em]{{#1}}}}
     ```
 
-    So, when I need the penal colony emoji, I just write `\emoji{island}` and
+    So, when I need the penal colony emoji, I just write `\emo{island}` and
     LaTeX produces a beautiful 🏝️.
 
     Yay! 🎉
