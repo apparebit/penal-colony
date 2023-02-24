@@ -3,7 +3,7 @@
 
 \usepackage{bm}               % Bold symbols in math mode
 \usepackage{epigraph}         % Setting the tone
-\usepackage{emo}              % Emoji done flexibly
+\usepackage[extra]{emo}       % Emoji done flexibly
 \usepackage{enumitem}         % \begin{enumerate}[resume]
 \usepackage{float}
 \usepackage{graphicx}
@@ -15,20 +15,21 @@
 % Better tables
 \usepackage{colortbl}
 \usepackage{multirow}
-\newcolumntype{C}{>{\columncolor[gray]{.93}}c}
-\newcolumntype{L}{>{\columncolor[gray]{.93}}l}
-\newcolumntype{R}{>{\columncolor[gray]{.93}}r}
+\newcolumntype{C}{>{\columncolor[gray]{.94}}c}
+\newcolumntype{L}{>{\columncolor[gray]{.94}}l}
+\newcolumntype{R}{>{\columncolor[gray]{.94}}r}
 
 \newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 
 \begin{document}
 
-\newcommand\MK{\emo{checkmark}}
-\newcommand\MKONE{\multicolumn{2}{l}{\emo{keycapone}}}
+\newcommand\MK{\emo{check-mark}}
+\newcommand\MKONE{\multicolumn{2}{l}{\emo{keycap-one}}}
 
 % Acronyms in small caps (which require lower case)
 \newcommand\AI{\textsc{ai}}
+\newcommand\AIsplaining{\textsc{ai}splaining}
 \newcommand\API{\textsc{api}}
 \newcommand\CEO{\textsc{ceo}}
 \newcommand\ChatGPT{ChatGPT}
@@ -44,6 +45,7 @@
 \newcommand\NCMEC{\textsc{ncmec}}
 \newcommand\NGO{\textsc{ngo}}
 \newcommand\UN{\textsc{un}}
+\newcommand\US{\textsc{us}}
 
 \newcommand\sectionbreak{\noindent\begin{center}\char"2042\end{center}}
 \newcommand\openfat{\makebox[0pt][r]{\ding{125}}}
@@ -54,7 +56,7 @@
 
 % --------------------------------------------------------------------------------------
 
-\title{Letters from the Stochastic Penal Colony \protect \emo{desertisland}}
+\title{Letters from the Stochastic Penal Colony \protect \emo{desert-island}}
 \subtitle{When Algorithms Discipline and Punish}
 
 \author{Robert Grimm}
@@ -68,8 +70,8 @@
 \email{rgrimm@alum.mit.edu}
 
 \keywords{algorithmic snake oil, child sexual abuse material, content
-    moderation, harm reduction, punitive algorithms, text-to-image tools,
-    transparency reporting}
+    moderation, harm reduction, punitive algorithms, social media, text-to-image
+    tools, transparency reporting}
 \begin{CCSXML}
     <ccs2012>
        <concept>
@@ -104,6 +106,7 @@
 \input{sections/twitter}
 \input{sections/census}
 \input{sections/escape-from-dalle2}
+\input{sections/discussion}
 \input{sections/conclusion}
 
 \begin{acks}
@@ -123,9 +126,9 @@ with phrasing and last minute legal questions. Thank you!
 \appendix
 
 \input{appendices/dalle2-policies}
-\input{appendices/twitter-policies}
-\input{appendices/from-kafka-with-love}
-\input{appendices/lets-chat}
+\input{appendices/twitter-sources}
+\input{appendices/dalle2-images}
+\input{appendices/chatgpt-sources}
 \input{appendices/research-ethics}
 
 \end{document}

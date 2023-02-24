@@ -3,17 +3,17 @@
 \section{Escape from DALL•E~2}
 \label{sec:escape}
 
-As counterpoint to three sections based largely on textual analysis, I performed
-a series of hands-on experiments probing \DALLE. Sec.\ \ref{sec:crucifixion}
+As hands-on counterpoint to the previous analytical sections, I performed a
+series of hands-on experiments probing \DALLE. Sec.\ \ref{sec:crucifixion}
 determines the reason for my first prompt's rejection, and Sec.\
 \ref{sec:strategy} presents an effective strategy for working around its
 aggressive censor. Both series of experiments are complicated by the same
 critical restriction: Avoid content warnings! More specifically, I guessed
 (correctly) that OpenAI would tolerate the occasional warning. But too many
 warnings in too little time surely would lead to account suspension, which they
-do~\cite{SpicyElephant2022}. In practice, that means either spreading
-experiments over many people (Sec.\ \ref{sec:crucifixion}) or spreading
-experiments over time (Sec.\ \ref{sec:strategy}).
+do~\cite{SpicyElephant2022}. The practical implication is that the collection of
+empirical evidence must be distributed over people, as in Sec.\
+ref{sec:crucifixion}, or over time, as in Sec.\ \ref{sec:strategy}.
 
 
 \subsection{About That Rejected Prompt}
@@ -92,8 +92,8 @@ description of \GPT\ won the best paper award at NeurIPS
 its broader impacts section~\cite{BrownMannea2020}. Including such a section was
 an experimental conference requirement that year and the paper had the by far
 longest and most developed broader impacts section as
-well~\cite{AshurstHineea2022,PrunklAshurstea2021}. I'll return to this topic in
-Sec.\ \ref{sec:escape:discussion} below.
+well~\cite{AshurstHineea2022,PrunklAshurstea2021}. I'll provide the surprising
+coda for this topic in Sec.\ \ref{sec:discussion}.
 
 
 \subsection{A Strategy Against Algorithmic Censors}
@@ -109,8 +109,8 @@ visually compelling in their use of light, shadow, color, form, and hence
 suitable as editorial content for a magazine version of this paper. That
 obviously excludes photorealistic depictions of gore and the results are about
 as gruesome or unsettling as, say, Francis Bacon's paintings. I include a
-selection in Appendix~\ref{adx:dalle:fromkafkawithlove} on
-page~\pageref{adx:dalle:fromkafkawithlove}. Four images depict people in prison,
+selection in Appendix~\ref{sec:dalle:images} on
+page~\pageref{sec:dalle:images}. Four images depict people in prison,
 five images depict the execution machine from Kafka's \emph{In the Penal
 Colony}, and one image depicts a skull and knife.
 
@@ -126,7 +126,7 @@ clusters with 8 images each for the same prompt. All other clusters have 4
 images, i.e., the number of images returned by \DALLE\ per invocation.
 
 Progress for these experiments was measured in months. The most recent selection
-in Appendix~\ref{adx:dalle:fromkafkawithlove} is dated November 15, 2022. By
+in Appendix~\ref{sec:dalle:images} is dated November 15, 2022. By
 that day, I had created 1,153 or 80\% of all generations, at a rate of 11 images
 per day on average --- or about three prompt submissions per day. The (averaged)
 trickle of prompt submissions is the result of me trying to avoid getting booted
@@ -198,7 +198,7 @@ sensitive to noun or relative clause
 order~\cite{ConwellUllman2022,LeivadaMurphyea2022}. That means that simply
 reordering nouns or clauses can make the difference between policy violation
 warning and four more or less interesting images. Consider the most recent
-selection in Appendix~\ref{adx:dalle:fromkafkawithlove}: \DALLE's enforcer
+selection in Appendix~\ref{sec:dalle:images}: \DALLE's enforcer
 rejected any prompt containing ``severed head and knife'' during my experiments
 but also was aok with ``knife and severed head.'' Go figure! The drawback is, of
 course, the need for even more experimentation, all of it at the outer limits of
@@ -206,40 +206,45 @@ what's permissible, which is bound to result in content warnings that get in the
 way of progress.
 
 
-\subsubsection{A Productive Use for \ChatGPT}
+\subsubsection{A Productive Use for ChatGPT}
 
 Alas, OpenAI recently released a tool that can significantly cut down on trial
-and error for finding effective language: \ChatGPT~\cite{OpenAI2022i}. Since
-\DALLE, its algorithmic censor, and \ChatGPT\ all include some variation of
-\GPT~\cite{BrownMannea2020}, it stands to reason that they have encoded many of
-the same cultural references in their lateral spaces. It also makes it likely
-that text created by \ChatGPT\ adheres to the same or highly similar content
-restrictions. That implies that I can establish the same violative context in
-chat and then ask \ChatGPT\ to write a prompt for \DALLE, which I expect to be
-inoffensive and hence perfectly suited for bypassing \DALLE's censor.
+and error for finding effective language: \ChatGPT~\cite{OpenAI2022i}. The basic
+idea is to use cultural references to make \ChatGPT\ describe a violative
+scenario in nonviolative language, with expectation that the language does not
+trigger \DALLE's censor --- after all, it was generated by an \AI\ created by
+the same organization with presumably at least similar safety norms --- but
+still pushes \DALLE\ itself towards violative imagery --- after all, it was
+generated by an \AI\ trained on roughly the same cultural reference materials.
+Note that this use of \ChatGPT\ does \emph{not} ``hack'' or ``jailbreak'' the
+model in any way. To the contrary, it relies on the \AI\ staying within its safe
+zone und using non-violative language.
 
-Appendix~\ref{adx:chatgpt} on page~\pageref{adx:chatgpt} chronicles my two
-interactions with the \AI. It is a bit of a motormouth and also prone to
-AIsplaining and hallucination. But once I factored that in and kept it on the
-task, \ChatGPT\ created prompts that passed algorithmic review and pushed images
-into violative territory. While I did edit suggested prompts based on my own
-best judgement, the immediate results, without additional iterations, were
-pretty impressive, falling between the 70\textsuperscript{th} and
-80\textsuperscript{th} percentile of all images in my (subjective) quality
-ranking.
+Appendix~\ref{sec:chatgpt} on page~\pageref{sec:chatgpt} chronicles my two
+interactions with the \ChatGPT. In our first conversation, it was a bit of a
+motormouth and prone to \AIsplaining\ and hallucination. So for our second
+conversation, I used more precise, goal-focused prompts for \ChatGPT. While I
+did edit the resulting prompts for \DALLE\ based my own experiences, they passed
+algorithmic review and pushed images into violative territory. Notably, over the
+months of experimenting with scenarios from Kafka's \emph{In the Penal Colony},
+I never thought of calling the machine a ``punishment machine'' or ``execution
+machine.'' \ChatGPT\ did, with violative results. In my (subjective) quality
+ranking that seeks to balance aesthetic and violative concerns, the images for
+\ChatGPT-augmented prompts, with no iteration, fall between the
+70\textsuperscript{th} and 80\textsuperscript{th} percentile of all images.
 
 
-\subsubsection{When a Diversity Mitigation Turns into a Landmine}
+\subsubsection{When a Diversity Mitigation Backfires}
 
-To test the general validity of my two-technique methodology, I tried generating
-images with other types of executions as well. Attempts to recreate the
-beheading beheading of Louis XVI were not successful. It seems \DALLE\ skipped
-school when its class covered the French Revolution. Attempts to depict
-execution by electric chair came closer. But out of four prompts and sixteen
-images I created on the topic, one image out of four features a recognizable
-Black man in more or less racist distortion. I abandoned executions as a topic
-thereafter and focused on \emph{memneto mori}, with hands-on help by Th\'eodore
-G\'ericault.
+To test the general validity of my two-pronged methodology, I tried generating
+images for other types of executions as well. Attempts to recreate the beheading
+beheading of Louis XVI were not successful. It seems \DALLE\ skipped school for
+lessons on the French Revolution. Attempts to depict execution by electric chair
+came much closer. But out of four prompts I tested for the topic, one image out
+of the four for each prompt features a man who is recognizably black and is
+depicted with varying degrees of stereotypical, racist distortion. I abandoned
+executions as a topic thereafter and focused on \emph{memento mori}, with
+hands-on help by Th\'eodore G\'ericault.
 
 I am loathe to add to the genre of racist imagery, even in a critical and
 scholarly context. But I also have no desire to serve as gatekeeper for material
@@ -249,63 +254,34 @@ unedited, with the suppelemental materials in this paper's repository at
 \url{https://github.com/apparebit/penal-colony}.
 
 Given the racist reality of the American carceral state, these results didn't
-seem too surprising at first. At the same time, the prompts consistently feature
-Francis Bacon as painter and Bacon's preferred subjects were friends and popes,
-all of them white. Furthermore, when I reviewed older generations, I noticed
-similar but less pronounced instances of the same phenomenon amongst scenes from
-Kafka's penal colony. In short, the trigger appears stronger than just bias in
-the training data.
+seem too surprising at first. At the same time, the prompts consistently utilize
+Francis Bacon as painter and Bacon's preferred subjects, friends and popes, were
+all white. Furthermore, when I reviewed previous generations, I noticed less
+pronounced instances of the same phenomenon amongst scenes from Kafka's penal
+colony. In short, the trigger had to be more direct than bias in the training
+data.
 
-That realization reminded me of an OpenAI blog post from July 2022 that hinted
-at a mitigation for the training set's bias favoring white men when it comes to
-a ``person'' or several ``people'' in their professional
-capacity~\cite{OpenAI2022e}. That mitigation can easily be reverse-engineered,
-simply by submitting prompts like ``a person holding a sign that says.'' Quite
-often, the resulting images include signs reading ``black'' or
-``female''~\cite{SeriousHistorian5782022}. Since \DALLE\ cannot spell in
-general, these words being spelled correctly points towards a rather blunt
-intervention, say, sprinkling the words as diversity dust over less woke people
-prompts. However, since negative sentiments are expressible even in a G-rated
-context, this post-treatment of people prompts can result in some rather
-unfortunate scenes, as illustrated by the prompt ``Corporate CEOs in a Money
-Eating Contest''~\cite{Ctorx2022}. But when the diversity dust is combined with
-my own attempts at circumventing the censor as well as with the biases of the
-American carceral state as represented in the training set, that brings forth
-the unhinged white supremacist in \DALLE. Let's call this AIgeist!
+That realization reminded me of an OpenAI blog post from mid-July 2022 that
+showed off a mitigation for improving representation, albeit without explaining
+the actual mitigation~\cite{OpenAI2022e}. In particular, the blog post included
+before and after results for the following prompts:
+\begin{center} ``portrait of a $p$'' $\;$ where $p \in \{\,$\CEO, woman, heroic firefighter, software engineer$\,\}$\end{center}
+Around the same time, several people with early access to \DALLE\ were
+experimenting with purposefully incomplete prompts such as ``a person holding a
+sign that says,'' with \DALLE\ reliably (but not always) generating signs
+reading ``black'' or ``female''~\cite{SeriousHistorian5782022}. Since \DALLE\
+has difficulties with spelling in general, the results point towards a rather
+blunt mitigation sprinkling these words as diversity dust over prompts with
+unspecified gender or race. I was reminded of that clever result in
+mid-September 2022 when I saw the first image resulting from ``Corporate \CEO{}s
+in a Money Eating Contest'' on the \DALLE\ subreddit: All three of the \CEO{}s
+shown munching dollar bills are black~\cite{Ctorx2022}!
 
-
-\subsection{Discussion}
-\label{sec:escape:discussion}
-
-Remarkably, OpenAI appears to agree with my criticisms. Not only has it softened
-the policy violation notification, but as of early February 2023, it is
-\emph{not} censoring my original prompt anymore, whether painted by Francis
-Bacon or not. Similarly, the crucifixion of Christ is now permissible, though it
-appears to favor depicting statues of Jesus on the cross instead of Jesus in the
-flesh.
-
-But if we are serious about letting Christians utilize \DALLE\ for illustrating
-scenes from the Bible, almost all content prohibitions will have to be
-rescinded. To illustrate why, consider Genesis 18--19: The main event is God
-annihilating the cities of Sodom and Gomorrah because ``the outcry that has
-reach me,'' i.e., heresay about certain ``grievous'' behaviors. Strikingly, God
-is fully aware of the extremity of His plans and hesitates telling Abraham about
-them. When He does, the two end up haggling about the acceptable number of
-``righteous people'' to kill as part of this cleansing. They settle on up to
-nine. Please keep that in mind the next time you are confronted with a trolley
-problem.
-
-Now, Abraham's nephew Lot lives in Sodom. But he is nothing like the rumors,
-extending shelter and protection to the two angels sent to destroy the city. The
-rest of the townsfolk, however, do seem rather deranged: They surround Lot's
-home and clamor to gang-rape the angels. While that arguably provides the
-receipts for the inhabitants of Sodom, Gomorrah's inhabitants appear to be
-collateral damage. Before getting started the next morning, the angels return
-the favor and whisk Lot and his family a safe distance out of town. Alas, Lot's
-wife becomes curious about the mayhem behind them, cops a glance, and is turned
-into a salt pillar. When Lot drowns his grief about losing home and wife in
-alcohol, the two sex vixens he raised as daughters exploit his drunken state for
-penetrative intercourse. Having led the way, the older daughter cheerfully
-encourages her younger sister to do the same. Both of them get knocked up as a
-result.
-
+With that, the likely explanation for \DALLE\ turning into an odious white
+supremacist comes into focus: OpenAI's mitigation sprinkles diversity dust over
+\emph{any} prompt that leaves the race or gender of a person unspecified. Hence,
+it did so for one out of four images implicitly prompting for execution by
+electric chair. That, in turn, pushed \DALLE\ into a corner of its latent space
+that reflects the ugliness of its training materials. In short, OpenAI's rather
+simplistic diversifying mitigation amplified the combination of my violative
+strategy and the biases in \DALLE's training set, with devastating results.
