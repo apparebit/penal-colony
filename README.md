@@ -12,9 +12,9 @@ Colony 🏝” by Robert Grimm.
   * To work with the ACM's new (but arguably not improved) publishing flow, the
     paper uses only approved LaTeX packages and compiles with `pdflatex`.
   * Unfortunately, that leaves only one subpar option for color emoji, namely
-    simulating them by including graphics files. In practice, my `\emo{name}`
-    macro takes care of everything. I even documented my [workflow and
-    macro](supplements/emoji.md).
+    simulating them by including graphics files. I wrote [my own LaTeX
+    package](https://github.com/apparebit/emo) to take care of that and then
+    some. It's included inline with the paper sources.
   * Transparency data and Jupyter notebooks with the code for analyzing the data
     are inside the [supplements](supplements) directory.
   * The build script assumes that the virtual environment with Python packages
