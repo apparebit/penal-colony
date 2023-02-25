@@ -75,7 +75,7 @@ do_build() {
 do_clean() {
     rm -f source/comment.cut
     rm -f source/missfont.log
-    for f in aux bbl blg log out pdf; do
+    for f in aux bbl blg fdb_latexmk fls log out pdf; do
         rm -f "source/main.$f"
     done
     rm -f .DS_store pdf/.DS_store source/.DS_store supplements/.DS_store
