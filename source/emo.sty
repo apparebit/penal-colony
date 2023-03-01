@@ -5,12 +5,12 @@
 %% The original source files were:
 %%
 %% emo.dtx  (with options: `package')
-%% 
+%%
 %% emo: emoji for all (ahem, modern LaTeX engines)
 %% (C) Copyright 2023 by Robert Grimm
 %% Released under LPPL v1.3c or later
 %% <https://github.com/apparebit/emo>
-%% 
+%%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{emo}[2023/02/10 v1.0 emoji for all]
 \newif\ifemo@mkextra\emo@mkextrafalse
@@ -87,7 +87,7 @@
 \newcommand\emo[1]{%
     \emo@ifdef{#1}{%
         \emo@index{#1}%
-        \raisebox{-0.2ex}{\includegraphics[height=1em]{./emo-graphics/#1}}%
+        \raisebox{-0.2ex}{\includegraphics[height=1em]{#1}}%
     }%
 }
 \fi
@@ -107,11 +107,11 @@
 \else
 \newcommand\lingchi{%
     \emo@index{lingchi}%
-    \raisebox{-0.2ex}{\includegraphics[height=1em]{./emo-graphics/lingchi}}%
+    \raisebox{-0.2ex}{\includegraphics[height=1em]{lingchi}}%
 }
 \newcommand\YHWH{%
     \emo@index{YHWH}%
-    \raisebox{-0.2ex}{\includegraphics[height=1em]{./emo-graphics/YHWH}}%
+    \raisebox{-0.2ex}{\includegraphics[height=1em]{YHWH}}%
 }
 \fi
 \fi
