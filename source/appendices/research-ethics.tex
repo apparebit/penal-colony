@@ -1,6 +1,3 @@
-% !TEX root = ../main.tex
-
-%\newpage
 \section{Research Ethics}
 \label{app:research-ethics}
 
@@ -18,93 +15,48 @@ publishers often offer better rates for bulk access, they still are entirely
 unreasonable given that publishers paid nothing for the hard work of writing,
 reviewing, and editing these articles. Instead, I largely relied on Sci-Hub to
 access paywalled research articles. Since my prior academic publications did not
-benefit from open access options, I encourage others to also rely on Sci-Hub for
-accessing them.
+benefit from open access options, I have no objections to others accessing them
+through Sci-Hub.
 
-The paper itself combines two auto-ethnographic case studies with a survey based
-on transparency reports and experiments that actively probed the beta release of
-a production system. Sec.~\ref{sec:census}, the section presenting the survey,
-already covers an attempt at validating some of the underlying transparency
-disclosures. It also includes a discussion of the limitations inherent in such a
-survey, especially when one of the covered organizations effectively is beholden
-to a single person. Consequently, there is little more to say about the survey.
+My experiemental work on circumventing \DALLE's censor is comparable to security
+researchers actively probing the security of internet-facing systems, with two
+important differences. First, whereas probing a system's security invariably
+ends up exercising paths infrequently travelled and hence has a non-zero risk of
+causing system disruption, my probing of \DALLE's censor was well within the
+intended use of the system and hence did not pose any additional risk for
+disruption. Second, a successful security exploit negatively impacts
+confidentiality, integrity, or availability of a system. That is not the case
+for my censorship circumvention strategy, which results in violative images for
+a given topic and no more. Furthermore, unlike for other text-to-image systems,
+generated images are private by default, i.e., only visible to myself and
+OpenAI. I not only leveraged that for carefully curating images for publication
+but explicitly made aesthetic considerations an integral part of my attack
+strategy, never fully testing how for it might go.
 
-Both research and auto-ethnographic case studies are initially based on my
-personal interests. Given the lack of institutional support, the decision to
-make my own experiences the topic of the two case studies was an easy one. It
-neatly avoids questions of consent and provides me with unrestricted access to
-supporting materials. In particular, I had made a habbit of saving interesting
-webpages years ago and hence had saved key moments of my interactions with
-OpenAI's and Twitter's enforcement processes as screenshots. The Internet
-Archive helped fill in missing materials.
-
-By comparison, any survey would have been harder to pull off ethically (e.g., no
-review by IRB) and practically (e.g., no students to survey). Alas, the
-auto-ethnographic character of the case studies does raise concerns about their
-validity. The qualitative nature of both only strengthens the concerns. At the
-same time, both case studies are about two corporations' policies and automated
-processes, none of which have been created for my benefit and hence clearly go
-beyond subjective experience. In other words, for the purposes of this paper, my
-interest in these two algorithmic interventions mostly helped to more fully
-scope OpenAI's and Twitter's content moderation.
-
-My probing of \DALLE's censor is comparable to studies that probe the security
-of internet-facing systems, with one important difference: Whereas probing a
-system's security invariably ends up exercising a path infrequently travelled
-and hence has a non-zero risk of causing disruption, my probing of \DALLE's
-censor was well within the intended use of the system and hence did not pose any
-additional risk for disruption. Furthermore, unlike for other text-to-image
-systems, generated images are private by default, i.e., only visible to myself
-and OpenAI. That allows for considered curation before sharing potentially
-upsetting images --- which is just what I did.
-
-Determining the least bad way for handling the unexpected, grotesquely racist
-images took a while. I pretty much immediately knew that I didn't want to
-include them with the paper. The potential for adding to existing emotional
-trauma just seems too big. But that left unaddressed what to do if somebody
-wanted to validate my claims or needed the prompts and/or images for their own
-research. I found the prospect of me acting as gatekeeper and exercising power
-in accepting/rejecting requests unpalatable. In part, that is because I know how
-uncomfortable it feels writing such a request as an independent researcher,
-without the cachet of an institution to back me up.
+Arguably, that also left me somewhat unprepared for when my probing unexpectedly
+resulted in grotesquely racist images. I immediately decided that I didn't want
+to include them with the paper. Since they were unexpected, their content does
+not help support my claims. At the same time, the potential for adding to
+existing emotional trauma is too large. But that leaves unaddressed what to do
+if somebody wants to validate my claims or evaluate the prompts and/or images
+for their own research. I found the prospect of me acting as gatekeeper
+unpalatable. That reaction is largely based on my own experiences interacting
+with institutional gatekeepers as an independent researcher when compared to as
+a faculty member: Writing a request takes considerably more effort to establish
+context and credibility but still has markedly lower chances to be granted, as
+some gatekeepers seemingly won't even reply to non-institutional requests. I'd
+rather avoid putting other researchers into a similar position.
 
 After consultation with a close friend, I settled on including prompts and
 images with the paper's supplemental materials at
 \url{https://github.com/apparebit/penal-colony}. That lets people who want to
 see or use the prompts and/or images do so without being asked to justify their
-interest. To have recourse in case somebody abuses that, I do assert copyright
-for both prompts and images and grant a non-exclusive license only for
-``not-for-profit education and scholarship,'' i.e., only within already existing
-fair use exemptions. Prompts and images are copyrightable because they are part
-of the larger effort to circumvent \DALLE's censor, which requires far more than
-a modicum of creativity.
-
-\hidden{
-That hints at a tension that permeats this paper, namely the tension between me
-as individual and also outsider versus me as academic researcher working within
-an institutional tradition. Being personally subjected to Twitter's punishment
-ritual certainly made me hyperaware of its punitive condenscension. Yet I turn
-to scholarship for demonstrating that this weird anecdote actually has broader
-significance. That same scholarship prefers that we maintain an emotional and
-intellectual distance --- but grants us authority in return. Yet this weird
-anecdote started because I was acting as a daily active shithead --- mind you,
-that's an actual industry metric~\cite{Sherman2021}. Though I doubt that
-anecdote or metric will grow my academic cachet. Then again, institutional
-authority is brittle and prone to double standards, blindspots, and other
-failures --- as the paper demonstrates on the example of OpenAI and \DALLE{}.
-
-Consistent with that qualified skepticism of authority, this paper explicitly
-favors the perspectives and experiences of individuals over those of
-organizations, even if the individual has violated an organization's rules or
-country's laws. That is a deliberate reaction to the dehumanizing impact of
-organizational policies and algorithmic enforcement described in this paper. For
-those same reasons, I appear as myself in this paper and don't hide behind a
-pluralis majestatis (uhm, right, see previous paragraph) or similar linguistic
-device. They only project but never provide authority. Furthermore, this isn't
-an academic affectation. I conducted the research and wrote this paper on my
-own, without institutional support and, in particular, without access to an
-institutional library.
-}
+interest. To have recourse in case somebody abuses unrestricted access, I do
+assert copyright for both prompts and images and grant a non-exclusive license
+only for ``not-for-profit education and scholarship,'' i.e., only within already
+existing fair use exemptions. I'd claim that prompts and images are
+copyrightable because they are part of the larger effort to circumvent \DALLE's
+censor, which requires far more than a modicum of creativity.
 
 
 \subsection{Potential Conflicts of Interest}
