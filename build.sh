@@ -79,7 +79,7 @@ do_clean() {
     for f in aux bbl blg fdb_latexmk fls log out pdf; do
         rm -f "source/main.$f"
     done
-    rm -f .DS_store pdf/.DS_store source/.DS_store supplements/.DS_store
+    rm -f .DS_store source/.DS_store supplements/.DS_store
     rm -rf arxiv
     rm -f acm.zip arxiv.zip
 }
@@ -105,10 +105,10 @@ prep_arxiv() {
 }
 
 prep_acm() {
-    ( cd source && do_build $@ )
-    mv source/main.pdf pdf/main.pdf
-    do_clean
-    zip -r acm.zip pdf source supplements build.sh
+    #( cd source && do_build $@ )
+    #mv source/main.pdf pdf/main.pdf
+    #do_clean
+    #zip -r acm.zip pdf source supplements build.sh
 }
 
 target=${1:-build}
