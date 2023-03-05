@@ -61,6 +61,7 @@ do_venv() {
     exec /bin/zsh -f -i
 }
 
+export TEXINPUTS=.:emo-graphics/:images/:
 local LATEX_TOOL=pdflatex
 
 do_build() {
@@ -79,13 +80,28 @@ do_clean() {
         rm -f "source/main.$f"
     done
     rm -f .DS_store pdf/.DS_store source/.DS_store supplements/.DS_store
+    rm -rf arxiv
     rm -f acm.zip arxiv.zip
 }
 
 prep_arxiv() {
+    # Make sure paper builds and working directory exists.
     ( cd source && do_build $@ )
-    do_clean
-    zip -r arxiv.zip source/*
+    [ ! -d arxiv ] && mkdir arxiv
+
+    # Combine all LaTeX sources into one and inject pdflatex marker.
+    ( cd source && latexpand main.tex -o ../arxiv/apaper.tex )
+    sed -i '' '2i\
+\\pdfoutput=1' arxiv/apaper.tex
+
+    # Include emo style, bibliography, images.
+    cp source/emo.sty arxiv
+    cp source/main.bbl arxiv/apaper.bbl
+    cp source/images/*.{jpg,png} arxiv
+    cp source/emo-graphics/*.pdf arxiv
+
+    # Package it up
+    zip -r arxiv.zip arxiv/*
 }
 
 prep_acm() {

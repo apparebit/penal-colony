@@ -305,3 +305,7 @@ TSWLatexianTemp*
 
 # The generated document
 source/main.pdf
+
+# The arxiv staging directory and archive file
+arxiv
+arxiv.zip
