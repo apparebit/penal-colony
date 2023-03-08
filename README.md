@@ -32,22 +32,25 @@ content moderation are excessively punitive, often resulting in the figurative
 death of users through permanent account suspension. First, based on my own
 experiences and grounded in procedural justice, this paper starts by exploring
 the many ways policy and automated enforcement turn punitive on the example of
-OpenAI's DALL•E 2. Second, it illustrates how even best-practices policy turns
+OpenAI's DALL•E 2. Second, it illustrates how even best-practices policy turns
 punitive performance on the example of pre-Musk Twitter. Third, a comprehensive
 survey of non-Chinese social media demonstrates the pervasiveness of excessively
 punitive content moderation. It also tests the limits of their accountability,
 notably by projecting the likely impact of the European Union's Digital Services
 Act and by correlating data released by Facebook, Google, and the National
 Center for Missing and Exploited Children. Fourth, to illustrate the limits of
-algorithmic content moderation, it presents a successful strategy for subverting
-DALL•E's aggressive automated censor, which inadvertently also unleashed
-grotesquely racist imagery. This paper concludes by pointing towards harm
-reduction as a strategy for, possibly maybe, making life in this digital penal
-colony at least somewhat bearable — because, I fear, we are stuck in it.
+algorithmic content moderation, this paper presents a successful strategy for
+subverting DALL•E's aggressive automated censor, which inadvertently also
+unleashed grotesquely racist imagery. Fifth, such discoveries in latent space
+require hands-on probing but corporations are unlikely to grant such access to
+researchers. Hence this paper argues for legal mandates and sketches an approach
+informed by patent law. Finally, this paper concludes by pointing towards harm
+reduction as a mindset for, possibly maybe, making life in this digital penal
+colony at least somewhat bearable --- because, I fear, we are stuck in it.
 
 
 ## (C) Copyright 2023 by Robert Grimm
 
-The shell script and Jupyter notebooks included in this repository are open
-source under the Apache 2.0 license. I have not yet settled on a license for the
-paper itself. For now, all rights are reserved.
+The shell script and Jupyter notebooks included in this repository have been
+released as open source under the Apache 2.0 license. All rights are reserved
+for the paper itself.
