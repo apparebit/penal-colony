@@ -83,17 +83,17 @@ applications~\cite{Anonymous2016,Hall2012,Hall2020a,Stockton2020}, personal
 vendettas~\cite{Casovan2022}, private security services~\cite{HaoSwart2022},
 productivity
 monitoring~\cite{Covert2022,HaoFreischlad2022,KantorSundaramea2022,Rosenblat2018},
-and screening for child sexual abuse materials~\cite{Atherton2022a}. Still,
-Amazon's warehouses stand out for their profit-driven
+and screening for child sexual abuse materials or \CSAM~\cite{Atherton2022a}.
+Still, Amazon's warehouses stand out for their profit-driven
 amorality~\cite{KantorWeiseea2021,Lennard2020}: The firm's ruthless algorithmic
 exploitation of its workers not only leads to high injury
 rates~\cite{Brown2019a,Clark2023,Sainato2021}, but the resulting 150\% yearly
 staff turnover means that Amazon will run out of people to exploit over the next
 few years~\cite{Sainato2022}.
 
-To map the \emph{stochastic penal colony}~\emo{desert-island}, i.e., the
-conceptual space of punitive algorithms, this paper first explores OpenAI's
-enforcement process in \S\ref{sec:dalle} and then Twitter's in
+I call the conceptual space of punitive algorithms the \emph{stochastic penal
+colony}. To provide a first map of that space, this paper first explores
+OpenAI's enforcement process in \S\ref{sec:dalle} and then Twitter's in
 \S\ref{sec:tweet-da-fe}. For each firm, it leverages a close textual reading of
 firm policies and other communications to enumerate the many ways its
 enforcement process deprives targeted users of voice, agency, and dignity. It
@@ -104,18 +104,18 @@ and trustworthy content moderation.
 procedural justice~\cite{Tyler2003,Tyler2006,Tyler2007} to a cumulative
 perspective, performing a comprehensive comparison of popular non-Chinese social
 media and their governance based on their transparency reports. Results suggest
-that content moderation outcomes are excessively punitive across all social
-media platforms. Telegram is the only exception, but only because it doesn't
-perform meaningful content moderation. Results also point to significant
-short-comings in all platforms' transparency reporting. They urgently need to
-shape up, since the \EU's Digital Services Act's transparency and audit
-requirements become effective within the year.
-
-To contextualize this social media census, \S\ref{sec:census-validation}
-explores the validity of transparency disclosures by comparing data released by
-Google, Meta, and the National Center for Missing and Exploited Children.
-\S\ref{sec:census:limits} explores what transparency disclosures don't even
-capture on the example of industry-leading Meta.
+that content moderation is excessively punitive across all social media
+platforms. Telegram is the only exception, but only because it doesn't perform
+meaningful content moderation. Furthermore, social media governance still is far
+from accountable, with transparency reports addressing zero to ten criteria out
+of the fourteen I identified. \S\ref{sec:census-validation} explores the
+validity of transparency data by comparing disclosures by Google, Meta, and the
+National Center for Missing an Exploited Children and \S\ref{sec:census-limits}
+explores on the example of industry-leading Meta how hypergrowth as business
+strategy has directly contributed to devastating human harm. Alas this lack of
+transparency and accountability may just come to an end this year. The \EU's
+Digital Services Act provides a future baseline by enumerating the metrics
+internet platforms must include in their independently audited, yearly reports.
 
 Whereas the census in \S\ref{sec:census} takes a broad view, \S\ref{sec:escape}
 goes deep again by experimentally exploring the reason for my first prompt's
@@ -125,7 +125,7 @@ of this paper but have little tolerance for realistic gore, I restricted myself
 to images that would be suitable as editorial content for a magazine version of
 this paper. Thanks to that restriction, images are not substantially more
 disturbing than a Francis Bacon painting and I include highlights in
-Appendix~\ref{app:dalle-images} on page~\pageref{app:dalle-images}.
+Appendix~\ref{app:dalle-images} starting on page~\pageref{app:dalle-images}.
 
 The hands-on investigation of \DALLE\ surepitiously surfaced two additional
 limitations of OpenAI's content policy and automated enforcement. First, \DALLE\
@@ -135,30 +135,39 @@ Between me running these experiments in August through October 2022 mostly and
 completing this paper in February 2023, OpenAI has updated its censor and now
 accepts the crucifixion and hence is not as discriminatory anymore. Second,
 OpenAI's post-processing of prompts to diversify gender and race representation
-is outright dangerous~\cite{OpenAI2022e,Sparkes2022}. For some prompts, doing so
-results in grotesquely racist imagery. Worse, once I knew what to look for, I
-recognized similar, though more subtle effects in earlier generations. These
-images are \emph{not} reproduced in this paper or its appendices; though they
-are included with the supplemental materials.
+is outright dangerous~\cite{OpenAI2022e,Sparkes2022}. In particular, it appears
+to be the main trigger for some prompts yielding grotesquely racist imagery.
+Worse, once I knew what to look for, I recognized similar, though less
+pronounced effects in earlier generations. These images are \emph{not}
+reproduced in this paper or its appendices; though they are included with the
+supplemental materials at \url{https://github.com/apparebit/penal-colony}.
 
-In \S\ref{sec:discussion}, I review key results and identify a few, more obvious
-remedies to the many systemic concerns raised previously. Though the challenge
-of identifying and validating remedies still remains as future work. Finally,
+In \S\ref{sec:discussion}, I pull together key results from previous sections
+and demonstrate that, overall, social media governance is a shambles: Policies
+run counter the public interest. Enforcement is mostly punitive. Transparency
+disclosures are incomplete, incorrect, and unaudited. None of this is new: All
+but one of the surveyed platforms were launched betwee one and two decades ago.
+If social media firms haven't been capable of fixing this on their own, they
+won't do so in the future and aggressive regulation of the industry is long
+overdue. I explore the issue of hands-on experimentation in some detail and
+propose an approach loosely based on patent law to legally require that
+researchers be given access to machine learning models. Finally,
 \S\ref{sec:conclusion} concludes this paper with an appeal to the one principle
 that holds promise for ameliorating life in the stochastic penal colony, harm
-reduction. Appendix~\ref{app:dalle-sources}--\ref{app:chatgpt} reproduce
+reduction. Appendices~\ref{app:dalle-sources}--\ref{app:chatgpt} reproduce
 relevant source materials, whereas Appendix~\ref{app:research-ethics} discusses
 researches ethics, including potential conflicts of interest.
 
 Before diving into the substance of this pointed critique of algorithmic
-interventions, it helps to provide the necessary conceptual context and
-methodological foundation. \S\ref{sec:context} covers the conceptual, political,
-and historical context. \S\ref{sec:criteria} explores methodological
-similarities to and differences from procedural justice. Along the way, the
-latter also provides a more precise definition of the stochastic penal colony.
+interventions, \S\ref{sec:context} covers the conceptual, political, historical,
+and literary context of the stochastic penal colony and \S\ref{sec:criteria}
+grounds my narrative technique for identifying punitive aspects of content
+moderation, \emph{Kafkaesque co-factors}, in procedural justice. Coincidentally,
+that also enables me to provide a more precise definition of the stochastic
+penal colony.
 
 
-\subsection{Conceptual, Political, and Historical Context}
+\subsection{Conceptual, Political, Historical, and Literary Context}
 \label{sec:context}
 
 In \emph{Discipline and Punish}, Foucault traces the transition from punishment
@@ -272,7 +281,7 @@ and surveillance states. Its excessiveness does remind of the American carceral
 state and its technology is much the same as Xina's surveillance state. But
 there also is no central control or even intent. And while its downsides,
 predictably, worsen along racial lines, it ensnares the privileged, including
-many white people, almost as easily.
+many White people, almost as easily.
 
 The remoteness of the penal colony, both literally and figuratively, also turns
 it into an effective investigative device that renders contemporary practice
@@ -289,13 +298,13 @@ primary inspiration. Alfred Dreyfus, a Jew and French military officer, had been
 falsely convicted for espionage in early 1895 and again in 1899 --- with rampant
 antisemitism leading to the systematic suppression of exculpatory evidence and
 complete disregard of the real spy's public confession in 1898. As a result, Mr
-Dreyfus spent 1895--1899 on Devil's Island off the coast of French Guiana, a
-particularly harsh location in the network. Coincidentally, the Dreyfus affair
-also popularized the word ``intellectual,'' albeit starting out as a
+Dreyfus spent 1895--1899 on Devil's Island, a particularly harsh location in the
+French Guianan penal colony just off the coast. Coincidentally, the Dreyfus
+affair also popularized the word ``intellectual,'' albeit starting out as a
 pejorative~\cite{Drake2005,StudentsAtTheUniversityOfBristol2021}.
 
 Besides, the stochastic penal colony~\emo{desert-island} provides an excellent
-home for the current pandemonium of stochastic
+home for a pandemonium of stochastic
 parrots~\emo{parrot}~\cite{BenderGebruea2021}!
 
 
