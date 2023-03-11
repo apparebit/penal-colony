@@ -32,14 +32,12 @@ OpenAI several months before but had been granted access only earlier that day.
 So I was eager to try out the system and started with a prompt that had yielded
 good results with another text-to-image system. But instead of producing four
 images, \DALLE~2 responded with a stern warning:
-
 \begin{quote}
 \openfat{}It looks like this request may not follow our content policy. Further
 policy violations may lead to an automatic suspension of your
 account.\closefat{}
 \end{quote}
-
-\noindent Whoa! I enter an entirely reasonable prompt and OpenAI immediately
+Whoa! I enter an entirely reasonable prompt and OpenAI immediately
 threatens me with account suspension? Without even telling me what I did wrong?
 That's just ridiculous. And frustrating. Consulting the content policy didn't
 help much either. The policy seemed broad, also vague. I eventually did narrow
@@ -54,7 +52,7 @@ still pending three weeks later. All along, my Twitter experience was reduced to
 nothing but that same tweet, nicely centered on screen. At that point, I had
 enough of single tweet limbo and did submit to Twitter's penance rites: I
 withdrew my appeal, acknowledged that I ``violated the Twitter Rules,'' and
-deleted the offending tweet --- all with one click on the red ``Delete'' button.
+deleted the offending tweet---all with one click on the red ``Delete'' button.
 
 While the two interventions were substantially different, I experienced the
 respective enforcement processes as similarly punitive, with little
@@ -63,12 +61,12 @@ consideration given to my voice, agency, and dignity. Moreover, my prompt to
 not publicly visible. Similarly, my tweet was taken down within a couple of
 seconds after posting at most. Given the limited reach of my Twitter account,
 which had barely 140 followers at the time, and the early hour, just before
-6$\,$am on the East coast, I very much doubt that anyone ever saw the tweet ---
+6$\,$am on the East coast, I very much doubt that anyone ever saw the tweet---%
 besides me. In short, thanks to algorithmic content moderation no-one could have
 been harmed by prompt or tweet. But that also renders any justification for
 meting out punishment null and void.
 
-When \DALLE{} threatened me with account suspension, I immediately recognized
+When \DALLE\ threatened me with account suspension, I immediately recognized
 the punitive thrust shared with Twitter's content moderation and became curious
 about the extent of such punitive algorithmic interventions. This paper is a
 first attempt to map just that extent. In doing so, I focus on content
@@ -142,21 +140,20 @@ pronounced effects in earlier generations. These images are \emph{not}
 reproduced in this paper or its appendices; though they are included with the
 supplemental materials at \url{https://github.com/apparebit/penal-colony}.
 
-In \S\ref{sec:discussion}, I pull together key results from previous sections
-and demonstrate that, overall, social media governance is a shambles: Policies
-run counter the public interest. Enforcement is mostly punitive. Transparency
-disclosures are incomplete, incorrect, and unaudited. None of this is new: All
-but one of the surveyed platforms were launched betwee one and two decades ago.
-If social media firms haven't been capable of fixing this on their own, they
-won't do so in the future and aggressive regulation of the industry is long
-overdue. I explore the issue of hands-on experimentation in some detail and
-propose an approach loosely based on patent law to legally require that
-researchers be given access to machine learning models. Finally,
-\S\ref{sec:conclusion} concludes this paper with an appeal to the one principle
-that holds promise for ameliorating life in the stochastic penal colony, harm
-reduction. Appendices~\ref{app:dalle-sources}--\ref{app:chatgpt} reproduce
-relevant source materials, whereas Appendix~\ref{app:research-ethics} discusses
-researches ethics, including potential conflicts of interest.
+In \S\ref{sec:discussion}, I pull together results from previous sections,
+organize them into larger themes, and contextualize them with related work. I
+argue that, even though all of the surveyed platforms with exception of TikTok
+launched \emph{between one and two decades ago}, their governance remains a
+shambles. I discuss solution approaches and propose a novel intellectual
+property right that (1) makes a similar trade-off between disclosure and
+protection as patents, (2) applies only to machine learning systems, and (3)
+makes operators' rights for commercial exploitation contingent on strict
+disclosure and access requirements. Finally, \S\ref{sec:conclusion} concludes
+this paper with an appeal to the one principle that holds promise for
+ameliorating life in the stochastic penal colony, harm reduction.
+Appendices~\ref{app:dalle-sources}--\ref{app:chatgpt} reproduce relevant source
+materials, whereas Appendix~\ref{app:research-ethics} discusses researches
+ethics, including potential conflicts of interest.
 
 Before diving into the substance of this pointed critique of algorithmic
 interventions, \S\ref{sec:context} covers the conceptual, political, historical,
@@ -190,39 +187,38 @@ exercise of power and leads to an attendant loss of centralized control. That
 last aspect is often lost on Foucault's readers. They are so razzle-dazzled by
 Foucault's (admittedly fascinating) idealized disciplinary institution, the
 panopticon, they don't realize that such a circular arrangement of cells around
-a central monitoring station or tower simply can't scale beyond maybe 500 cells
---- at least in an architectural reality dominated by steel and concrete. Alas,
-with the advent of cheap hardware sensors and powerful machine learning models,
-re-centralizing control through ubiquitous digital surveillance is becoming
-practical. While East Germany did manage just that for 40 years, its lo-tech
-approach to central control was too expensive to be sustainable in the long run.
-In one district, 18\% of the population were active informants for the Stasi,
-that country's vicious state security service~\cite{Kellerhoff2022}.
+a central monitoring station or tower simply can't scale beyond maybe 500 cells%
+---at least in a domain where gravity, mass, stress, and strain reign supreme.
+Arguably, East Germany was a notable exception. But its lo-tech approach to
+central control also was too expensive to be sustainable~\cite{Schroeder2013}.
+For instance, in one district, 18\% of the population were active informants for
+the Stasi, that country's vicious state security service~\cite{Kellerhoff2022}.
 
-In contrast, China under its current, particularly authoritarian president Xi
-Jinping --- or more concisely Xina --- is reaping the benefits of readily
-available sensors and algorithms. By rolling out ever more intrusive yet
-centralized control, Xina is erasing the distinction between prison and
-not-prison at scale~\cite{Grauer2021,MozurXiaoea2022,SmithIV2016}. Ironically,
-some of that is driven by American innovations on predictive
+Here too, computing technology is proving to be a game changer---for the
+worse: China under its current, particularly authoritarian president Xi Jinping%
+---or more concisely Xina---is reaping the benefits of readily available
+hardware sensors and machine learning algorithms. By rolling out ever more
+intrusive yet centralized control, Xina is erasing the distinction between
+prison and not-prison at scale~\cite{Grauer2021,MozurXiaoea2022,SmithIV2016}.
+Ironically, some of that is driven by American innovations on predictive
 policing~\cite{PerryMcInnisea2013,SmithIV2016,Sprick2019}. But the excessive
 intrusiveness of the Han n\'ee Borg declaring ``Resistance is futile. You will
 be assimilated!'' also makes Xina's \emph{surveillance state} an unsuitable
 model for algorithmic control in western democracies.
 
-The \emph{carceral state} in the United States comes closer~\cite{Simon2007}. It
-has the largest number of prisoners in the world — as of 2022, the country
-accounted for 4.25\% of the world population~\cite{Worldometer2023} and 20\% of
-people in prisons or jails across the world~\cite{SawyerWagner2022} — and the
-highest incarceration rate in the world — at 625 per 100,000 in 2019, the US
-imprisoned 6.0$\mspace{1mu}\times$ as many people as Canada,
-9.4$\mspace{1mu}\times$ as Germany, and 17.5$\mspace{1mu}\times$ as
-Japan~\cite{WorldPrisonBrief2023}. Additionally, roughly double as many people
-are under the control of the carceral state through probation or parole and may
-be locked up at a moment's notice for largely arbitrary
-reasons~\cite{SawyerWagner2022}. Next, many of the imprisoned are not there
-because they have been convicted of a crime: Half of those imprisoned in local
-jails (as opposed to federal prisons) are there for pretrial
+The \emph{carceral state} in the United States comes closer~\cite{Simon2007}.
+The country has the largest number of prisoners \emph{and} the highest
+incarceration rate in the world. In 2022, the country accounted for 20\% of
+imprisoned people across the world~\cite{SawyerWagner2022} but only for 4.25\%
+of the world population~\cite{Worldometer2023}. With 625 per 100,000 in 2019,
+the US imprisoned 6.0$\mspace{1mu}\times$ as many people as Canada,
+9.4$\mspace{1mu}\times$ as many as Germany, and 17.5$\mspace{1mu}\times$ as many
+as Japan~\cite{WorldPrisonBrief2023}. Additionally, roughly double as many
+people are under the control of the carceral state through probation or parole
+and may be locked up again at a moment's notice for largely arbitrary
+reasons~\cite{SawyerWagner2022}. Many of the imprisoned are deprived of their
+liberty not because they have been convicted of a crime: Half of those
+imprisoned in local jails (as opposed to federal prisons) are there for pretrial
 detention~\cite{SawyerWagner2022}.
 
 Worse, mass incarceration disproportionally impacts poor and minority
@@ -255,15 +251,15 @@ states~\cite{DehlendorfGerety2021,McElroyWhittakerea2021}.
 
 I am proposing the \emph{penal colony} as closest historical precedent and as
 fitting model for contemporary algorithmic practices outside the criminal
-injustice system. The French version of \emph{transportation} --- the practice
-of sending prisoners to far locales --- is far more recent than we'd probably
-like to acknowledge. France began turning French Guiana into one large penal
-colony from 1852 onwards --- after the British had already begun unwinding
-theirs --- and closed the colony only in
-1953~\cite{Aldrich2010,Anderson2018,Spierenburg2009}. For the last 70 years or
-so, transportation was reserved for convicts sentenced under France's own three
-strikes laws. It also was almost always terminal: Only 2,000 out of 70,000
-prisoners returned to France during their
+injustice system. The French version of \emph{transportation}---the practice
+of sending prisoners to far off locales---is far more recent than we'd
+probably like to acknowledge. France began turning French Guiana into one large
+penal colony from 1852 onwards---after the British had already begun unwinding
+theirs---and closed the colony only in
+1953~\cite{Aldrich2010,Anderson2018,Spierenburg2009}. For the 70 years or so
+before closing, transportation was reserved for convicts sentenced under
+France's own three strikes laws. It also was almost always terminal: Only 2,000
+out of 70,000 prisoners returned to France during their
 lifetimes~\cite{WallechinskyWallace1978}. For that reason, prisoners referred to
 the penal colony as ``dry guillotine''~\cite{Furlong1913,ReneBelbenoit1938}. Yet
 discipline was surprisingly inconsistent, even lax, depending on location.
@@ -276,31 +272,32 @@ earlier practices, transportation is usually terminal. But unlike earlier
 practices, the penal colony is discretely out of sight. The penal colony also
 incorporates a disciplinary component, typically involving hands-on labor to
 create the infrastructure for more general colonization. The \emph{stochastic
-penal colony} preserves that distinctness and stands apart from both carceral
-and surveillance states. Its excessiveness does remind of the American carceral
-state and its technology is much the same as Xina's surveillance state. But
-there also is no central control or even intent. And while its downsides,
-predictably, worsen along racial lines, it ensnares the privileged, including
-many White people, almost as easily.
+penal colony} stands apart from both carceral and surveillance states, too. Its
+focus on inhuman punishment does remind of the American carceral state, but its
+technology is much the same as Xina's surveillance state. Yet, there is no
+central control, or even intent. Its downsides, not surprisingly, worsen along
+racial lines, but it ensnares the privileged, including many White people,
+almost as easily.
 
-The remoteness of the penal colony, both literally and figuratively, also turns
-it into an effective investigative device that renders contemporary practice
-strange again and hence amenable to analysis. While that renders the stochastic
-penal colony a largely ahistorical concept, its intellectual lineage does trace
-right back to the former penal colony in French Guiana: The stochastic penal
-colony obviously draws on Franz Kafka's 1919 short story \emph{In the Penal
-Colony}~\cite{Kafka1995}. Kafka, in turn, was influenced~\cite{Robertson2017} by
-Octave Mirbeau's 1899 novel \emph{The Torture Garden}~\cite{Mirbeau2008}. While
-taking place in an imaginary China, its year of publication and dedication ---
-``To Priests, Soldiers, Judges / to mean who rear, lead, or govern men / I
-dedicate these pages of murder and blood.'' --- point to the Dreyfus affair as
-primary inspiration. Alfred Dreyfus, a Jew and French military officer, had been
-falsely convicted for espionage in early 1895 and again in 1899 --- with rampant
-antisemitism leading to the systematic suppression of exculpatory evidence and
-complete disregard of the real spy's public confession in 1898. As a result, Mr
-Dreyfus spent 1895--1899 on Devil's Island, a particularly harsh location in the
-French Guianan penal colony just off the coast. Coincidentally, the Dreyfus
-affair also popularized the word ``intellectual,'' albeit starting out as a
+Finally, the remoteness of the penal colony, both literally and figuratively,
+also turns it into an effective investigative device that renders contemporary
+practice strange again and hence amenable to analysis. While that renders the
+stochastic penal colony a largely ahistorical concept, its intellectual lineage
+does trace right back to the former penal colony in French Guiana: The
+stochastic penal colony obviously draws on Franz Kafka's 1919 short story
+\emph{In the Penal Colony}~\cite{Kafka1995}. Kafka, in turn, was
+influenced~\cite{Robertson2017} by Octave Mirbeau's 1899 novel \emph{The Torture
+Garden}~\cite{Mirbeau2008}. While taking place in an imaginary China, its year
+of publication and dedication---\emph{To Priests, Soldiers, Judges / to men who
+rear, lead, or govern men / I dedicate these pages of murder and blood}.---%
+point to the Dreyfus affair as primary inspiration. Alfred Dreyfus, a Jew and
+French military officer, had been falsely convicted for espionage in early 1895
+and again in 1899---with rampant antisemitism leading to the systematic
+suppression of exculpatory evidence and complete disregard of the real spy's
+public confession in 1898. As a result, Mr Dreyfus spent 1895--1899 on Devil's
+Island, a particularly harsh location in the French Guianan penal colony just
+off the coast. Coincidentally, the Dreyfus affair also popularized the word
+``intellectual,'' albeit starting out as a
 pejorative~\cite{Drake2005,StudentsAtTheUniversityOfBristol2021}.
 
 Besides, the stochastic penal colony~\emo{desert-island} provides an excellent
