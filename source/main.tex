@@ -1,33 +1,38 @@
 %\documentclass[manuscript,screen,review,anonymous]{acmart}
 \documentclass[authorversion,nonacm,screen]{acmart}
 
-\usepackage{bm}               % Bold symbols in math mode
-\usepackage{epigraph}         % Setting the tone
-\usepackage[extra]{emo}       % Emoji done flexibly
-\usepackage{enumitem}         % \begin{enumerate}[resume]
-\usepackage{float}
+% >>> Bold math symbols, used in Table 3
+\usepackage{bm}
+% >>> Start paper with Kafka quote
+\usepackage{epigraph}
+% >>> My very own emoji
+\usepackage[extra]{emo}
+% >>> \begin{enumerate}[resume]
+\usepackage{enumitem}
 \usepackage{graphicx}
-%\graphicspath{{./emo-graphics/}{./images/}}
-\usepackage{pifont}           % \ding{166} as a section break
-\usepackage{wrapfig}          % Text wrapping around figure
+% >>> Fat double quotes via \ding{125} and \ding{126}
+\usepackage{pifont}
+% >>> Wrap text around figure. \intextsep keeps spacing sane, breaks regular figures.
+\usepackage{float}
+\usepackage{wrapfig}
 \setlength{\intextsep}{0pt}
 
-% Better tables
+% >>> Better tables. \T, \B are struts for row spacing.
 \usepackage{colortbl}
 \usepackage{multirow}
 \newcolumntype{C}{>{\columncolor[gray]{.94}}c}
 \newcolumntype{L}{>{\columncolor[gray]{.94}}l}
 \newcolumntype{R}{>{\columncolor[gray]{.94}}r}
-
-\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
-\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+\newcommand\T{\rule{0pt}{2.6ex}}
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}}
 
 \begin{document}
 
 \newcommand\MK{\emo{check-mark}}
 \newcommand\MKONE{\multicolumn{2}{l}{\emo{keycap-one}}}
 
-% Acronyms in small caps (which require lower case)
+% Abbreviations and acronyms in small caps. They require lower case in LaTeX,
+% whereas OpenType has the much better c2sc feature. So sad!
 \newcommand\AI{\textsc{ai}}
 \newcommand\AIP{\textsc{aip}}
 \newcommand\AIPP{\textsc{aipp}}
@@ -38,9 +43,7 @@
 \newcommand\CEO{\textsc{ceo}}
 \newcommand\ChatGPT{ChatGPT}
 \newcommand\CSAM{\textsc{csam}}
-% Phew!
-\newcommand\DDAALLEE{\texorpdfstring{DALL\raisebox{0.2ex}{•}E}{DALL•E}}
-%\newcommand\DALLE{$\textsc{dall}\raisebox{0.18ex}{\scalebox{0.6}{$\bullet$}}\textsc{e}$}
+\newcommand\DDAALLEE{\texorpdfstring{DALL\raisebox{0.2ex}{•}E}{DALL•E}}  % Oof!
 \newcommand\DALLE{\textsc{dall}•\textsc{e}}
 \newcommand\DSA{\textsc{dsa}}
 \newcommand\EU{\textsc{eu}}
@@ -58,7 +61,6 @@
 \newcommand\USPTO{\textsc{uspto}}
 \newcommand\WHO{\textsc{who}}
 
-\newcommand\sectionbreak{\noindent\begin{center}\char"2042\end{center}}
 \newcommand\openfat{\makebox[0pt][r]{\ding{125}}}
 \newcommand\openfatplain{\ding{125}}
 \newcommand\closefat{\ding{126}}
@@ -81,9 +83,9 @@
 \email{rgrimm@alum.mit.edu}
 
 \keywords{\AI\ image generator, child sexual abuse material, content moderation,
-    \textsc{dall}•\textsc{e}, generative model, governance, harm reduction,
-    Kafkaesque co-factor, punitive algorithm, social media, text-to-image tool,
-    transparency reporting}
+    \DALLE, generative model, governance, harm reduction, Kafkaesque co-factor,
+    punitive algorithm, social media, text-to-image tool, transparency
+    reporting}
 \begin{CCSXML}
     <ccs2012>
        <concept>
