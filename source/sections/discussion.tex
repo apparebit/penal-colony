@@ -1,26 +1,33 @@
 \section{Discussion}
 \label{sec:discussion}
 
-Between the depth of the analytical case studies in
-\S\S\ref{sec:dalle}--\ref{sec:tweet-da-fe} and the breadth of the social media
-census in \S\ref{sec:census}, this paper presents a comprehensive first
-exploration of the stochastic penal colony. It demonstrates that mostly punitive
-usage of \AI\ is far from aberation or exceptional occurrance but rather the
-established, inhuman norm when it comes to content moderation. That many of the
-firms covered in this paper also are significantly advancing the state of the
-art in \AI, raises grave concerns about the future of \AI. Yet proactive
-\AI-based content moderation also provides the perfect opportunity for
-abandoning the stochastic penal colony. After all, when \AI\ detects and
-intercepts violative content before it is posted, there is \emph{no} human harm
-and hence no need for punishment. By nonetheless insisting on punishment, social
-media are cosplaying Prudence Pingleton absolutely, positively, permanently
-punishing her daughter Penny at best~\cite{Waters1988} or the IngSoc Party
-ruthlessly prosecuting thoughtcrime at worst~\cite{Orwell1949}.
+Between the depth of the analytical case studies in \S\ref{sec:dalle} and
+\S\ref{sec:tweet-da-fe} as well as the breadth of the social media census in
+\S\ref{sec:census}, this paper presents a comprehensive first exploration of the
+stochastic penal colony. It demonstrates that mostly punitive usage of \AI\ is
+far from aberation or exceptional occurrance but rather the established, inhuman
+norm when it comes to content moderation. While the biggest platforms, Google,
+Meta, and Twitter, are almost completely in thrall of algorithmic moderation,
+smaller platforms are slowly catching up as well. They certainly have the
+punitive enforcement down pat.
 
-Remarkably, the punitive overreach described in this paper is not their only
-overreach. Throughout this paper, I have identified conflicts between expansive
-content policies and aggressive enforcement on one hand and the public interest
-on the other hand. Notably, \DALLE's prohibition against politics and
+More fundamentally, algorithmic content moderation poses a paradox: Basic
+economics serve as driving force for social media to continue expanding its
+reach. The (misleading) gloss of technological neutrality and infallibility only
+strengthens it. As illustrated in \S\ref{sec:dalle} and \S\ref{sec:tweet-da-fe},
+that is bound to result in less transparency and diminished
+fairness~\cite{GorwaBinnsea2020}. Yet algorithmic content moderation also
+provides a near perfect opportunity for abandoning the stochastic penal colony.
+After all, when \AI\ detects and intercepts violative content before it is
+posted, there is \emph{no} human harm and hence no need for punishment. By
+nonetheless insisting on punishment, social media are at best cosplaying
+Prudence Pingleton absolutely, positively, permanently punishing her daughter
+Penny~\cite{Waters1988} or at worst making the IngSoc Party's ruthless
+prosecution of thoughtcrimes become reality~\cite{Orwell1949}.
+
+Remarkably, the punitive overreach described in this paper is not social media's
+only overreach. Several policy provisions are so expansive they conflict with
+the public interest. Notably, \DALLE's prohibition against politics and
 Pinterest's prohibition against criticism place significant a-priori constraints
 on public debate and hence are fundamentally anti-democratic. \DALLE's
 prohibition against health-related content may interfere with both science and
@@ -33,9 +40,10 @@ the very people they are intended to protect, notably \LGBT\
 folk~\cite{EidelmanLeeea2021,RahmanAlJaloudAlKhatibea2019,Wille2020}.
 
 While I focused on \DALLE\ and the crucifixion in \S\ref{sec:escape}, all social
-media (besides Telegram) surveyed in \S\ref{sec:census} have equivalent
-prohibitions against violence and sexual content. Furthermore, many foundational
-religious texts contain passages that are blatantly violative. Consider the
+media surveyed in \S\ref{sec:census} besides Telegram have equivalent
+prohibitions against violence and, with some exceptions for Tumblr and Twitter,
+also against sexual content. At the same time, many foundational religious texts
+contain passages that are blatantly, even excessively violative. Consider the
 story of Abraham's nephew Lot, who hosted \YHWH's messengers at his home in
 Sodom, protecting them from the mob. In return, the messengers saved him, his
 wife, and youngest two daughters before \YHWH\ destroyed Sodom and Gomorrah. The
@@ -52,20 +60,86 @@ get daddy drunk so that he knocks them up. Yet that same book of the Hebrew
 Bible, Genesis, also contains utterly sublime passages, notably when \YHWH\
 entrusts us with Their creation.
 
+Ironically, when social media do consider the public interest, they use it to
+justify their prohibitions against disinformation. In doing so, social media are
+supported by a majority of \US\ respondents in at least one survey. Remarkably,
+however, political affiliation has a significant impact on people's attitudes,
+with Republicans ``consistently less willing than Democrats or independents to
+remove posts or penalize the accounts that posted
+them''~\cite{KozyrevaHerzogea2023}. That would suggest that, to a degree,
+disinformation has become a political cudgel, or at least a shortcut to avoid
+the hard work of actually informing and convincing others.
+
+Furthermore, as the pandemic illustrated over and over again, so-called experts
+haven't done so well with adjusting to new facts and disseminating correct
+information~\cite{SinghMcNabea2021}. Notably, the \WHO\ took years to overcome
+the influence of outdated theories and acknowledge airborne transmission of
+Covid-19~\cite{Chamary2021,GreenhalghOzbilginea2022,JimenezMarrea2022,Lewis2022,SirleafClark2021,SirleafClarkea2021}.
+Its mask guidance wasn't much better~\cite{ChanLeungea2020} and inconsistent
+with that of the \CDC~\cite{Curtis2020}. Then again, the \CDC's mask guidance
+was often flawed as well, with the agency changing its position for what appear
+to be political or otherwise arbitrary reasons~\cite{Netburn2021}. Furthermore,
+the \CDC's recommendations on other aspects, notably testing, were also
+subpar~\cite{Flam2022,Ngo2022,Scott2022}. So do we really want outsourced,
+barely trained content moderators, who are toiling away under despiccable
+working conditions~\cite{Newton2019b,Newton2019}, to judge what is legitimate
+information and what is illegitimate disinformation in at most 30 seconds per
+post?
+
+\hidden{
+LESS IS MORE \cite{Douek2021,Masnick2019}
+
+
+Dying alone \cite{AndersonShawZar2020,AnnYiAzharea2021,Capozzo2020,StrangBergstromea2020,WakamMontgomeryea2020}
+Commentary \cite{DCouto2022}
+}
+
+
 This double overreach makes clear that social media content moderation has gone
 too far, regulating too much content and doing so in an excessively punitive
-manner. Alas, making less moderation palatable to users will likely be difficult
-and hence will require some offsetting functionality that lets them set their
-own policies. One fairly simple, yet potentially effective option is to require
-content warning labels for content that might be problematic and provide users
-with simple tools for determining what labelled content if any they see. They
-have been available on Mastodon for years and are deployed for a wide range of
-content, including spoiler warnings, strong emotions, sensitive subjects ``like
-addition, drugs, war, news, politics,'' and \AI-generated
-content~\cite{Maloki2022,Sheehan2022,Voit2022}. Tumblr introduced their own
-version in September 2022, though the choice of labels is far more conventional
-and limited to mature, drug and alcohol addiction, violence, and sexual
-themes~\cite{Tumblr2022}.
+manner. Alas, making less moderation palatable to users is going to be difficult
+and will require offsetting functionality that lets individual users enforce
+their own policies, but without requiring manual review. A first step in that
+direction may just be content warnings: When a user creates content, they are
+responsible for applying appropriate warnings, too. They have been available on
+Mastodon for years, allow for arbitrary label text, and are used for a wide
+range of content, including for example spoiler warnings, strong emotions,
+sensitive subjects ``like addition, drugs, war, news, politics,'' and
+\AI-generated content~\cite{Maloki2022,Sheehan2022,Voit2022}. Tumblr introduced
+their own version in September 2022, though the choice of labels is far more
+conventional and limited to mature, drug and alcohol addiction, violence, and
+sexual themes~\cite{Tumblr2022}.
+
+Other efforts at
+self-empowerment~\cite{AngelidouSmith2021,Goodman2021,Hern2021,Instagram2021}
+
+While largely accurate for North America and Europe, the above narrative of
+content moderation overreach becomes more complicated for other countries. As
+far as I can tell, social media impose the same content policies globally, which
+is a form of cultural imperialism. But they do not commit the same resources to
+global content moderation, as illustrated for Meta in \S\ref{sec:census-limits}.
+
+
+
+% In reverse, countries should push back on social media that have not been
+% localized and do not have local content moderation teams~\cite{Grimm2020}
+
+% Myanmar and Ethiopia both
+% have fairly large, ethnically diverse populations (ranking
+% 27\textsuperscript{th} and 12\textsuperscript{th}, respectively) but limited
+% trade with the \US (with Myanmar ranking 97\textsuperscript{th} and Ethiopia
+% 85\textsuperscript{th}) and aren't particularly popular as tourist destinations
+% (with Myanmar ranking 105\textsuperscript{th} and Ethiopia
+% 126\textsuperscript{th} when searching Google with ``\emph{country} rank by
+% \emph{criterion}'').
+
+
+% Common to both countries
+% is that they have fairly large, ethnically diverse populations
+
+% Myanmar ranks 27 by population, 97 by trade with \US, 105 by tourism
+% Ethiopia ranks 12 by population, 85 by trade with \US,  126 by tourism
+
 
 \S\ref{sec:census} also makes clear that, in addition to their immoderate
 moderation, social media fall well short of any reasonable standards for
@@ -76,7 +150,7 @@ violative. Zero platforms report for how much content they reduce visibility.
 Only one platform includes external oversight. Only two platforms commit to
 meaningful notification and even those two make it quite hard to find their
 commitment, forcing me to lean hard on the Electronic Frontier Foundation's
-excellent prior work~\cite{CrockerGebhartea2019}. Finally, only four platforms
+prior work~\cite{CrockerGebhartea2019}. Finally, only four platforms
 report on appeals and reversals. That is a major disconnect between platforms
 and users, since meaningful appeals are essential for content moderation with
 its many greys and hence opportunities for making ``the wrong call.'' The \EU's
@@ -114,44 +188,184 @@ transparency or research data are, in fact, accurate and meaningful.
 Conveniently, yearly audits \emph{are} included in the \DSA\ --- though that
 does not help with research data disclosures.
 
-By comparsion, \AI\ complicates matters: Dataset, model, and system cards cover
-basic design and implementation of an algorithmic intervention reasonably
+\hidden{
+\cite{Vermeulen2022} research access to data
+
+Meta on Covid \cite{SternShirazyanea2022}
+
+\cite{Persily2021} proposed law
+
+\cite{BeersWilsonea2022} urges reflection
+
+systems thinking \cite{Douek2022}
+
+
+
+Google disinformation \cite{Canegallo2019}
+Twitter's disinformation \cite{Harrison2019}
+
+
+The United Kingdom's
+communications regulator also bemoaned this plethora of inconsistent and
+somewhat arbitrary metrics~\cite{HarlingHenesyea2023}. I believe
+that the above breakdown can help stakeholders approach transparency reporting
+in a more structured and hence meaningful manner.
+}
+
+By comparsion, transparency for \AI\ is more complicated: Dataset, model, and
+system cards cover basic design and implementation of an algorithmic
+intervention reasonably
 well~\cite{GebruMorgensternea2021,MitchellWuea2019,ProcopeCheemaea2022}. They
 also are fundamentally limited to capturing characteristics that, one way or
-another, were explicitly examined by a system's builders. At the same time, as
+another, were explicitly considered by a system's builders. At the same time, as
 \S\ref{sec:escape} and also~\cite{BirhanePrabhuea2021,CarliniHayesea2023}
 demonstrate, hands-on experimentation is uniquely suited to surfacing
-unanticipated ``features'' that may be lurking in latent space or, just like
-\DALLE\ acting out white supremacist imagery, result from unexpected
-interactions between system components.
+unanticipated ``features'' that may be lurking in latent space or, like \DALLE\
+unexpectedly generating white supremacist imagery, result from unexpected
+interactions between system components. Or as the lead for OpenAI's alignment
+team put it in an interview~\cite{Heaven2023}: ``I think it's very difficult to
+really anticipate what the real safety problems are going to be with these
+systems once you've deployed them.'' In other words, direct access to production
+systems is critical for safety.
 
 While OpenAI's expansive content policy and aggressive enforcement did not
-exactly help matters, experiments with \DALLE\ nonetheless were fairly
-straight-forward. Initially, that was in part due to \DALLE's sheer novelty,
-which meant that I had nothing riding on the success of those experiments,
-privately or professionally. By comparison, I'd be more reluctant to conduct
-similar experiments on, say, Facebook or YouTube, especially in light of Meta's
-recent deplatforming of researchers~\cite{EdelsonMcCoy2021a}. But content
-moderation for \DALLE\ and social media still is conducive to experimentation
-because (1) creating and posting content is cheap, if not free, and simple and
-(2) the content moderation function is the only other large component besides
-the component managing the content itself. That distinctly isn't the case, for
-example, when evaluating commercial \AI\ solutions or when reviewing the
-allocation of government benefits.
+exactly encourage that experimentation, doing so with \DALLE\ nonetheless was
+fairly straight-forward. At the start of the project, that was in part due to
+\DALLE's sheer novelty, which meant that I had nothing riding on the success of
+those experiments, privately or professionally. By comparison, I'd be more
+reluctant to conduct similar experiments on, say, Facebook or Instagram,
+especially in light of Meta's recent deplatforming of inconvenient
+researchers~\cite{EdelsonMcCoy2021a}. Still, content moderation for \DALLE\ and
+social media actually is conducive to experimentation because (1) creating and
+posting content is simple and cheap, if not free, and (2) posting increasingly
+subjects the content to algorithmic review. That already is the case for
+Facebook, Instagram, Twitter, and YouTube and the economics of content
+moderation all but guarantee that other social media will automate their
+enforcement as well. However, that distinctly isn't the case, for example, when
+seeking to review algorithmic benefit allocation by government agencies. Their
+\AI\ components are typically integrated into complex workflows that may not be
+even accessible through \API{}s and that are closely guarded because considered
+proprietary.
 
-The remedy ought to be legal regulation: Require that any machine learning model
-making decisions over human benefits in the widest sense of the word be exposed
-by itself as an \API. The responsible organization may require registration from
-researchers before they may use the \API\ and may also charge a nominal fee, not
-to exceed the marginal cost of provisioning the additional server capacity. Such
-a legal requirement would be stronger than current financial and \DSA\ audit
-requirements because it allows anyone with the necessary background knowledge
-and interest to also experimentally audit the \AI. But given the stakes and
-regulatory capture in existing industries, that is just the point. Probably the
-closest legal precedent is patent law, which also forces a public disclosure.
-Patent law also grants a temporary monopoly on commercial exploitation of a
-patent. But history provides some measure for how excessive current rights
-grants have become: When the \US\ first enacted nationwide patent and copyright
-protections in April and May 1790, respectively, the rights grants for either
-kind of intellectual property lasted only 14
-years~\cite{FisherIII1999,KhanSokoloff2001}!
+It appears that there is a direct conflict between society's desire for safer,
+less harmful deployments of \AI\ and current commercial technology practices.
+Resolving that requires a legislative intervention. My proposal is inspired by
+patent law and OpenAI's charter. As OpenAI states succinctly and early on in
+that document: ``Our primary fiduciary duty is to humanity.'' So let's start
+from that position and make the default \AIP\ or \AI\ Property position that
+individuals and organizations cannot own any \IP\ rights in large machine
+learning models. It neatly resolves current uncertainty about the copyright
+status of the training data and the outputs of generative \AI\ systems---even if
+the socially minded, communal default is an unusual starting point in capitalist
+practice.
+
+To keep venture capital and entrepreneurism in play, my proposal recognizes a
+privileged subclass of \AIP\ called \AI Protected Property or \AIPP, which gives
+owners of specific \AI\ systems exclusive usage rights as long as they register
+with the \USPTO\ or equivalent local agency and meet a few on-going transparency
+requirements. The extent of the registration are contact information and a
+systems card for the \AIPP\ deployment. The on-going obligations are quarterly
+transparency reports and giving safety researchers \API\ access to all \AI\
+algorithms. Transparency reports should capture sufficient statistics about
+usage. For \AI{}s that bestow some form of benefit, the rejections, rejection
+reasons. Above certain popularity or importance thresholds, these reports
+must be audited once a year. The research access requirement...
+
+, which need to be audited every year only for
+deployments above certain thresholds,
+
+
+First, \AIPP\ operators include the equivalent
+of a systems card with the original registration. In fact, that's the bulk
+of the registration.
+
+
+special subclass
+
+To keep greed and the attendant investeurism/entrepreneurism in play, my proposal
+
+
+introduces  \AIP, \AIPP\ or \AI\ Protected Property
+
+
+in play self-interest investment and entrepreneurism for \AI, we observe that
+patents grant time-limited monopoly rights to inventors but in return require
+proactive public disclosure. Admittedly, based on five patents I served as
+coinventor on, the particulars of that disclosure are somewhat precious and also
+alienating. But the basic proposition of ensuring public visibility into
+technical progress for limited protections for unfettered exploitation is
+reasonable.
+
+
+and the particulars introduce the \AIPP\ or \AI Protected Property
+status. It is initially granted for five years, with an option to renew for
+another five years. All it takes is to fill out the equivalent of a systems card
+on a country's \AI\ regulators homepage and follow the few simple rules \AIPP\
+is contingent on. First, the operator must release quarterly tranparency reports
+with to be determined metrics. Second, the operator must make each \AI\
+component of the system available for probing and experimentation by researchers
+through an \API. The operator may require registration but must admit also
+unaffiliated and independent folk. They may also charge a nominal fee that does
+not exceed the marginal cost of (cloud) infrastructure for the workloads
+generated by the researchers. Third, adverse findings by researchers have a
+standard responsible disclosure process with an embargo period on sharing
+findings of maximally three months and the operator must make a good faith
+effort to remediate the findings, and update the systems card accordingly.
+
+
+Operators are encouraged, but not required, to offer safety bounties, just like
+many corporations currently offer bug bounties for identifying security flaws.
+My personal impression is that that ecosystem is dominated by individuals and
+small teams. The \AIP/\AIPP\ system should be designed that nothing gets in the
+way of repeating that.
+
+Finally, the notion that content moderators cannot possibly explain how they
+are detecting inauthentic coordination and other
+
+\cite{Douek2020} on coordinated inauthentic behavior. as \cite{Doctorow2022}
+succinctly puts it, ``como is infosec.'' Como stands for content moderation.
+There even was a COMO Summit in 2018, which lead to the formation of the Trust
+\& Safety Professional Association. While I am no fan of the syllabic
+abbreviation ``como,'' the association's yearly conference suffers from an even
+more unfortunate and even self-defeating name: TrustCon.
+
+
+, unfortunately, is
+called TrustCon.
+
+
+That may be a somewhat unusual position but it does resolve
+current uncertainty about the copyright for \AI\ learning materials as well as
+
+
+
+Really the only reliable remedy for facilitating research experimentation with
+\AI\ is a legal mandate: Require that any machine learning model making
+decisions over human benefits in the widest sense of the word be exposed by
+itself as an \API. The responsible organization may require registration and may
+also charge a nominal fee, not to exceed the marginal cost of provisioning the
+additional server capacity for the research \API. Such a legal requirement would
+be broader than current financial and \DSA\ audit requirements because it allows
+anyone with the necessary background knowledge and interest to experimentally
+audit the \AI\ and not just some qualified third party. Given the stakes and
+regulatory capture in existing industries, that is by design. Patent law
+provides legal precedent for forcing public disclosure. Of course, patent law
+grants a temporary monopoly on commercial exploitation in return. Given the
+significant uncertainties about the intellectual property implications of \AI, I
+am confident that an equivalent rights grant can be provided. Then again,
+history provides some measure for how excessive current rights grants have
+become: When the \US\ first enacted nationwide patent and copyright protections
+in April and May 1790, respectively, the right grants for either lasted a mere
+14 years --- compared to 20 years for patents and lifetime of author plus 70
+years for copyright under current \US\
+law~\cite{FisherIII1999,KhanSokoloff2001}.
+
+
+
+\hidden{
+    PaineGrahamCumming2019    CloudFlare CSAM detection tool
+
+
+    Head of OpenAI's alignment team: ``I think it's very difficult to really
+anticipate what the real safety problems are going to be with these systems once
+you've deployed them.'' }
