@@ -28,50 +28,68 @@ destination for users leaving Twitter and employees laid off by Twitter in the
 wake of Elon Musk's takeover of the firm~\cite{Patel2022}.
 
 To determine the criteria for the census, I iterated a few times over a list
-gleaned from social media transparency reports, previous
-studies~\cite{BradfordGriselea2019,CrockerGebhartea2019}, best practices
+gleaned from social media transparency reports, previous studies and
+commentary~\cite{BradfordGriselea2019,CrockerGebhartea2019,Douek2022}, best
+practices
 recommendations~\cite{AccessNowACLUFoundationOfNorthernCaliforniaea2021}, and
 the \EU's \DSA. For each iteration, I also filled in
-Table~\ref{table:governance} below. The process converged only after I started
-grouping individual criteria according to major aspects of content moderation,
-which helped reason about the coverage and completeness. The resulting hierarchy
-follows, with emoji serving as column headers in the aforementioned table.
+Table~\ref{table:governance} below. The list stabilized only after I started
+grouping individual criteria according to major aspects of content moderation.
+That organization also facilitated integration of criteria, such as the role of
+trusted flaggers or visibility reduction, that do not fit as neatly into common
+conceptions of content moderation focused on individuals more or less
+misbehaving. The resulting hierarchy follows, with emoji serving as column
+headers in the aforementioned table.
 
 % \hfill pushes the nested enumerations onto the next line!
 
 \begin{description}
-\item[The violative content itself]\hfill
+\item[Violative content or behavior]\hfill
     \begin{enumerate}
         \item \emo{receipt}~Prevalence of violative content measured as fraction
-            of all content
+            of all content \label{itm:prevalence}
         \item \emo{triangular-ruler}~Reach of violative content measured in time
-            or better views
+            or better views \label{itm:reach}
+        \item \emo{roll-of-paper}~Spam, which may not warrant due process
+            protections \label{itm:spam}
+        \item \emo{busts}~Content resulting from ``coordinated inauthentic
+            behavior'' \label{itm:coordination}
     \end{enumerate}
-\item[The entity reporting violative content]\hfill
+\item[The entity reporting violative content or behavior] including reported vs
+    acted-upon reports\hfill
     \begin{enumerate}[resume]
-        \item \emo{classical-building}~Government inquiries and removal
-            requests; also intellectual property claims
-        \item \emo{enraged-face}~Platform users
-        \item \emo{robot}~Algorithmic enforcement
-        \item \emo{judge}~Human moderation, including its mental health impact
+        \item \emo{classical-building}~Government inquiries and removal requests
+            \label{itm:government}
+        \item \emo{detective} Trusted flaggers, including fact checkers and \IP\
+            rights holders \label{itm:flaggers}
+        \item \emo{enraged-face}~Platform users \label{itm:users}
+        \item \emo{robot}~Algorithms, hybrid vs fully automatic
+            \label{itm:algorithms}
+        \item \emo{judge}~Human moderators, in-house vs outsourced
+            \label{criterion:moderators}
     \end{enumerate}
-\item[Sanctions on content and users]\hfill
+\item[Actions on content and users]\hfill
     \begin{enumerate}[resume]
-        \item \emo{label}~Warning labels (increasingly used for misinformation)
+        \item \emo{label}~Warning labels, self-imposed while posting vs
+            platform-imposed afterwards \label{itm:labels}
         \item \emo{foggy}~Visibility reduction and blacklists (aka shadow
-            banning)
-        \item \emo{wastebasket}~Content removal
-        \item \emo{biohazard}~Sanctions on users
+            banning) \label{itm:visibility}
+        \item \emo{wastebasket}~Content removal \label{itm:removal}
+        \item \emo{biohazard}~Sanctions on users \label{itm:accounts}
     \end{enumerate}
 \item[Due process protections]\hfill
     \begin{enumerate}[resume]
-        \item \emo{pager}~Meaningful notification
-        \item \emo{balance-scale}~Appeals and reversals
-        \item \emo{eye}~External oversight, including conflict resolution and auditing
+        \item \emo{pager}~Meaningful notification \label{itm:notification}
+        \item \emo{balance-scale}~Appeals and reversals \label{itm:appeals}
+        \item \emo{eye}~External oversight: policy formulation, conflict
+            resolution, auditing \label{itm:oversight}
     \end{enumerate}
-\item[Cultural proficiency and fluency]\hfill
+\item[Global differences and impact]\hfill
     \begin{enumerate}[resume]
-        \item \emo{globe-africa-europe}~Different countires and cultures
+        \item \emo{currency-exchange}~Platform localization and regional
+            resourcing for content mooderation \label{itm:resourcing}
+        \item \emo{globe-africa-europe}~Resources and results for different
+            countries and cultures \label{itm:countries}
     \end{enumerate}
 \end{description}
 
@@ -88,6 +106,18 @@ prohibitions do stick out. Pinterest's ``Harassment and criticism'' is chilling
 in its pathologizing overreach. Then again, Tumblr's ``Misattribution or
 Non-Attribution'' is rather endearing---but probably not that practical.
 
+For the seventeen criteria listed above, the table contains a checkmark if a
+platform includes \emph{some} statistics for that criterion in its transparency
+reports. For criteria~\ref{itm:prevalence, itm:reach, itm:government,
+itm:flaggers, itm:users, itm:algorithms, itm:moderators, itm:labels,
+itm:visibility, itm:removal, itm:accounts, itm:appeals, itm:countries}, the data
+should further differentiate between specific prohibitions. Though in practice,
+most platforms' government-initiated reports and country-specific breakdowns do
+not meet that standard. For criteria~\ref{criterion:moderators}, the data should
+include cover topics no platform bothered to address. They include counts of
+in-house vs external moderators, the mental health impact on human moderators,
+which can be devastating, as well as the resources spent for each country.
+
 \begin{table}
 \caption{A survey of governance practices for social media, with a checkmark
     indicating release of \emph{some} statistics for that criterion.
@@ -95,19 +125,22 @@ Non-Attribution'' is rather endearing---but probably not that practical.
     of forced timeout, and X for account suspension. The \emo{robot} robot and
     \emo{judge} judge columns share the \emo{keycap-one} number one when a
     transparency report does not distinguish between in-house automated and
-    human review.}
+    human review. All years are within this century.}
 \label{table:governance}
-\begin{tabular}{LCcCc@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\quad}cC}
+\begin{tabular}{L@{\;\;}CcCc@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\quad}c@{\;}cC}
 
 \multicolumn{2}{C}{\textbf{Platform}} & \textbf{Account} & \textbf{Latest}
-& \multicolumn{14}{c}{\textbf{Included in Transparency Report\T}} & \\
+& \multicolumn{18}{c}{\textbf{With \emph{Some} Coverage in Transparency Report\T}} & \\
 
-\multicolumn{2}{C}{\textbf{Name \& Launch}}
+\multicolumn{2}{C}{\textbf{\& Launch}}
 & \textbf{Sanctions}
 & \textbf{Report}
 & \emo{receipt}
 & \emo{triangular-ruler}
+& \emo{roll-of-paper}
+& \emo{busts}
 & \emo{classical-building}
+& \emo{detective}
 & \emo{enraged-face}
 & \emo{robot}
 & \emo{judge}
@@ -118,100 +151,109 @@ Non-Attribution'' is rather endearing---but probably not that practical.
 & \emo{pager}
 & \emo{balance-scale}
 & \emo{eye}
+& \emo{currency-exchange}
 & \emo{globe-africa-europe} \T\B
 & \multirow{-2}{*}{\emo{floppy-disk}} \\ \hline
 
 \href{https://transparency.fb.com/policies/community-standards/}{FB/IG}
-& 2003
+& '03
 & \href{https://transparency.fb.com/enforcement/taking-action/restricting-accounts/}{W,1,3,7,30,X}
-& \href{https://transparency.fb.com/data/community-standards-enforcement/}{Q3 2022}
-& \MK & & \MK & \MK & \MKONE &
-& & \MK & & \MK & \MK & \MK & &
+& \href{https://transparency.fb.com/data/community-standards-enforcement/}{Q3 '22}
+& \MK & & & & \MK & & \MK & \MKONE &
+& & \MK & & \MK & \MK & \MK & & &
 \href{https://transparency.fb.com/sr/community-standards/}{CSV} \T\\
 
 \href{https://www.linkedin.com/legal/professional-community-policies}{LinkedIn}
-& 2003
-& & \href{https://about.linkedin.com/transparency/community-report}{H1 2022}
-& & & \MK & \MK & \MKONE
-& & & \MK & & & & & & \\
+& '03
+& & \href{https://about.linkedin.com/transparency/community-report}{H1 '22}
+& & & & & \MK & & \MK & \MKONE
+& & & \MK & & & & & & & \\
 
 \href{https://policy.pinterest.com/en/community-guidelines}{Pinterest}
-& 2010
-& & \href{https://policy.pinterest.com/en/transparency-report}{H1 2022}
-& & \MK & \MK & \MK & \MK & \MK & &
-& \MK & \MK & & \MK & & \MK & \\
+& '10
+& & \href{https://policy.pinterest.com/en/transparency-report}{H1 '22}
+& & \MK & & & \MK & & \MK & \MK & \MK & &
+& \MK & \MK & & \MK & & & \MK & \\
 
 \href{https://help.quora.com/hc/en-us/articles/360000470706-Platform-Policies}{Quora}
-& 2010
-& & & & & & & & & & & & & & & & & \\
+& '10
+& & & & & & & & & & & & & & & & & & & & & \\
 
 \href{https://www.redditinc.com/policies/content-policy}{Reddit}
-& 2005
+& '05
 & \href{https://www.redditinc.com/policies/transparency-report-2021-2/}{W,3,7,X}
-& \href{https://www.redditinc.com/policies/transparency-report-2021-2/}{2021}
+& \href{https://www.redditinc.com/policies/transparency-report-2021-2/}{'21}
 \hidden{\,/\,\href{https://www.redditinc.com/policies/mid-year-transparency-report-2022}{H1
-2022}
+'22}
 \href{https://www.reddit.com/r/redditsecurity/comments/rgikn1/q3_safety_security_report/}{Q3
-2021}}
-& \MK & & \MK & \MK & \MK & \MK & & & \MK & \MK & \MK & \MK & & \MK & \\
+'21}}
+& \MK & & & & \MK & & \MK & \MK & \MK & & & \MK & \MK & \MK & \MK & & & \MK & \\
 
 \href{https://values.snap.com/privacy/transparency/community-guidelines}{Snap}
-& 2011
-& & \href{https://values.snap.com/privacy/transparency}{H1 2022}
-& & \MK & \MK & \MK & & & &
-& \MK & \MK & & & & \MK &
+& '11
+& & \href{https://values.snap.com/privacy/transparency}{H1 '22}
+& & \MK & & & \MK & & \MK & & & &
+& \MK & \MK & & & & & \MK &
 \href{https://assets.ctfassets.net/kw9k15zxztrs/4aBF69gFiv4l9x7LzAgY8X/578e44f80fc51d0ebc52e04fe3d8c857/Snap_H1_2022_TR.csv}{CSV}\\
 
-Telegram & 2013 & & & & & & & & & & & & & & & & & \\
+Telegram & '13 & & & & & & & & & & & & & & & & & & & & & \\
 
 \href{https://www.tiktok.com/community-guidelines}{TikTok}
-& 2017
-& & \href{https://www.tiktok.com/transparency/en/community-guidelines-enforcement-2022-3/}{Q3 2022}
-& \MK & \MK & \MK & \MK & \MKONE & &
-& \MK & \MK & & & & \MK &
+& '17
+& & \href{https://www.tiktok.com/transparency/en/community-guidelines-enforcement-2022-3/}{Q3 '22}
+& \MK & \MK & & & \MK & & \MK & \MKONE & &
+& \MK & \MK & & & & & \MK &
 \href{https://sf16-va.tiktokcdn.com/obj/eden-va2/nuvlojeh7ryht/Transparency_CGE_2022Q3/English_CGE_2022Q3.xlsx}{XLS} \\
 
 \href{https://www.tumblr.com/policy/en/community}{Tumblr}
-& 2007
-& & \href{https://transparency.automattic.com/tumblr/}{H1 2022}
-& & & \MK & & & & & & & & & & & & \\
+& '07
+& & \href{https://transparency.automattic.com/tumblr/}{H1 '22}
+& & & & & \MK & & & & & & & & & & & & & & \\
 
 \href{https://help.twitter.com/en/rules-and-policies/twitter-rules}{Twitter}
-& 2006
+& '06
 & \href{https://help.twitter.com/en/rules-and-policies/enforcement-options}{W/0.5--7/X}
-& \href{https://transparency.twitter.com/en/reports/rules-enforcement.html#2021-jul-dec}{H2 2021}
-& & \MK & \MK & \MK & \MKONE &
-& & \MK & \MK & & & & \MK &
+& \href{https://transparency.twitter.com/en/reports/rules-enforcement.html#2021-jul-dec}{H2 '21}
+& & \MK & & \MK & \MK & & \MK & \MKONE &
+& & \MK & \MK & & & & & \MK &
 \href{https://transparency.twitter.com/content/dam/transparency-twitter/download/rules_enforcement_test.zip}{CSV} \\
 
 \href{https://www.youtube.com/howyoutubeworks/policies/community-guidelines/}{YouTube}
-& 2005
+& '05
 & \href{https://support.google.com/youtube/answer/2802032}{W,7,14,X}
-& \href{https://transparencyreport.google.com/youtube-policy/removals}{Q3 2022} \B
-& \MK & \MK & \MK & \MK & \MK & \MK & & & \MK & \MK & & \MK & & \MK & \\
+& \href{https://transparencyreport.google.com/youtube-policy/removals}{Q3 '22} \B
+& \MK & \MK & & & \MK & & \MK & \MK & \MK & & & \MK & \MK & & \MK & & & \MK & \\
 \hline
 
-\multicolumn{4}{L}{\textbf{Required by EU Digital Services Act\T}} & &
-& \emo{eu} & \emo{eu} & \emo{eu} & & \emo{eu} & \emo{eu} & \emo{eu} & \emo{eu} &
-\emo{eu} & \emo{eu} & \emo{eu} & & \emo{eu} \\
+\multicolumn{4}{L}{\textbf{Required by EU Digital Services Act\T}} &
+& & & & \emo{eu} & \emo{eu} & \emo{eu} & \emo{eu} & & \emo{eu} & \emo{eu} & \emo{eu} & \emo{eu} &
+\emo{eu} & \emo{eu} & \emo{eu} & & & \emo{eu} \\
 
 \end{tabular}
 \end{table}
 
-When it comes to sanctioning accounts, \emph{all} social media (besides
-Telegram) fall in one of two groups. The first group seems to model their
-sanctions on the Queen of Hearts from \emph{Alice's Adventures in Wonderland},
-enthusiastically screaming ``Off with their heads!'' and then even figuratively
+\hidden{
+\cite{RothGadde2021} Twitter's datasets on inauthentic coordination by governments
+}
+
+When it comes to sanctioning accounts, \emph{all} social media besides Telegram
+fall into one of two groups. The first group seems to model their sanctions on
+the Queen of Hearts from \emph{Alice's Adventures in Wonderland},
+enthusiastically screaming ``Off with their heads!'' and then figuratively even
 following through~\cite{Carroll2008}. The second group manages to improve on
-that (low) standard, but only barely, by modelling their sanctions on
-California's 1994 ``three strikes'' law~\cite{Vitiello2002}. A decade later, the
-law accounted for a quarter of the state's prisoners, but did not curb
-crime~\cite{BrownJolivette2005}, increased homicides~\cite{MarvellMoody2001},
-and led to even more Black men being locked up for even
-longer~\cite{BrownJolivette2005}. Three decades after enactment, the most
-salient change is that the law accounts for a third of all the state's
-prisoners~\cite{BirdGillea2022}. In short, the uniformity and severity of these
-sanctions turns all social media into wardens of the stochastic penal colony.
+that (low) standard, but only barely. Members of that group apparently model
+their sanctions on California's 1994 ``three strikes'' law~\cite{Vitiello2002}.
+A decade later, the law accounted for a quarter of the state's prisoners, it did
+not curb crime~\cite{BrownJolivette2005} but rather \emph{increased}
+homicides~\cite{MarvellMoody2001}. It also led to even more Black men being
+locked up for even longer~\cite{BrownJolivette2005}. Three decades after
+enactment, the most salient change is that the law accounts for a third of all
+the state's prisoners~\cite{BirdGillea2022}. Since nothing about content
+moderation would suggest fundamentally different outcomes, the uniformity and
+severity of this sanction regime only leads to significant disenfranchisement
+from digital platforms, at times with traumatic consequences~\cite{Hill2022},
+and turns social media into highly effective boosters of the stochastic penal
+colony.
 
 That conclusion does not change if I avoid the damning analogues and restrict
 the framing to content moderation only: When it comes to judging the severity of
@@ -248,7 +290,7 @@ February 2024. Penalties for non-compliance are steep: Each fine is capped at
 6\% of the firm's global revenue for the previous year.
 
 By design, Table~\ref{table:governance} largely obscures the subpar presentation
-and organization of social media platforms' transparency disclosures. It is
+and organization of many social media platforms' transparency disclosures. It is
 utterly ridiculous that five out of nine \emph{technology} firms can't be
 bothered to release their data in machine-readable form; it is unacceptable to
 the \EU, too. Next, ambiguously named prohibitions make for confusing reading of
@@ -262,21 +304,19 @@ report statistics on the reach of violative content. Yet Pinterest, Twitter, and
 YouTube report binned view counts, Snap median minutes, and Tiktok takedowns
 within 24 hours as well as without views. For historical, reasons, most
 platforms also break out government requests and intellectual property claims
-into their own sections or even reports. In the latter case, it is up to users
-to notice that the transparency report's statistics are incomplete and manually
-combine statistics from three different reports. Still, Pinterest's and
-YouTube's disclosures stand out for being better organized and presented than
-those of other platforms, with YouTube's coming closest to my own.
+into their own sections or even reports. In the latter case, it is up to
+interested parties to notice that the transparency report's statistics are
+incomplete and manually combine statistics from three different reports.
 
 Finally, social media's transparency reports tell vastly different stories about
 the role of \AI. As already discussed in Section~\ref{sec:tweet-da-fe}, Twitter
-is in public denial about its aggressive use of algorithms. In contrast,
-Pinterest is very exacting and distinguishes between fully automated and hybrid
-detection for each prohibition. In the latter case, algorithms pick violative
-content too, but humans need to approve the violation before the system acts on
-it. Next, Facebook, Instagram, Twitter, and YouTube have largely automated
-content moderation---though algorithmic review doesn't always happen before
-posting. Finally, while TikTok is playing catchup with Meta, Twitter, and
+blithely pretends it doesn't make aggressive use of algorithms. In contrast,
+Pinterest is very exacting and clearly distinguishes between fully automated and
+hybrid detection for each prohibition. In the latter case, algorithms pick
+violative content too, but humans need to approve the violation before the
+system acts on it. Next, Facebook, Instagram, Twitter, and YouTube have largely
+automated content moderation---though algorithmic review doesn't always happen
+before posting. Finally, while TikTok is playing catchup with Meta, Twitter, and
 YouTube, it also is making rapid strides in that direction. From Q3~2020 to
 Q3~2021, the share of automatically removed video clips grew from 7.8\% to
 33.9\% of all removed clips. After plateauing at that level for another two
@@ -433,26 +473,27 @@ That would explain the consistently much higher numbers. However, combining such
 disparate categories of content into one metric and then labelling that metric
 by the most severe category is highly inappropriate and deeply misleading.
 
-Even before Meta thusly changed metrics, there was some indication that Meta was
-inflating statistics. In February 2021, Antigone Davis, Meta's Global Head of
-Safety, reported in a blog post~\cite{Davis2021} that 90\% of pieces reported to
-\NCMEC\ during October and November 2020 had been reported before or were
-visually similar to previously reported content. Notably, six videos accounted
-for more than half of the reported content. Further analysis of 150 accounts
-reported to \NCMEC\ during July and August 2020 as well as January 2021 showed
-that 75\% of them didn't share \CSAM\ with malicious intent but ``for other
-reasons, such as outrage or in poor humor (i.e. a child's genitals being bitten
-by an animal).'' While Meta still is legally mandated to report such instances
-to \NCMEC, not including such information in its transparency disclosures is
-negligent at best. By comparison, Pinterest's transparency disclosures do
+Even before Meta thusly changed metrics, there was some indication that Meta's
+statistics were overstating the problem. In February 2021, Antigone Davis,
+Meta's Global Head of Safety, reported in a blog post~\cite{Davis2021} that 90\%
+of pieces reported to \NCMEC\ during October and November 2020 had been reported
+before or were visually similar to previously reported content. Notably, six
+videos accounted for more than half of the reported content. Further analysis of
+150 accounts reported to \NCMEC\ during July and August 2020 as well as January
+2021 showed that 75\% of them didn't share \CSAM\ with malicious intent but
+``for other reasons, such as outrage or in poor humor (i.e. a child's genitals
+being bitten by an animal).'' While Meta still is legally mandated to report
+such instances to \NCMEC, not including such information in its transparency
+disclosures is negligent at best. So is Meta's decision to only disclose piece
+counts but not reports. By comparison, Pinterest's transparency disclosures do
 distinguish between posts and the content itself, including for
 \CSAM~\cite{Pinterest2022}.
 
 While extracting the data for Meta and Google from \NCMEC's transparency
-disclosures, I discovered a hint at a significant hole in Meta's disclosures.
-For 2019 and 2020, \NCMEC\ reported one number for Meta under its old name
-Facebook. But in 2021, \NCMEC\ reported three counts, one for Facebook, one for
-Instagram, and one for WhatsApp. Uhm, \emph{WhatsApp}?? Meta makes no
+disclosures, I discovered indication for a significant omission from Meta's
+disclosures. For 2019 and 2020, \NCMEC\ reported one number for Meta under its
+old name Facebook. But in 2021, \NCMEC\ reported three counts, one for Facebook,
+one for Instagram, and one for WhatsApp. Uhm, \emph{WhatsApp}?? Meta makes no
 transparency disclosures about WhatsApp, neither in its ``transparency center''
 nor on WhatsApp's website, beyond some outdated statistics about California's
 privacy law.
@@ -467,13 +508,45 @@ transparency report nor the blog post announcing the report's release mention
 anything about these changes. That seems heedless at the very best.
 
 
-\subsubsection{The Global Spread of \CSAM}
+\subsubsection{NCMEC vs Other Platforms}
+
+Given the rather inconsistent results for Google and Meta, one cannot but wonder
+about other platforms' disclosures. Hence, I also compared \NCMEC's data with
+the corresponding disclosures by LinkedIn, Pinterest, Reddit, Snap, TikTok, and
+Twitter for 2021. Out of the bunch, only Reddit and Pinterest unambiguously
+identify \CSAM\ reports to \NCMEC\ in their transparency disclosures. But
+whereas Reddit provides the exact same number as \NCMEC, Pinterest claims 18\%
+more reports than \NCMEC. In a dedicated section, Snap explicitly mentions
+\CSAM\ and \NCMEC\ reporting but then labels the statistic ``Total Account
+Deletions.'' For H1 2021, it also discloses the fraction of ``accounts enforced
+globally,'' which amounts to a 14\% larger quantity. But even with that larger
+quantity, its number of account deletions still is 35\% smaller than the number
+of reports received by \NCMEC. Given Snap's stated zero-tolerance policy, those
+numbers should match. Though it is possible that Snap doesn't consistently
+follow through with account closure. By contrast, Twitter discloses (presumably
+permanent) ``account suspensions'' due to ``child sexual exploitation,'' but its
+number is 11.1$\mspace{1mu}\times$ larger than the number of reports \NCMEC\
+received from the firm. That does raise the question of whether Twitter always
+reports \CSAM\ to \NCMEC, as it is legally required. Finally, LinkedIn and
+TikTok disclose statistics for the more general ``child exploitation'' and
+``minor safety,'' respectively; they are incomparable to \NCMEC's disclosures.
+
+That results diverge in different ways for platforms other than Google and
+Reddit suggests that the fault probably lies with platforms and not \NCMEC. That
+generally does not bode well for the accuracy of platforms' other transparency
+disclosures. By comparison, Meta's data quality issues still seem out there. At
+the same time, Twitter claiming over an order of magnitude more account
+suspensions due to \CSAM\ than reports about \CSAM\ sent to \NCMEC\ is highly
+problematic as well.
+
+
+\subsubsection{The Global Spread of CSAM}
 
 \NCMEC\ also releases report counts broken down by individual countries. Since
-the largest non-Chinese social media, with exception of Telegram, are all based
-in the United States, that breakdown should be fairly representative of \CSAM\
-sharing patterns across the world. Hence, I decided to wrap up my investigation
-into the quality of transparency disclosures by analyzing \NCMEC's dataset for
+all surveyed social media, with exception of Telegram, are based in the United
+States, that breakdown should be fairly representative of \CSAM\ sharing
+patterns across the world. Hence, I decided to wrap up my investigation into the
+quality of transparency disclosures by analyzing \NCMEC's country dataset for
 2021~\cite{NcmecByCountry2021}.
 
 Right away, I did encounter several minor data quality issues. Notably, the data
@@ -483,14 +556,14 @@ Netherlands Antilles, (2) Bonaire, Sint Eustatius, and Saba (3) Curaçao, as wel
 as (4) Sint Maarten, even though the former was split into the latter three in
 2010. Finally, it included an entry for Bouvet Island. That is surprising
 because this subantarctic Norwegian territory is an uninhabited nature preserve
-with no man-made structures beyond a weather station.
+with no man-made structures beyond an automated weather station.
 
 To characterize geographic distribution, I computed regional totals as well as
 per-capita rates per country. Taken together South and South East Asia are
 responsible for 58.1\% of all reports despite only comprising 33.8\% of the
 world population. However, when ranking countries by their reports per capita,
 the countries with the highest number of reports per capita are located on the
-Arab peninsula or in North Africa, abutting the Mediterranean. The exception are
+Arab peninsula and in North Africa, abutting the Mediterranean. The exception are
 the Cocos or Keeling Islands. With 168 reports per 596 capita, the rate for the
 Australian territory is seven times higher than that of the second ranked
 country, Libya. While there is no reason to doubt the accuracy of that count,
@@ -513,7 +586,7 @@ its transparency report metrics~\cite{BradfordGriselea2019}, having the
 attendant data collection audited~\cite{Sarang2022}, and endowing an external
 oversight board~\cite{BoteroMarinoGreeneea2020}. Yet the firm also has an
 astoundingly deadly foreign record. By distributing and amplifying sectarian
-messaging, Meta has directly contributed to genocides not once but twice! As a
+messages, Meta has directly contributed to genocides not once but twice! As a
 result, 25,000 Rohingya were murdered in Myanmar from August 2017 to August 2018
 and 700,000 were driven into refugee camps across the border in Bangladesh,
 which have become the densest settlement on
@@ -530,10 +603,10 @@ documents, help pages, content moderation tools, and machine learning models
 have not yet been localized. In Myanmar, Facebook paid local cell phone
 providers to provide their customers with free access through the Facebook app.
 As a result, ``internet'' and ``Facebook'' are largely synonymous in the country
-to this day~\cite{Strom2016}. At the same time, Facebook had no employees who
-speak Burmese in early 2017. It ignored warnings from human rights organizations
-and other \NGO{}s. It also got stymied by legacy encodings for Burmese
-text~\cite{LaGrowPruzan2019,Wade2022}. When the firm finally got its act
+to this day~\cite{Strom2016}. At the same time, Facebook had few to no employees
+who speak Burmese in early 2017. It ignored warnings from human rights
+organizations and other \NGO{}s. It also got stymied by legacy encodings for
+Burmese text~\cite{LaGrowPruzan2019,Wade2022}. When the firm finally got its act
 together, it was too late: The genocide was well under
 way~\cite{McLaughlin2018,MilkoOrtutay2022,Mozur2018,Ortutay2022}.
 
@@ -542,7 +615,7 @@ general and Ethiopia specifically. Facebook had opened its first office in
 Africa, a \emph{sales} office, in 2015~\cite{Wagner2015}. When it started
 pushing more aggressively into African countries in 2018, it publicly insisted
 that it had learned its lessons~\cite{Tiku2018}. Yet it opened its first content
-moderation office in (all of) Africa only in 2019~\cite{Agutu2019}. The firm
+moderation office in Subsaharan Africa only in 2019~\cite{Agutu2019}. The firm
 lacked an appreciation of the richness of dialects and languages spoken across
 the continent~\cite{FickDave2019,JacksonTownsendea2022,Madung2021}. It also
 exploited local workers~\cite{AlSibai2022,Perrigo2022,Perrigo2023}. Its own
