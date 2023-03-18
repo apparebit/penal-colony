@@ -1,33 +1,59 @@
 #!/bin/zsh
 
 scriptname=$(basename $0)
-BOLD="\e[1m"
-RED="\e[1;31m"
-GREEN="\e[1;32m"
-BLUE="\e[1;34m"
-RESET="\e[0m"
+
+# Handle --no-color early to simplify setup.
+if [[ "$1" == "--no-color" ]]; then
+    shift
+    nocolor="nocolor"
+fi
+
+if [[ "$nocolor" != "nocolor" ]] && [ -t 2 ]; then
+    BOLD="\e[1m"
+    RED="\e[1;31m"
+    GREEN="\e[1;32m"
+    BLUE="\e[1;34m"
+    RESET="\e[0m"
+else
+    BOLD=""
+    RED=""
+    GREEN=""
+    BLUE=""
+    RESET=""
+fi
+
+# --------------------------------------------------------------------------------------
 
 show_help() {
-    printf "${BOLD}${scriptname} <target>${RESET}  # with <target> being one of:\n"
-    printf "    ${BOLD}venv${RESET}       install & activate Python virtual env\n"
-    printf "    ${BOLD}build${RESET}      recreate the PDF document (default)\n"
-    printf "    ${BOLD}lua${RESET}        recreate PDF document with LuaLaTeX\n"
-    printf "    ${BOLD}clean${RESET}      delete auxiliary files\n"
-    printf "    ${BOLD}arxiv${RESET}      prepare submission to ArXiv\n"
-    printf "    ${BOLD}acm${RESET}        prepare submission to ACM\n"
-    printf "    ${BOLD}-h, help${RESET}   print this message\n"
-    printf "\n"
-    printf "Note that ${BOLD}venv${RESET} installs a new virtual environment only\n"
-    printf "if \"$(pwd)/.venv\" doesn't exist.\n"
+    {
+        printf "${BOLD}${scriptname} [--no-color] [<target>]${RESET}"
+        printf " with target one of these:\n"
+        printf "    ${BOLD}venv${RESET}       install & activate Python virtual env\n"
+        printf "    ${BOLD}build${RESET}      recreate the PDF document (default)\n"
+        printf "    ${BOLD}lua${RESET}        recreate PDF document with LuaLaTeX\n"
+        printf "    ${BOLD}clean${RESET}      delete auxiliary files\n"
+        printf "    ${BOLD}arxiv${RESET}      prepare submission to ArXiv\n"
+        printf "    ${BOLD}acm${RESET}        prepare submission to ACM\n"
+        printf "    ${BOLD}-h, help${RESET}   print this message\n"
+        printf "\n"
+        printf "Note that ${BOLD}venv${RESET} installs a new virtual environment only\n"
+        printf "if \"$(pwd)/.venv\" doesn't exist.\n"
+    } >&2
 }
 
 show_info() {
-    printf "${BLUE}${scriptname}: $1${RESET}\n" >&2
+    printf "${BLUE}INFO: $1${RESET}\n" >&2
+}
+
+show_success() {
+    printf "${GREEN}SUCCESS: $1${RESET}\n" >&2
 }
 
 show_error() {
     printf "${RED}ERROR: $1${RESET}\n" >&2
 }
+
+# --------------------------------------------------------------------------------------
 
 do_venv() {
     local installing=0
@@ -61,17 +87,21 @@ do_venv() {
     exec /bin/zsh -f -i
 }
 
+# --------------------------------------------------------------------------------------
+
 export TEXINPUTS=.:emo-graphics/:images/:
-local LATEX_TOOL=pdflatex
+local LATEX_ENGINE=pdflatex
 
 do_build() {
-    $LATEX_TOOL main
+    $LATEX_ENGINE main
     bibtex main
-    $LATEX_TOOL main
+    $LATEX_ENGINE main
     while ( grep -q '^LaTeX Warning: Label(s) may have changed' *.log ); do
-        $LATEX_TOOL main
+        $LATEX_ENGINE main
     done
 }
+
+# --------------------------------------------------------------------------------------
 
 do_clean() {
     rm -f source/comment.cut
@@ -84,25 +114,33 @@ do_clean() {
     rm -f acm.zip arxiv.zip
 }
 
+# --------------------------------------------------------------------------------------
+
 prep_arxiv() {
-    # Make sure paper builds and working directory exists.
+    # Make sure that the paper builds and the working directory exists.
+    show_info "Build article"
     ( cd source && do_build $@ )
     [ ! -d arxiv ] && mkdir arxiv
 
     # Combine all LaTeX sources into one and inject pdflatex marker.
-    ( cd source && latexpand main.tex -o ../arxiv/apaper.tex )
+    show_info "Stage files"
+    ( cd source && latexpand main.tex -o ../arxiv/article.tex )
     sed -i '' '2i\
-\\pdfoutput=1' arxiv/apaper.tex
+\\pdfoutput=1' arxiv/article.tex
 
-    # Include emo style, bibliography, images.
+    # Include the emo package, the bibliography, and all image as well as emoji.
     cp source/emo.sty arxiv
-    cp source/main.bbl arxiv/apaper.bbl
+    cp source/emo.def arxiv
+    cp source/main.bbl arxiv/article.bbl
     cp source/images/*.{jpg,png} arxiv
     cp source/emo-graphics/*.pdf arxiv
 
-    # Package it up
+    # Package it all up
+    show_info "Create archive"
     zip -r arxiv.zip arxiv/*
 }
+
+# --------------------------------------------------------------------------------------
 
 prep_acm() {
     #( cd source && do_build $@ )
@@ -111,24 +149,25 @@ prep_acm() {
     #zip -r acm.zip pdf source supplements build.sh
 }
 
+# --------------------------------------------------------------------------------------
+
 target=${1:-build}
 shift
 
 case $target in
-    venv     )  do_venv    $@ ;;
-    build    )  ( cd source && do_build $@ ) ;;
-    lua      )  LATEX_TOOL=lualatex
-                ( cd source && do_build $@ ) ;;
-    clean    )  do_clean   $@ ;;
-    arxiv    )  prep_arxiv $@ ;;
-    acm      )  prep_acm   $@ ;;
-    -h | help)  show_help  $@ ;;
+    venv      )  do_venv    $@ ;;
+    build     )  ( cd source && do_build $@ ) ;;
+    lua       )  LATEX_ENGINE=lualatex
+                 ( cd source && do_build $@ ) ;;
+    clean     )  do_clean   $@ ;;
+    arxiv     )  prep_arxiv $@ ;;
+    acm       )  prep_acm   $@ ;;
+    -h | help )  show_help >&2 ;;
     *)
         show_error "\"$target\" is not a valid build target!"
-        printf "\n"
         show_help
         exit 1
         ;;
 esac
 
-printf "${GREEN}Happy, happy joy, joy!${RESET}\n"
+show_success "Happy, happy, joy, joy!"
