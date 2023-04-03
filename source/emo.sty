@@ -6,22 +6,24 @@
 %%
 %% emo.dtx  (with options: `package')
 %% 
-%% emo: emoji for all (LaTeX engines)
+%% emo•ji for all (LaTeX engines)
 %% (C) Copyright 2023 by Robert Grimm
 %% Released under LPPL v1.3c or later
 %% <https://github.com/apparebit/emo>
 %% 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{emo}
-    [2023/03/07 v0.1 emoji for all]
+    [2023/04/01 v0.2 emo•ji for all (LaTeX engines)]
 \newif\ifemo@extra\emo@extrafalse
 \DeclareOption{extra}{\emo@extratrue}
 \newif\ifemo@indexing\emo@indexingfalse
 \DeclareOption{index}{\emo@indexingtrue}
 \ProcessOptions\relax
 \RequirePackage[utf8]{inputenc}
+\newif\ifemo@usefont\emo@usefontfalse
 \RequirePackage{iftex}
-\ifluatex
+\ifluatex\emo@usefonttrue\fi
+\ifemo@usefont
 \RequirePackage{fontspec}
 \else
 \RequirePackage{graphicx}
@@ -55,7 +57,7 @@
 \else
 \def\emo@index#1{}
 \fi
-\ifluatex
+\ifemo@usefont
 \newfontface\emo@font[Renderer=Harfbuzz]{NotoColorEmoji.ttf}
 \newcommand\emo[1]{%
     \emo@ifdef{#1}{%
@@ -67,13 +69,14 @@
 \newcommand\emo[1]{%
     \emo@ifdef{#1}{%
         \emo@index{#1}%
-        \raisebox{-0.2ex}{\includegraphics[height=1em]{./emo-graphics/#1}}%
+        \raisebox{-0.2ex}{%
+            \includegraphics[height=1em]{emo-graphics/emo-#1}}%
     }%
 }
 \fi
 \ifemo@extra
-\ifluatex
-\newfontface\emo@chinese{NotoSerifTC-Regular.otf}
+\ifemo@usefont
+\newfontface\emo@chinese{emo-lingchi.ttf}
 \newfontface\emo@hebrew{LinLibertine_R.otf}
 \newcommand\lingchi{%
     \emo@index{lingchi}%
@@ -81,16 +84,21 @@
     \xspace}
 \newcommand\YHWH{%
     \emo@index{YHWH}%
-    \begingroup\textdir TRT\emo@hebrew \char"5D9\char"5D4\char"5D5\char"5D4\endgroup%
+    \begingroup%
+        \textdir TRT%
+        \emo@hebrew \char"5D9\char"5D4\char"5D5\char"5D4%
+    \endgroup%
     \xspace}
 \else
 \newcommand\lingchi{%
     \emo@index{lingchi}%
-    \raisebox{-0.2ex}{\includegraphics[height=1em]{./emo-graphics/lingchi}}%
+    \raisebox{-0.2ex}{%
+        \includegraphics[height=1em]{emo-graphics/emo-lingchi}}%
     \xspace}
 \newcommand\YHWH{%
     \emo@index{YHWH}%
-    \raisebox{-0.2ex}{\includegraphics[height=1em]{./emo-graphics/YHWH}}%
+    \raisebox{-0.2ex}{%
+        \includegraphics[height=1em]{emo-graphics/emo-YHWH}}%
     \xspace}
 \fi
 \fi
