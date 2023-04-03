@@ -37,11 +37,11 @@ images, \DALLE~2 responded with a stern warning:
 policy violations may lead to an automatic suspension of your
 account.\closefat{}
 \end{quote}
-Whoa! I enter an entirely reasonable prompt and OpenAI immediately
-threatens me with account suspension? Without even telling me what I did wrong?
-That's just ridiculous. And frustrating. Consulting the content policy didn't
-help much either. The policy seemed broad, also vague. I eventually did narrow
-down the violation to two out of the eleven content prohibitions. But which of
+Whoa! I enter an entirely reasonable prompt and OpenAI immediately threatens me
+with account suspension? Without even telling me what I did wrong? That's just
+ridiculous. And frustrating. Consulting the content policy didn't help much
+either. The policy seemed broad, also vague. I eventually did narrow down the
+violation to two candidates out of the eleven content prohibitions. But which of
 the two? I couldn't tell. It all seemed rather Kafkaesque!
 
 It also was familiar. In October 2021, Twitter's \V{AI} took offense to an
@@ -93,7 +93,7 @@ I call the conceptual space of punitive algorithms the \emph{stochastic penal
 colony}. To provide a first map of that space, this paper first explores
 OpenAI's enforcement process in \S\ref{sec:dalle} and then Twitter's in
 \S\ref{sec:tweet-da-fe}. For each firm, it leverages a close textual reading of
-firm policies and other communications to enumerate the many ways its
+firm policies and other communications to enumerate the many ways the firm's
 enforcement process deprives targeted users of voice, agency, and dignity. It
 also contrasts these \emph{Kafkaesque co-factors} with major failures of neutral
 and trustworthy content moderation.
@@ -101,24 +101,26 @@ and trustworthy content moderation.
 \S\ref{sec:census} shifts from auto-ethnographic case studies based on
 procedural justice~\cite{Tyler2003,Tyler2006,Tyler2007} to a cumulative
 perspective, performing a comprehensive comparison of popular non-Chinese social
-media and their governance based on their transparency reports. Results suggest
-that content moderation is excessively punitive across all social media
-platforms. Telegram is the only exception, but only because it doesn't perform
-meaningful content moderation. Furthermore, social media governance still is far
-from accountable, with transparency reports addressing zero to ten criteria out
-of the nineteen I identified. \S\ref{sec:census-validation} explores the
-validity of transparency data by comparing disclosures by Google, Meta, and the
-National Center for Missing an Exploited Children and \S\ref{sec:census-limits}
-explores on the example of industry-leading Meta how hypergrowth as business
-strategy has directly contributed to devastating human harm. Alas this lack of
-transparency and accountability may just come to an end this year. The \V{EU}'s
-Digital Services Act provides a future baseline by enumerating the metrics
-internet platforms must include in their independently audited, yearly reports.
-For full disclosure, I worked for Meta as a software engineer from summer 2018
-to summer 2019. In the second half of 2022, I also served as paid consultant to
-litigation against Meta. Neither employment nor litigation were related to the
-topics covered in this paper and I have \emph{no} financial interest in the
-company (nor any of the other companies covered in this paper).
+media and their governance based on their transparency reports. The results in
+\S\ref{sec:census-results} suggest that content moderation is indeed excessively
+punitive across all social media platforms. Telegram is the only exception, but
+only because it doesn't perform meaningful content moderation. Furthermore,
+social media governance still is far from accountable, with transparency reports
+addressing zero to twelve criteria out of the nineteen I identified.
+\S\ref{sec:census-validation} explores the validity of transparency data by
+comparing disclosures by Google, Meta, and the National Center for Missing an
+Exploited Children and \S\ref{sec:census-limits} uses the example of
+industry-leading Meta for illustrating the devastating human harm that can
+result from hypergrowth as business strategy. Alas, social media's lack of
+transparency and accountability may just come to an end within the year. The
+\V{EU}'s Digital Services Act provides a future baseline by enumerating the
+metrics internet platforms must include in their independently audited, yearly
+reports~\cite{EuropeanParliamentAndCouncil2022}. For full disclosure, I worked
+for Meta as a software engineer from summer 2018 to summer 2019. In the second
+half of 2022, I also served as paid consultant to litigation against Meta.
+Neither employment nor litigation were related to the topics covered in this
+paper and I have \emph{no} financial interest in the company (nor any of the
+other companies covered in this paper).
 
 Whereas the census in \S\ref{sec:census} takes a broad view, \S\ref{sec:escape}
 goes deep again by experimentally exploring the reason for my first prompt's
@@ -134,8 +136,8 @@ The hands-on investigation of \DALLE\ surepitiously surfaced two additional
 limitations of OpenAI's content policy and automated enforcement. First, \DALLE\
 effectively discriminated against Christian religious beliefs, simultaneously
 censoring too little and too much, with the latter including the crucifixion.
-Between me running these experiments in August through October 2022 mostly and
-completing this paper in February 2023, OpenAI has updated its censor and now
+Between me running these experiments in August through October 2022 and
+completing this paper in March 2023, OpenAI did update its censor and now
 accepts the crucifixion and hence is not as discriminatory anymore. Second,
 OpenAI's post-processing of prompts to diversify gender and race representation
 is outright dangerous~\cite{OpenAI2022e,Sparkes2022}. In particular, it appears
@@ -149,43 +151,41 @@ In \S\ref{sec:discussion}, I pull together results from previous sections,
 organize them into larger themes, and contextualize them with related work. I
 argue that, even though all of the surveyed platforms with exception of TikTok
 launched \emph{between one and two decades ago}, their governance remains a
-shambles. I discuss solution approaches and propose a novel intellectual
-property right that (1) makes a similar trade-off between disclosure and
-protection as patents, (2) applies only to machine learning systems, and (3)
-makes operators' rights for commercial exploitation contingent on strict
-disclosure and access requirements. Finally, \S\ref{sec:conclusion} concludes
+shambles. I also discuss solution approaches and propose a novel intellectual
+property regime specifically tailored to \V{AI} systems that recombines proven
+elements from copyright and patent law to balance the interests of those who
+deploy such systems and everyone else. Finally, \S\ref{sec:conclusion} concludes
 this paper with an appeal to the one principle that holds promise for
 ameliorating life in the stochastic penal colony, harm reduction.
 Appendices~\ref{app:dalle-sources}--\ref{app:chatgpt} reproduce relevant source
-materials, whereas Appendix~\ref{app:research-ethics} discusses researches
-ethics, including potential conflicts of interest.
+materials, whereas Appendix~\ref{app:research-ethics} discusses research ethics,
+including my handling of the racist imagery.
 
 Before diving into the substance of this pointed critique of algorithmic
-interventions, \S\ref{sec:context} covers the conceptual, political, historical,
-and literary context of the stochastic penal colony and \S\ref{sec:criteria}
-grounds my narrative technique for identifying punitive aspects of content
-moderation, \emph{Kafkaesque co-factors}, in procedural justice. Coincidentally,
-that also enables me to provide a more precise definition of the stochastic
-penal colony.
+practice, \S\ref{sec:context} covers the conceptual, political, historical, and
+literary context of the stochastic penal colony and \S\ref{sec:criteria} grounds
+my narrative technique for identifying punitive aspects of content moderation,
+\emph{Kafkaesque co-factors}, in procedural justice. Coincidentally, that also
+enables me to provide a more precise definition of the stochastic penal colony.
 
 
 \subsection{Conceptual, Political, Historical, and Literary Context}
 \label{sec:context}
 
-In \emph{Discipline and Punish}, Foucault traces the transition from punishment
-as a public and usually deadly spectacle to the modern prison and other
-disciplinary institutions~\cite{Foucault1979}. He argues that this transition
-did not happen for humanist concerns, as the result of reform efforts. Instead,
-the driving force was the destabilizing impact of public executions. By being
-rather ostentatious displays of power, they turned the criminal into sympathetic
-victim. In contrast, executioner as well as sovereign became targets of popular
-resentment. By simultaneously rationalizing, tempering, and distributing the
-application of power, penal institutions avoid these downsides. They instead
-instill discipline into the individual under their custody. As people
-internalize discipline, that self-discipline obviates the need for more direct
-applications of power and begets other disciplinary institutions, including
-schools, hospitals, and factories. That way, we all turned into seasoned
-practitioners of discipline.
+In \emph{Discipline and Punish}, Michel Foucault traces the transition from
+punishment as a public and usually deadly spectacle to the modern prison and
+other disciplinary institutions~\cite{Foucault1979}. He argues that this
+transition did not happen for humanist concerns, as the result of reform
+efforts. Instead, the driving force was the destabilizing impact of public
+executions. By being rather ostentatious displays of power, they turned the
+criminal into sympathetic victim. In contrast, executioner as well as sovereign
+became targets of popular resentment. By simultaneously rationalizing,
+tempering, and distributing the application of power, penal institutions avoid
+these downsides. They instead instill discipline into the individual under their
+custody. As people internalize discipline, that self-discipline obviates the
+need for more direct applications of power and begets other disciplinary
+institutions, including schools, hospitals, and factories. That way, we all
+turned into seasoned practitioners of discipline.
 
 The institutionalization of discipline does place constraints on the sovereign's
 exercise of power and leads to an attendant loss of centralized control. That
@@ -216,24 +216,22 @@ The country has the largest number of prisoners \emph{and} the highest
 incarceration rate in the world. In 2022, the country accounted for 20\% of
 imprisoned people across the world~\cite{SawyerWagner2022} but only for 4.25\%
 of the world population~\cite{Worldometer2023}. With 625 per 100,000 in 2019,
-the US imprisoned 6.0$\mspace{1mu}\times$ as many people as Canada,
-9.4$\mspace{1mu}\times$ as many as Germany, and 17.5$\mspace{1mu}\times$ as many
-as Japan~\cite{WorldPrisonBrief2023}. Additionally, roughly double as many
-people are under the control of the carceral state through probation or parole
-and may be locked up again at a moment's notice for largely arbitrary
-reasons~\cite{SawyerWagner2022}. Many of the imprisoned are deprived of their
-liberty not because they have been convicted of a crime: Half of those
-imprisoned in local jails (as opposed to federal prisons) are there for pretrial
-detention~\cite{SawyerWagner2022}.
-
+the \V{US} imprisoned $6.0\times$ as many people as Canada, $9.4\times$ as many
+as Germany, and $17.5\times$ as many as Japan~\cite{WorldPrisonBrief2023}.
+Additionally, roughly double as many people are under the control of the
+carceral state through probation or parole and may be locked up again at a
+moment's notice for largely arbitrary reasons~\cite{SawyerWagner2022}. Many of
+the imprisoned are deprived of their liberty not because they have been
+convicted of a crime: Half of those imprisoned in local jails (as opposed to
+federal prisons) are there for pretrial detention~\cite{SawyerWagner2022}.
 Worse, mass incarceration disproportionally impacts poor and minority
-populations. Notably, Black Americans made up 12\% of the US adult population in
-2018 but also made up 33\% of all people serving sentences greater than one year
-in state or federal prison~\cite{Gramlich2020}. Incredibly, that is after a 34\%
-reduction of their incarceration rate since 2006 and comparatively smaller
-reductions for other ethnicities. They also tend to be locked up, far from home,
-in districts that are far more white than their homes, cutting them off from
-family and friends~\cite{WagnerKopf2015}.
+populations. Notably, Black Americans made up 12\% of the \V{US} adult
+population in 2018 but also made up 33\% of all people serving sentences greater
+than one year in state or federal prison~\cite{Gramlich2020}. Incredibly, that
+is after a 34\% reduction of their incarceration rate since 2006 and
+comparatively smaller reductions for other ethnicities. They also tend to be
+locked up, far from home, in districts that are far more white than their homes,
+cutting them off from family and friends~\cite{WagnerKopf2015}.
 
 As I'll discuss in more detail in Section~\ref{sec:census}, some of the more
 extreme and hence also white supremacist practices of the American carceral
@@ -260,7 +258,7 @@ injustice system. The French version of \emph{transportation}---the practice
 of sending prisoners to far off locales---is far more recent than we'd
 probably like to acknowledge. France began turning French Guiana into one large
 penal colony from 1852 onwards---after the British had already begun unwinding
-theirs---and closed the colony only in
+their own penal colonies---and closed the colony only in
 1953~\cite{Aldrich2010,Anderson2018,Spierenburg2009}. For the 70 years or so
 before closing, transportation was reserved for convicts sentenced under
 France's own three strikes laws. It also was almost always terminal: Only 2,000
@@ -300,9 +298,9 @@ French military officer, had been falsely convicted for espionage in early 1895
 and again in 1899---with rampant antisemitism leading to the systematic
 suppression of exculpatory evidence and complete disregard of the real spy's
 public confession in 1898. As a result, Mr Dreyfus spent 1895--1899 on Devil's
-Island, a particularly harsh location in the French Guianan penal colony just
-off the coast. Coincidentally, the Dreyfus affair also popularized the word
-``intellectual,'' albeit starting out as a
+Island, a particularly harsh location in the French Guianan penal colony.
+Coincidentally, the Dreyfus affair also popularized the word ``intellectual,''
+albeit starting out as a
 pejorative~\cite{Drake2005,StudentsAtTheUniversityOfBristol2021}.
 
 Besides, the stochastic penal colony~\emo{desert-island} provides an excellent
@@ -339,7 +337,8 @@ consider its original context, namely sovereign law and justice. In the
 governmental application of justice and particularly in criminal justice,
 individuals' agency is at best a secondary concern and for the most part
 lacking. As the above summary of outcomes for the American application of
-injustice demonstrates, even voice is on exceedingly shaky grounds in the US.
+injustice demonstrates, even voice is on exceedingly shaky grounds in the
+\V{US}.
 
 A more subtle difference is my grouping of the five criteria. Whereas procedural
 justice distinguishes between process and relational criteria, I distinguish
