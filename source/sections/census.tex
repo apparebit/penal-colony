@@ -24,7 +24,7 @@ are unlikely to adhere to Klonick's governance model. I also drop Facebook
 Messenger, Microsoft Teams, Skype, and WhatsApp, since they mostly enable
 private communication between users. While that arguably is the predominant use
 case for Telegram, too, its stickers, channels, and bots are public and require
-moderation, as even Telegram acknowledges in their \FAQ. Hence, Telegram
+moderation, as even Telegram acknowledges in their \V{FAQ}. Hence, Telegram
 remains. Finally, I add Tumblr because that social network has become a popular
 destination for users leaving Twitter and employees laid off by Twitter in the
 wake of Elon Musk's takeover of the firm~\cite{Patel2022}.
@@ -63,7 +63,7 @@ below.
     \begin{enumerate}[resume]
         \item \emo{classical-building}~Government inquiries and removal requests
             \label{itm:government}
-        \item \emo{detective} Trusted flaggers, including fact checkers and \IP\
+        \item \emo{detective} Trusted flaggers, including fact checkers and \V{IP}
             rights holders \label{itm:flaggers}
         \item \emo{enraged-face}~Platform users \label{itm:users}
         \item \emo{robot}~Algorithms, hybrid vs fully automatic
@@ -127,7 +127,9 @@ or Non-Attribution'' is rather endearing---but probably not that practical.
     of forced timeout, and X for account suspension. The \emo{robot} robot and
     \emo{judge} judge columns share the \emo{keycap-one} number one when a
     transparency report does not distinguish between in-house automated and
-    human review. All years are within this century.}
+    human review. A \emo{collision} collision indicates that the firm commits
+    to meaningful notification but blatantly violates that commitment in
+    practice. All years are within this century.}
 \label{table:governance}
 \begin{tabular}{L@{\;\;}CcCc@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}cC}
 
@@ -190,7 +192,7 @@ or Non-Attribution'' is rather endearing---but probably not that practical.
 '22}
 \href{https://www.reddit.com/r/redditsecurity/comments/rgikn1/q3_safety_security_report/}{Q3
 '21}}
-& \MK & & & & \MK & & \MK & \MK & \MK & & & \MK & \MK & & \MK & \MK & & & \MK & \\
+& \MK & & & & \MK & & \MK & \MK & \MK & & & \MK & \MK & & \emo{collision} & \MK & & & \MK & \\
 
 \href{https://values.snap.com/privacy/transparency/community-guidelines}{Snap}
 & '11
@@ -244,7 +246,7 @@ When it comes to sanctioning accounts, \emph{all} social media besides Telegram
 fall into one of two groups. The first group seems to model their sanctions on
 the Queen of Hearts from \emph{Alice's Adventures in Wonderland},
 enthusiastically screaming ``Off with their heads!'' and then figuratively even
-following through~\cite{Carroll2008}. The second group manages to improve on
+following through~\cite{Carroll2009}. The second group manages to improve on
 that (low) standard, but only barely. Members of that group apparently model
 their sanctions on California's 1994 ``three strikes'' law~\cite{Vitiello2002}.
 A decade later, the law accounted for a quarter of the state's prisoners, it did
@@ -301,17 +303,27 @@ more than ten out of the nineteen categories---provides a rude counterpoint to
 Klonick's cheerful enthusiasm for social media governance. Worse, as the
 \emph{Launch} years make clear, all but TikTok had one to two decades for making
 the necessary investments into content moderation processes and transparency
-reporting.
+reporting. Remarkably, most social media platforms won't even commit to
+meaningful notification and one platform that does commit has been breaking its
+commitment on grand scale for years.  To fill in the column, I originally relied
+on the Electronic Frontier Foundation's prior work, validating their results as
+much as possible~\cite{CrockerGebhartea2019}. Later on, I discovered that
+subreddit moderators can ``shadowban'' or ``bot ban'' comments, which renders
+them invisible to everyone but the original author. Updating the domain of any
+Reddit \V{URL} to \texttt{reveddit.com} makes such comments visible again and
+shows that this feature is widely and arbitrarily used even on constructive
+contributions, suggesting that Reddit has a massive moderation abuse
+problem~\cite{Hawkins2023}.
 
-That won't do for much longer---unless platforms are willing to forgo the
-European market. As the bottom table row illustrates, the \EU's \DSA\ includes
-fairly extensive requirements for transparency reporting. In turn, that requires
-continuous collection of data on content moderation. For the top-most tier as
-far as obligations go, the so-called \emph{very large platforms}, those reports
-have to be independently audited as well. The \DSA\ doesn't leave much time for
-setting up the necessary infrastructure. All platforms should have reported
-their user numbers to the \EU\ by February 2023. The Commission then decides
-which platforms to designate as very large. Once a firm has been thusly
+Such shenanigans won't do for much longer---unless platforms are willing to
+forgo the European market. As the bottom table row illustrates, the \EU's \DSA\
+includes fairly extensive requirements for transparency reporting. In turn, that
+requires continuous collection of data on content moderation. For the top-most
+tier as far as obligations go, the so-called \emph{very large platforms}, those
+reports have to be independently audited as well. The \DSA\ doesn't leave much
+time for setting up the necessary infrastructure. All platforms should have
+reported their user numbers to the \EU\ by February 2023. The Commission then
+decides which platforms to designate as very large. Once a firm has been thusly
 designated, it has a mere four months to comply with the law. Meanwhile, smaller
 platforms have until February 2024 to come into compliance. Penalties for
 non-compliance are steep: Each fine is capped at 6\% of the firm's global
@@ -386,7 +398,7 @@ before~\cite{Bass2014,Brown2019,Dickson2014,Martin2012,Masnick2017,McCormack2012
 While Google is a distant second, I originally included the firm because it uses
 the same two \CSAM\ detection systems as Meta~\cite{Allen2011,Davis2018}:
 Microsoft's PhotoDNA for detecting previously known instances of \CSAM\ based on
-perceptual hashing and Google's own Content Safety \API{} for detecting
+perceptual hashing and Google's own Content Safety \V{API} for detecting
 previously unknown instances of \CSAM\ based on a machine learning model.
 
 Table~\ref{table:csam} summarizes \emph{all} \CSAM\ disclosures by the three
@@ -397,6 +409,8 @@ disclosures of only piece counts. That already implies that only \NCMEC's and
 Google's data are comparable. As the table shows, they are reasonably close,
 with a maximum yearly difference of -0.6\% between \NCMEC's count for Google and
 Google's own count.
+
+%https://facebook.com/business/f/973284106800107 roundup
 
 \begin{table}
 \caption{\CSAM{} disclosures by \NCMEC, Google, and Meta from 2018 to 2022.}
@@ -635,7 +649,7 @@ providers to provide their customers with free access through the Facebook app.
 As a result, ``internet'' and ``Facebook'' are largely synonymous in the country
 to this day~\cite{Strom2016}. At the same time, Facebook had few to no employees
 who speak Burmese in early 2017. It ignored warnings from human rights
-organizations and other \NGO{}s. It also got stymied by legacy encodings for
+organizations and other \V{NGO}s. It also got stymied by legacy encodings for
 Burmese text~\cite{LaGrowPruzan2019,Wade2022}. When the firm finally got its act
 together, it was too late: The genocide was well under
 way~\cite{McLaughlin2018,MilkoOrtutay2022,Mozur2018,Ortutay2022}.
@@ -656,11 +670,12 @@ way~\cite{Allen2022,Gilbert2020,GlobalWitness2022,Ilori2020,Malik2022,ElliottChr
 
 Since Meta is publicly traded, we might wonder what shareholders think about
 this abysmal record. They don't seem to be too pleased either and did try
-holding the firm's \CEO\ and Chairman of the Board Mark Zuckerberg accountable.
-The annual meetings in 2018~\cite{Butler2018}, 2019~\cite{Sumagaysay2019},
-2020~\cite{McRitchie2020}, 2021~\cite{Nix2021}, and 2022~\cite{WatersAgnew2022}
-featured motions to strip him of one or both titles and the majority of shares
-approved the motions in 2019, 2021, and 2022. But thanks to some funny business
-with the allocation of votes per share, Mr Zuckerberg controls the majority of
-votes. He also keeps voting for himself. So how much transparency and
-accountability can we realistically expect from a genocide-enabling autocracy?
+holding the firm's \V{CEO} and Chairman of the Board Mark Zuckerberg
+accountable. The annual meetings in 2018~\cite{Butler2018},
+2019~\cite{Sumagaysay2019}, 2020~\cite{McRitchie2020}, 2021~\cite{Nix2021}, and
+2022~\cite{WatersAgnew2022} featured motions to strip him of one or both titles
+and the majority of shares approved the motions in 2019, 2021, and 2022. But
+thanks to some funny business with the allocation of votes per share, Mr
+Zuckerberg controls the majority of votes. He also keeps voting for himself. So
+how much transparency and accountability can we realistically expect from a
+genocide-enabling autocracy?
