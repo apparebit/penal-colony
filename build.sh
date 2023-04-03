@@ -11,12 +11,14 @@ fi
 if [[ "$nocolor" != "nocolor" ]] && [ -t 2 ]; then
     BOLD="\e[1m"
     RED="\e[1;31m"
+    ORANGE="\e[1;38;5;208m"
     GREEN="\e[1;32m"
     BLUE="\e[1;34m"
     RESET="\e[0m"
 else
     BOLD=""
     RED=""
+    ORANGE=""
     GREEN=""
     BLUE=""
     RESET=""
@@ -47,6 +49,10 @@ show_info() {
 
 show_success() {
     printf "${GREEN}SUCCESS: $1${RESET}\n" >&2
+}
+
+show_warning() {
+    printf "${ORANGE}WARNING: $1${RESET}\n" >&2
 }
 
 show_error() {
@@ -92,13 +98,43 @@ do_venv() {
 export TEXINPUTS=.:emo-graphics/:images/:
 local LATEX_ENGINE=pdflatex
 
+check_bibtex() {
+    # Surface actionable information from BibTeX's output
+    local warnings=$(
+        grep -e '^Warning--' main.blg |
+        grep -ve 'no number and no volume' |
+        grep -ve 'page numbers missing' |
+        grep -ve 'can'"'"'t use both author and editor fields')
+
+    if [[ -n $warnings ]]; then
+        show_error "Please fix the following BibTeX warnings:\n$warnings"
+        exit 1
+    fi
+}
+
+check_latex() {
+    # Surface actionable information from LaTeX's output
+    local warnings=$(
+        grep -e '^LaTeX Warning: Reference `' main.log)
+
+    if [[ -n $warnings ]]; then
+        show_error "Please fix the following LaTeX warnings:\n$warnings"
+        exit 1
+    fi
+}
+
 do_build() {
     $LATEX_ENGINE main
+
     bibtex main
+    check_bibtex
+
     $LATEX_ENGINE main
     while ( grep -q '^LaTeX Warning: Label(s) may have changed' *.log ); do
         $LATEX_ENGINE main
     done
+
+    check_latex
 }
 
 # --------------------------------------------------------------------------------------
@@ -106,8 +142,8 @@ do_build() {
 do_clean() {
     rm -f source/comment.cut
     rm -f source/missfont.log
-    for f in aux bbl blg fdb_latexmk fls log out pdf; do
-        rm -f "source/main.$f"
+    for suffix in aux bbl blg fdb_latexmk fls log out pdf; do
+        rm -f "source/main.$suffix"
     done
     rm -f .DS_store source/.DS_store supplements/.DS_store
     rm -rf arxiv
@@ -156,9 +192,9 @@ shift
 
 case $target in
     venv      )  do_venv    $@ ;;
-    build     )  ( cd source && do_build $@ ) ;;
+    build     )  ( cd source && do_build $@ ) || exit 1 ;;
     lua       )  LATEX_ENGINE=lualatex
-                 ( cd source && do_build $@ ) ;;
+                 ( cd source && do_build $@ ) || exit 1 ;;
     clean     )  do_clean   $@ ;;
     arxiv     )  prep_arxiv $@ ;;
     acm       )  prep_acm   $@ ;;
