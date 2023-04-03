@@ -157,23 +157,35 @@ prep_arxiv() {
     show_info "Build article"
     ( cd source && do_build $@ )
     [ ! -d arxiv ] && mkdir arxiv
+    [ ! -d arxiv/images ] && mkdir arxiv/images
+    [ ! -d arxiv/emo-graphics ] && mkdir arxiv/emo-graphics
 
     # Combine all LaTeX sources into one and inject pdflatex marker.
     show_info "Stage files"
     ( cd source && latexpand main.tex -o ../arxiv/article.tex )
     sed -i '' '2i\
-\\pdfoutput=1' arxiv/article.tex
+\\pdfoutput=1\
+' arxiv/article.tex
+    sed -i '' '9i\
+\\graphicspath{{images/}{emo-graphics/}}\
+' arxiv/article.tex
 
     # Include the emo package, the bibliography, and all image as well as emoji.
     cp source/emo.sty arxiv
     cp source/emo.def arxiv
     cp source/main.bbl arxiv/article.bbl
-    cp source/images/*.{jpg,png} arxiv
-    cp source/emo-graphics/*.pdf arxiv
+    cp source/images/*.{jpg,png} arxiv/images
+    cp source/emo-graphics/emo-*.pdf arxiv/emo-graphics/
 
     # Package it all up
     show_info "Create archive"
     zip -r arxiv.zip arxiv/*
+
+    # Make sure the paper still builds.
+    show_info "Build archive version"
+    unset TEXINPUTS
+    (cd arxiv && pdflatex article)
+    (cd arxiv && pdflatex article)
 }
 
 # --------------------------------------------------------------------------------------
