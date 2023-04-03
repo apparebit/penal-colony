@@ -1,27 +1,7 @@
 # Letters from the Stochastic Penal Colony 🏝
 
-Source code and supplements for the paper “Letters from the Stochastic Penal
-Colony 🏝” by Robert Grimm.
-
-  * A [__custom build script__](build.sh) in the repository root takes care of
-    repetitive tasks. The one optional argument is the name of the task to
-    execute.
-  * By default, i.e., when invoked without argument, the build script runs
-    `pdflatex` and `bibtex` to recreate the PDF document from the LaTeX files in
-    the [source](source) directory.
-  * To work with the ACM's new (but arguably not improved) publishing flow, the
-    paper uses only approved LaTeX packages and compiles with `pdflatex`.
-  * Unfortunately, that leaves only one subpar option for color emoji, namely
-    simulating them by including graphics files. I wrote [my own LaTeX
-    package](https://github.com/apparebit/emo) to take care of that and then
-    some. It's included inline with the paper sources.
-  * Transparency data and Jupyter notebooks with the code for analyzing the data
-    are inside the [supplements](supplements) directory.
-  * The build script assumes that the virtual environment with Python packages
-    necessary for running the notebooks is contained in the `.venv` directory.
-    When invoked with the `venv` argument, it checks whether that directory
-    exists, creating the virtual environment and installing packages otherwise,
-    and then activates the virtual environment.
+[Paper](penal-colony-1.0.pdf) (v1.0, PDF) by Robert Grimm, Independent
+Investigator, Brooklyn, NY, USA.
 
 
 ## Abstract
@@ -41,16 +21,50 @@ Act and by correlating data released by Facebook, Google, and the National
 Center for Missing and Exploited Children. Fourth, to illustrate the limits of
 algorithmic content moderation, this paper presents a successful strategy for
 subverting DALL•E's aggressive automated censor, which inadvertently also
-unleashed grotesquely racist imagery. Fifth, such discoveries in latent space
-require hands-on probing but corporations are unlikely to grant such access to
-researchers. Hence this paper argues for legal mandates and sketches an approach
-informed by patent law. Finally, this paper concludes by pointing towards harm
-reduction as a mindset for, possibly maybe, making life in this digital penal
-colony at least somewhat bearable --- because, I fear, we are stuck in it.
+unleashed grotesquely racist imagery. Fifth, this paper proposes a new
+intellectual property regime specifically for AI. It re-combines proven
+elements from copyright and patent law, resulting in a framework that balances
+the interests of those who invest in state-of-the-art AI and everyone else.
+Finally, this paper concludes by pointing towards harm reduction as a mindset
+for, possibly maybe, making life in this digital penal colony at least somewhat
+bearable—because, I fear, we are stuck in it.
+
+
+## Source Code and Supplements
+
+Source code and supplements for the paper “Letters from the Stochastic Penal
+Colony 🏝” by Robert Grimm.
+
+  * A [__custom build script__](build.sh) in the repository root takes care of
+    repetitive tasks. The one optional argument is the name of the task to
+    execute.
+  * By default, i.e., when invoked without argument, the build script runs
+    `pdflatex` and `bibtex` to __create the PDF document__ from the LaTeX files
+    in the [source](source) directory.
+  * Since LaTeX and BibTex are incredibly noisy in their output, the build
+    script contains custom logic to __detect actionable warnings__ and then
+    error out.
+  * To work with the ACM's new (but arguably not improved) publishing flow, the
+    paper uses only approved LaTeX packages and __compiles with `pdflatex`__. To
+    produce my own copies, it also compiles with `lualatex` when the build
+    script is given the `lua` argument.
+  * Unfortunately, that leaves only one subpar option for __color emoji__,
+    namely simulating them by including graphics files. I wrote my own LaTeX
+    package, emo, to take care of that and then some. Emo is included with the
+    paper sources, but may be outdated. Check out [its
+    repository](https://github.com/apparebit/emo) or
+    [CTAN](https://ctan.org/pkg/emo).
+  * Transparency data and Jupyter notebooks with the code for __analyzing the
+    data__ are inside the [supplements](supplements) directory.
+  * The build script assumes that the __virtual environment__ with Python
+    packages necessary for running the notebooks is contained in the `.venv`
+    directory. When invoked with the `venv` argument, it checks whether that
+    directory exists, creating the virtual environment and installing packages
+    otherwise, and then activates the virtual environment.
 
 
 ## (C) Copyright 2023 by Robert Grimm
 
 The shell script and Jupyter notebooks included in this repository have been
-released as open source under the Apache 2.0 license. All rights are reserved
-for the paper itself.
+released as open source under the Apache 2.0 license. Otherwise, all rights are
+reserved, including for the paper itself.
