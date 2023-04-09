@@ -1,6 +1,6 @@
 # Letters from the Stochastic Penal Colony 🏝
 
-[Paper](penal-colony-1.0.pdf) (v1.0, PDF) by Robert Grimm, Independent
+[Paper](penal-colony-v1.pdf) (v1.0, PDF) by Robert Grimm, Independent
 Investigator, Brooklyn, NY, USA.
 
 
@@ -28,6 +28,38 @@ the interests of those who invest in state-of-the-art AI and everyone else.
 Finally, this paper concludes by pointing towards harm reduction as a mindset
 for, possibly maybe, making life in this digital penal colony at least somewhat
 bearable—because, I fear, we are stuck in it.
+
+
+## Findings
+
+Highlights of the paper’s findings include:
+
+  * Content moderation by all surveyed social media is punitive and excessively
+    so. Social media are on the best way to creating a new underclass of people
+    without a voice on these platforms.
+  * Content moderation by all surveyed social media runs against the public
+    interest. Particularly prohibitions against misinformation are extremely
+    chilling given pervasive failures by medical experts during the pandemic.
+  * Transparency reports by all surveyed social media besides Reddit and YouTube
+    suffer from significant data quality issues.
+  * Transparency disclosures by Meta are so ridden by data quality issues to be
+    wholly untrustworthy and meaningless. Unfortunately, that is the case for
+    Meta’s data disclosures to researchers and customers as well.
+  * As demonstrated on OpenAI’s DALL•E 2, algorithmic censors based on large
+    language models are vulnerable to a new kind of attack strategy that is hard
+    if not impossible to mitigate.
+  * As demonstrated on ChatGPT, large language models can significantly simplify
+    and shorten the experiments necessary for that attack, raising significant
+    doubts about the efficacy of AI-based content moderation.
+  * OpenAI’s DALL•E 2 produces deeply racist images without being prompted to do
+    so, most likely due to a naive diversity mitigation.
+
+The paper explores regulatory responses to this sorry state of content
+moderation and transparency reporting but rejects them as too punitive. Instead
+it points towards more subversive, harm-reducing approaches to dismantling the
+stochastic penal colony. It also proposes a new intellectual property regime for
+AI that remixes existing, proven copyright and patent provisions to ensure that
+all of society benefits from this amazing new technology.
 
 
 ## Source Code and Supplements
