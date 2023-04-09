@@ -1,8 +1,9 @@
-\ProvidesFile{emo.def}[2023-04-01]
+\ProvidesFile{emo.def}[2023-04-07]
 \expandafter\def\csname emo@emoji@keycap-one\endcsname{1️⃣}
 \def\emo@emoji@biohazard{☣️}
 \expandafter\def\csname emo@emoji@balance-scale\endcsname{⚖️}
 \expandafter\def\csname emo@emoji@check-mark\endcsname{✔️}
+\def\emo@emoji@plus{➕}
 \def\emo@emoji@eu{🇪🇺}
 \def\emo@emoji@foggy{🌁}
 \expandafter\def\csname emo@emoji@globe-africa-europe\endcsname{🌍}

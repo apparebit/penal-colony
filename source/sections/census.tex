@@ -23,11 +23,11 @@ to either social network. I drop the five platforms targeting China, since they
 are unlikely to adhere to Klonick's governance model. I also drop Facebook
 Messenger, Microsoft Teams, Skype, and WhatsApp, since they mostly enable
 private communication between users. While that arguably is the predominant use
-case for Telegram, too, its stickers, channels, and bots are public and require
-moderation, as even Telegram acknowledges in their \V{FAQ}. Hence, Telegram
-remains. Finally, I add Tumblr because that social network has become a popular
-destination for users leaving Twitter and employees laid off by Twitter in the
-wake of Elon Musk's takeover of the firm~\cite{Patel2022}.
+case for Telegram as well, its stickers, channels, and bots are public and
+require moderation, as even Telegram acknowledges in their \V{FAQ}. Hence,
+Telegram remains. Finally, I add Tumblr because that social network has become a
+popular destination for users leaving Twitter and employees laid off by Twitter
+in the wake of Elon Musk's takeover of the firm~\cite{Patel2022}.
 
 To determine the criteria for the census, I iterated a few times over a list
 gleaned from social media transparency reports, previous studies and
@@ -52,7 +52,7 @@ below.
         \item \emo{receipt}~Prevalence of violative content measured as fraction
             of all content \label{itm:prevalence}
         \item \emo{triangular-ruler}~Reach of violative content measured in time
-            or better views \label{itm:reach}
+            or (preferably) views \label{itm:reach}
         \item \emo{roll-of-paper}~Spam, which may not warrant due process
             protections \label{itm:spam}
         \item \emo{busts}~Content resulting from ``coordinated inauthentic
@@ -64,7 +64,7 @@ below.
         \item \emo{classical-building}~Government inquiries and removal requests
             \label{itm:government}
         \item \emo{detective} Trusted flaggers, including fact checkers and \V{IP}
-            rights holders \label{itm:flaggers}
+            right holders \label{itm:flaggers}
         \item \emo{enraged-face}~Platform users \label{itm:users}
         \item \emo{robot}~Algorithms, hybrid vs fully automatic
             \label{itm:algorithms}
@@ -92,7 +92,7 @@ below.
 \item[Global differences and impact]\hfill
     \begin{enumerate}[resume]
         \item \emo{currency-exchange}~Platform localization and regional
-            resourcing for content mooderation \label{itm:resourcing}
+            resourcing for content moderation \label{itm:resourcing}
         \item \emo{globe-africa-europe}~Outcomes broken down by countries and
             cultures \label{itm:countries}
     \end{enumerate}
@@ -113,8 +113,8 @@ significantly in organization and level of detail but seem to mostly comprise
 the same basic prohibitions, typically covering adult sexual activity,
 harassment, threats and violence, hate speech, violent extremsism, suicide and
 self-harm, child endangerment, impersonation, private information,
-disinformation, fraud and other illegal activities. Yet prior work has also
-demonstrated substantial differences in definitions and
+disinformation, spam, as well as fraud and other illegal activities. Yet prior
+work has also demonstrated substantial differences in definitions and
 enforcement~\cite{FieslerJiangea2018,PaterKimea2016}. Beyond this core, a couple
 of prohibitions do stick out: Pinterest's ``Harassment and criticism'' is
 chilling in its pathologizing overreach. Then again, Tumblr's ``Misattribution
@@ -127,9 +127,11 @@ or Non-Attribution'' is rather endearing---but probably not that practical.
     of forced timeout, and X for permanent account suspension. The \emo{robot}
     robot and \emo{judge} judge columns share the \emo{keycap-one} number one
     when a transparency report does not distinguish between in-house automated
-    and human review. A \emo{collision} collision indicates that the firm
+    and human review. The \emo{collision} collision indicates that the firm
     commits to meaningful notification but blatantly violates that commitment in
-    practice. All years are within the 21\textsuperscript{st} century.}
+    practice. The \emo{plus} plus indicates a separate
+    dataset~\cite{RothGadde2021}. All years are within the
+    21\textsuperscript{st} century.}
 \label{table:governance}
 \begin{tabular}{L@{\;\;}CcCc@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}cC}
 
@@ -219,7 +221,7 @@ Telegram & '13 & & & & & & & & & & & & & & & & & & & & & & \\
 & '06
 & \href{https://help.twitter.com/en/rules-and-policies/enforcement-options}{\small W/0.5--7/X}
 & \href{https://transparency.twitter.com/en/reports/rules-enforcement.html#2021-jul-dec}{H2 '21}
-& & \MK & \MK & \MK & \MK & & \MK & \MKONE &
+& & \MK & \MK & \emo{plus} & \MK & & \MK & \MKONE &
 & & \MK & \MK & & & & & & \MK &
 \href{https://transparency.twitter.com/content/dam/transparency-twitter/download/rules_enforcement_test.zip}{\small CSV} \\
 
@@ -238,10 +240,6 @@ Telegram & '13 & & & & & & & & & & & & & & & & & & & & & & \\
 \end{tabular}
 \end{table}
 
-\hidden{
-\cite{RothGadde2021} Twitter's datasets on inauthentic coordination by governments
-}
-
 When it comes to sanctioning accounts, \emph{all} social media besides Telegram
 fall into one of two groups. The first group seems to model their sanctions on
 the Queen of Hearts from \emph{Alice's Adventures in Wonderland},
@@ -249,8 +247,8 @@ enthusiastically screaming ``Off with their heads!'' and then figuratively even
 following through~\cite{Carroll2009}. The second group manages to improve on
 that (low) standard, but only barely. Members of that group apparently model
 their sanctions on California's 1994 ``three strikes'' law~\cite{Vitiello2002}.
-A decade later, the law accounted for a quarter of the state's prisoners, it did
-not curb crime~\cite{BrownJolivette2005} but rather \emph{increased}
+A decade later, the law accounted for a quarter of the state's prisoners, did
+not curb crime~\cite{BrownJolivette2005}, and \emph{increased}
 homicides~\cite{MarvellMoody2001}. It also led to even more Black men being
 locked up for even longer~\cite{BrownJolivette2005}. Three decades after
 enactment, the most salient change is that the law accounts for a third of all
@@ -266,12 +264,12 @@ outcome, expelling members who become too conflicted with too many other members
 sparingly. The critical difference between such real-world groupings and social
 media is the reach: For a real-world group, the expelled member looses access to
 just that one group and, depending on their proximity to an urban center,
-probably can find other social groups to engage. For a social media platform,
-the expelled user looses access to all of that platform's users. Switching to
-another platform may not help because each social media platform tends to favor
-a particular kind of expression and hence attract different people as users. In
-short, using a different analogue didn't help: Social media account sanctions
-still are excessively punitive.
+probably can find other, similar social groups to engage. For a social media
+platform, the expelled user looses access to all of that platform's users.
+Switching to another platform may not help because each social media platform
+tends to favor a particular kind of expression and hence attract different
+people as users. In short, using a different analogue didn't help: Social media
+account sanctions still are excessively punitive.
 
 The conclusion does not change if I avoid the damning analogues and restrict
 the framing to content moderation only: When it comes to judging the severity of
@@ -353,8 +351,8 @@ the role of \V{AI}. As already discussed in Section~\ref{sec:tweet-da-fe}, Twitt
 blithely pretends it doesn't make aggressive use of algorithms. In contrast,
 Pinterest is very exacting and clearly distinguishes between fully automated and
 hybrid detection for each prohibition. In the latter case, algorithms pick
-violative content too, but humans need to approve the violation before the
-system acts on it. Next, Facebook, Instagram, Twitter, and YouTube have largely
+violative content as well, but humans need to approve the violation before the
+system acts on it. Next, Facebook, Instagram, and YouTube have also largely
 automated content moderation---though algorithmic review doesn't always happen
 before posting. Finally, while TikTok is playing catchup with Meta, Twitter, and
 YouTube, it also is making rapid strides in that direction. From Q3~2020 to
@@ -383,10 +381,10 @@ with that disclosed by social media platforms. In the language of \V{NCMEC}, whi
 I adopt for this section, each submission to its CyberTipline is called a
 \emph{report} and includes one or more \emph{pieces} of \V{CSAM}, i.e., photos or
 videos. Since report refers to just these CyberTipline submissions, I use
-``transparency disclosure'' for organization's statistical data releases.
+``transparency disclosure'' for organizations' statistical data releases.
 
 To make the validation meaningful while also keeping it manageable, I decided to
-compare the full history of \V{CSAM} statistics disclosures but for Meta and
+compare the full history of \V{CSAM} statistics disclosures for Meta and
 Google only. I include Meta because, at over 90\% of all reports made to \V{NCMEC},
 it appears to be a ``hotbed of \V{CSAM}''~\cite{Hitt2021} (and not Pornhub, as
 falsely asserted~\cite{Brown2020,Grant2020} with devastating
@@ -506,14 +504,14 @@ increase from Q1~2021 to Q2~2021 is jarring.
 Alas, Meta's transparency pages give \emph{no} explanation. Only after searching
 for ``Meta Community Standards Enforcement Report Q2~2021'' with an external
 search engine, did I find a blog post~\cite{Facebook2021a} pointing towards a
-PDF file that hints at an explanation~\cite{Facebook2021}. Apparently, Meta
+\V{PDF} file that hints at an explanation~\cite{Facebook2021}. Apparently, Meta
 started measuring ``Child Physical Abuse'' only that quarter and included it in
 the at least appropriately named ``Nudity and Physical Abuse'' metric. It also
 started measuring ``Sexualization of children'' and ``Inappropriate interactions
 with Children'' and included both in the ``Sexual Exploitation'' metric, too.
 That would explain the consistently much higher numbers. However, combining such
 disparate categories of content into one metric and then labelling that metric
-by the most severe category is highly inappropriate and deeply misleading.
+by the most severe category also is highly inappropriate and deeply misleading.
 
 Even before Meta thusly changed metrics, there was some indication that Meta's
 statistics were overstating the problem. In February 2021, Antigone Davis,
@@ -527,9 +525,7 @@ videos accounted for more than half of the reported content. Further analysis of
 being bitten by an animal).'' While Meta still is legally mandated to report
 such instances to \V{NCMEC}, not including such information in its transparency
 disclosures is negligent at best. So is Meta's decision to only disclose piece
-counts but not reports. By comparison, Pinterest's transparency disclosures do
-distinguish between posts and the content itself, including for
-\V{CSAM}~\cite{Pinterest2022}.
+counts but not reports.
 
 While extracting the data for Meta and Google from \V{NCMEC}'s transparency
 disclosures, I discovered indication for a significant omission from Meta's
