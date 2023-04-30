@@ -26,6 +26,27 @@
 \newcommand\T{\rule{0pt}{2.6ex}}
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}}
 
+% A less obnoxious \anon.
+\makeatletter
+\renewcommand{\anon}[2][elided for review]{%
+    \if@ACM@anonymous%
+        [{\sffamily\slshape#1}\/]%
+    \else%
+        #2%
+    \fi%
+}
+\newcommand{\anonhref}[2]{%
+    \if@ACM@anonymous%
+        #2%
+    \else%
+        \href{#1}{#2}%
+    \fi%
+}
+\makeatother
+
+% Use old-style numbers in body text. Requires explicit \libertineLF in tables.
+\AtBeginDocument{\libertineOsF}
+
 \begin{document}
 
 \newcommand\MK{\emo{check-mark}}
