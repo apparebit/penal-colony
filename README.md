@@ -1,6 +1,6 @@
 # Letters from the Stochastic Penal Colony 🏝
 
-[Paper](penal-colony-v1.pdf) (v1.0, PDF) by Robert Grimm, Independent
+[Paper](penal-colony-v1.1.pdf) (v1.1, PDF) by Robert Grimm, Independent
 Investigator, Brooklyn, NY, USA.
 
 
