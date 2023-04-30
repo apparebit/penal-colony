@@ -133,6 +133,7 @@ or Non-Attribution'' is rather endearing---but probably not that practical.
     dataset~\cite{RothGadde2021}. All years are within the
     21\textsuperscript{st} century.}
 \label{table:governance}
+\libertineLF
 \begin{tabular}{L@{\;\;}CcCc@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}c@{\;}c@{\;}c@{\quad}c@{\;}cC}
 
 \multicolumn{2}{C}{\textbf{Platform}} & \textbf{Account} & \textbf{Latest}
@@ -375,10 +376,10 @@ violative content as well, but humans need to approve the violation before the
 system acts on it. Next, Facebook, Instagram, and YouTube have also largely
 automated content moderation---though algorithmic review doesn't always happen
 before posting. Finally, while TikTok is playing catchup with Meta, Twitter, and
-YouTube, it also is making rapid strides in that direction. From Q3~2020 to
-Q3~2021, the share of automatically removed video clips grew from 7.8\% to
+YouTube, it also is making rapid strides in that direction. From \V{Q3}~2020 to
+\V{Q3}~2021, the share of automatically removed video clips grew from 7.8\% to
 33.9\% of all removed clips. After plateauing at that level for another two
-quarters, it started growing again, reaching 48.0\% for Q3~2022.
+quarters, it started growing again, reaching 48.0\% for \V{Q3}~2022.
 
 
 \subsection{Validating the Transparency Data}
@@ -436,6 +437,7 @@ Google's own count.
 previous year by March. This year, the organization is taking longer, with the
 release of reports for 2022 currently scheduled for May 2, 2023.}
 \label{table:csam}
+\libertineLF
 \begin{tabular}{cRrrRRrRrRr}
 
 & \multicolumn{5}{C}{\textbf{NCMEC}\T}
@@ -516,18 +518,18 @@ Instagram and does so even for the machine-readable data. As far as I can tell,
 Meta also is the \emph{only} platform to do so.
 
 Originally, Meta started disclosing ``Child Nudity \& Sexual Exploitation'' for
-Facebook only in Q3~2018 and for Instagram as well in Q2~2019, hence the
+Facebook only in \V{Q3}~2018 and for Instagram as well in \V{Q2}~2019, hence the
 horizontal line above that latter quarter's entry in Table~\ref{table:csam}. In
-Q2~2021, the firm switched to reporting ``Nudity and Physical Abuse'' and
+\V{Q2}~2021, the firm switched to reporting ``Nudity and Physical Abuse'' and
 ``Sexual Exploitation'' under the ``Child Endangerment'' heading, hence the line
 above that quarter's entry in Table~\ref{table:csam}. Based on metrics names,
 one might expect that ``Child Nudity \& Sexual Exploitation'' includes ``Child
-Endangerment: Sexual Exploitation.'' Yet the counts reported from Q2~2021
+Endangerment: Sexual Exploitation.'' Yet the counts reported from \V{Q2}~2021
 forward seem markedly higher than those from before. Notably, the $4.6\times$
-increase from Q1~2021 to Q2~2021 is jarring.
+increase from \V{Q1}~2021 to \V{Q2}~2021 is jarring.
 
 Alas, Meta's transparency pages give \emph{no} explanation. Only after searching
-for ``Meta Community Standards Enforcement Report Q2~2021'' with an external
+for ``Meta Community Standards Enforcement Report \V{Q2}~2021'' with an external
 search engine, did I find a blog post~\cite{Facebook2021a} pointing towards a
 \V{PDF} file that hints at an explanation~\cite{Facebook2021}. Apparently, Meta
 started measuring ``Child Physical Abuse'' only that quarter and included it in
@@ -563,12 +565,13 @@ privacy law.
 
 Finally, while replacing the original spreadsheet providing data for the above
 table with Python code, I discovered that data going back almost two years had
-been changed between Meta's disclosures for Q2~2022 and Q3~2022. The changes are
-fairly substantial: Out of 113 modified data points, 77 were for Q4~2020, 3 for
-Q1~2021, 4 for Q2~2021, and the rest for Q2~2022. Out of the 77 for Q4~2020, 58
-are absolute counts, which changed between -50.0\% and -0.1\%. Yet neither
-transparency report nor the blog post announcing the report's release mention
-anything about these changes. That seems heedless at the very best.
+been changed between Meta's disclosures for \V{Q2}~2022 and \V{Q3}~2022. The
+changes are fairly substantial: Out of 113 modified data points, 77 were for
+\V{Q4}~2020, 3 for \V{Q1}~2021, 4 for \V{Q2}~2021, and the rest for \V{Q2}~2022.
+Out of the 77 for \V{Q4}~2020, 58 are absolute counts, which changed between
+-50.0\% and -0.1\%. Yet neither transparency report nor the blog post announcing
+the report's release mention anything about these changes. That seems heedless
+at the very best.
 
 
 \subsubsection{NCMEC vs Other Platforms}
@@ -583,7 +586,7 @@ more reports than \V{NCMEC}. For H2, Pinterest also discloses the number of
 ``pins'' (or image cards) reported to \V{NCMEC}; curiously, the number of reports
 is 11\% larger. In a dedicated section, Snap explicitly mentions \V{CSAM} and
 \V{NCMEC} reporting but then labels the statistic ``Total Account Deletions.'' For
-H1 2021, it also discloses the fraction of ``accounts enforced globally,'' which
+\V{H1} 2021, it also discloses the fraction of ``accounts enforced globally,'' which
 amounts to a 14\% larger quantity. But even with that larger quantity, its
 number of account deletions still is 35\% smaller than the number of reports
 received by \V{NCMEC}. Given Snap's stated zero-tolerance policy, those numbers
