@@ -89,14 +89,14 @@ rates~\cite{Brown2019a,Clark2023,Sainato2021}, but the resulting 150\% yearly
 staff turnover means that Amazon will run out of people to exploit over the next
 few years~\cite{Sainato2022}.
 
-I call the conceptual space of punitive algorithms the \emph{stochastic penal
-colony}. To provide a first map of that space, this paper first explores
-OpenAI's enforcement process in \S\ref{sec:dalle} and then Twitter's in
-\S\ref{sec:tweet-da-fe}. For each firm, it leverages a close textual reading of
-firm policies and other communications to enumerate the many ways the firm's
-enforcement process deprives targeted users of voice, agency, and dignity. It
-also contrasts these \emph{Kafkaesque co-factors} with major failures of neutral
-and trustworthy content moderation.
+I call the conceptual, social, and emotional space carved out by punitive
+algorithms the \emph{stochastic penal colony}. To provide a first map of that
+space, this paper first explores OpenAI's enforcement process in
+\S\ref{sec:dalle} and then Twitter's in \S\ref{sec:tweet-da-fe}. For each firm,
+it leverages a close textual reading of firm policies and other communications
+to enumerate the many ways the firm's enforcement process deprives targeted
+users of voice, agency, and dignity. It also contrasts these \emph{Kafkaesque
+co-factors} with major failures of neutral and trustworthy content moderation.
 
 \S\ref{sec:census} shifts from auto-ethnographic case studies~\cite{Ellis2003}
 based on procedural justice~\cite{Tyler2003,Tyler2006,Tyler2007} to a cumulative
@@ -111,8 +111,8 @@ addressing zero to twelve criteria out of the nineteen I identified.
 comparing disclosures by Google, Meta, and the National Center for Missing and
 Exploited Children and \S\ref{sec:census-limits} uses the example of
 industry-leading Meta for illustrating the devastating human harm that can
-result from hypergrowth as business strategy. Alas, social media's lack of
-transparency and accountability may just come to an end within the year. The
+result from hypergrowth as a business strategy. Alas, social media's lack of
+transparency and accountability may just come to an end within a year or so. The
 \V{EU}'s Digital Services Act provides a future baseline by enumerating the
 metrics internet platforms must include in their independently audited, yearly
 reports~\cite{EuropeanParliamentAndCouncil2022}. For full disclosure, I worked
@@ -122,41 +122,44 @@ Neither employment nor litigation were related to the topics covered in this
 paper and I have \emph{no} financial interest in the company (nor any of the
 other companies covered in this paper).
 
-Whereas the census in \S\ref{sec:census} takes a broad view, \S\ref{sec:escape}
-goes deep again by experimentally exploring the reason for my first prompt's
-rejection as well as my successful strategy for circumventing \DALLE's content
-moderation. Since I did seek to create violative content related to the topics
-of this paper but have little tolerance for realistic gore, I restricted myself
-to images that would be suitable as editorial content for a magazine version of
-this paper. Thanks to that restriction, images are not substantially more
-disturbing than a Francis Bacon painting and I include highlights in
+Whereas \S\ref{sec:census} points towards algorithmic content moderation as a
+potential way out of the stochastic penal colony, \S\ref{sec:escape} squashes
+any optimism resulting from that observation by experimentally exploring one
+particular state-of-the-art exemplar, the gatekeeper to OpenAI's \DALLE. I
+identify the reason for my first prompt's rejection and describe my successful
+strategy for circumventing that same gatekeeper. In developing and validating
+that strategy, I focused on subjects related to this paper, particularly
+executions. Since I have little tolerance for realistic gore, I restricted
+myself to images that would be suitable as editorial content for a magazine
+version of this paper. Thanks to that restriction, images are not substantially
+more disturbing than a Francis Bacon painting and I include highlights in
 Appendix~\ref{app:dalle-images} starting on page~\pageref{app:dalle-images}.
 
 The hands-on investigation of \DALLE\ surepitiously surfaced two additional
 limitations of OpenAI's content policy and automated enforcement. First, \DALLE\
 effectively discriminated against Christian religious beliefs, simultaneously
 censoring too little and too much, with the latter including the crucifixion.
-Between me running these experiments in August through October 2022 and
-completing this paper in March 2023, OpenAI did update its censor and now
-accepts the crucifixion and hence is not as discriminatory anymore. Second,
-OpenAI's post-processing of prompts to diversify gender and race representation
-is outright dangerous~\cite{OpenAI2022e,Sparkes2022}. In particular, it appears
-to be the main trigger for some prompts yielding grotesquely racist imagery.
-Worse, once I knew what to look for, I recognized similar, though less
-pronounced effects in earlier generations. These images are \emph{not}
-reproduced in this paper or its appendices; though they are included with the
-supplemental materials at \anon{\url{https://github.com/apparebit/penal-colony}}.
+Between me running experiments in August through October 2022 and completing
+this paper in April 2023, OpenAI did update its censor and now accepts the
+crucifixion and hence is not as discriminatory anymore. Second, OpenAI's
+post-processing of prompts to diversify gender and race representation is
+outright dangerous~\cite{OpenAI2022e,Sparkes2022}. In particular, it appears to
+be the main trigger for some prompts yielding grotesquely racist imagery. Worse,
+once I knew what to look for, I recognized similar, though less pronounced
+effects in earlier generations. These images are \emph{not} reproduced in this
+paper or its appendices; though they are included with the supplemental
+materials at \anon{\url{https://github.com/apparebit/penal-colony}}.
 
 In \S\ref{sec:discussion}, I pull together results from previous sections,
 organize them into larger themes, and contextualize them with related work. I
 argue that, even though all of the surveyed platforms with exception of TikTok
 launched \emph{between one and two decades ago}, their governance remains a
 shambles. I also discuss solution approaches and propose a novel intellectual
-property regime specifically tailored to \V{AI} systems that recombines proven
+property regime specifically tailored to \V{AI} systems that remixes proven
 elements from copyright and patent law to balance the interests of those who
 deploy such systems and everyone else. Finally, \S\ref{sec:conclusion} concludes
-this paper with an appeal to the one principle that holds promise for
-ameliorating life in the stochastic penal colony, harm reduction.
+this paper with an appeal to the one principle that holds realistic potential
+for ameliorating life in the stochastic penal colony, harm reduction.
 Appendices~\ref{app:dalle-sources}--\ref{app:chatgpt} reproduce relevant source
 materials, whereas Appendix~\ref{app:research-ethics} discusses research ethics,
 including my handling of the racist imagery.
@@ -351,12 +354,13 @@ and trust when it comes to governance procedures fundamentally requires more
 than just one exemplar.
 
 Having clarified the differences in criteria, I can now also give a better
-definition of the stochastic penal colony: It's the universe of algorithmic
-interventions outside the governmental application of justice that routinely
-violate voice, agency, dignity, neutrality, and trust. That in turn also helps
-clarify the distinction from Foucault's disciplinary institutions: The latter
-imply some compromises when it comes to voice, agency, and dignity. But in the
-modern conception, they also require neutrality and trust. Routine violations of
-the latter two turn a disciplinary intervention into a penal one. For those same
-reasons, the American carceral state is not a disciplinary institution in line
-with Foucault's understanding but something altogether worse.
+definition of the stochastic penal colony: It's the human impact resulting from
+algorithmic interventions outside the governmental application of justice that
+routinely violate voice, agency, dignity, neutrality, and trust. That in turn
+also helps clarify the distinction from Foucault's disciplinary institutions:
+The latter imply some compromises when it comes to voice, agency, and dignity.
+But in the modern conception, they also require neutrality and trust. Routine
+violations of the latter two turn a disciplinary intervention into a penal one.
+For those same reasons, the American carceral state is not a disciplinary
+institution in line with Foucault's understanding but something altogether
+worse.
