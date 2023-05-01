@@ -43,6 +43,13 @@
 \newcommand\MK{\emo{check-mark}}
 \newcommand\MKONE{\multicolumn{2}{l}{\emo{keycap-one}}}
 
+% The ring of stars in the EU flag emoji is hardly visible.
+\ifluatex
+\let\emobase\emo
+\renewcommand\emo[1]{{\footnotesize\emobase{#1}}}
+\fi
+\newcommand\EUflag{\raisebox{-0.2ex}{\includegraphics[height=1em]{emo-graphics/emo-eu}}}
+
 % Abbreviations and acronyms in small caps. They require lower case in LaTeX,
 % whereas OpenType has the much better c2sc feature. So sad!
 \newcommand\br[1]{\textsc{\MakeLowercase{#1}}}
