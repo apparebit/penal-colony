@@ -26,6 +26,12 @@
 \newcommand\T{\rule{0pt}{2.6ex}}
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}}
 
+\newlength{\oldarrayrulewidth}
+\newcommand{\CLINE}[2]{%
+    \noalign{\global\setlength{\oldarrayrulewidth}{\arrayrulewidth}}%
+    \noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}%
+    \noalign{\global\setlength{\arrayrulewidth}{\oldarrayrulewidth}}}
+
 % A less obnoxious \anon.
 \makeatletter
 \renewcommand{\anon}[2][elided for review]{%
